@@ -1,0 +1,7 @@
+club_club:
+    resource: "@ClubBundle/Resources/config/routing/club.yml"
+    prefix:   /club
+
+club_homepage:
+    path:     /
+    defaults: { _controller: ClubBundle:Default:index }

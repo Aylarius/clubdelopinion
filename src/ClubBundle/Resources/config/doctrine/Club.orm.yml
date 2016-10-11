@@ -1,0 +1,69 @@
+ClubBundle\Entity\Club:
+    type: entity
+    table: null
+    repositoryClass: ClubBundle\Repository\ClubRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        soustitre11:
+            type: string
+            length: 255
+        soustitre12:
+            type: string
+            length: 255
+        soustitre13:
+            type: string
+            length: 255
+        soustitre14:
+            type: string
+            length: 255
+        soustitre15:
+            type: string
+            length: 255
+        soustitre21:
+            type: string
+            length: 255
+        soustitre22:
+            type: string
+            length: 255
+        soustitre23:
+            type: string
+            length: 255
+        soustitre31:
+            type: string
+            length: 255
+        soustitre32:
+            type: string
+            length: 255
+        soustitre33:
+            type: string
+            length: 255
+        blocktitle1:
+            type: string
+            length: 255
+        blockparagraph1:
+            type: string
+            length: 500
+        blocktitle2:
+            type: string
+            length: 255
+        blockparagraph2:
+            type: string
+            length: 500
+        blocktitle3:
+            type: string
+            length: 255
+        blockparagraph3:
+            type: string
+            length: 500
+        blocktitle4:
+            type: string
+            length: 255
+        blockparagraph4:
+            type: string
+            length: 500
+    lifecycleCallbacks: {  }

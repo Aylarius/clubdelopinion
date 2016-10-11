@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Club list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Soustitre11</th>
+                <th>Soustitre12</th>
+                <th>Soustitre13</th>
+                <th>Soustitre14</th>
+                <th>Soustitre15</th>
+                <th>Soustitre21</th>
+                <th>Soustitre22</th>
+                <th>Soustitre23</th>
+                <th>Soustitre31</th>
+                <th>Soustitre32</th>
+                <th>Soustitre33</th>
+                <th>Blocktitle1</th>
+                <th>Blockparagraph1</th>
+                <th>Blocktitle2</th>
+                <th>Blockparagraph2</th>
+                <th>Blocktitle3</th>
+                <th>Blockparagraph3</th>
+                <th>Blocktitle4</th>
+                <th>Blockparagraph4</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for club in clubs %}
+            <tr>
+                <td><a href="{{ path('club_show', { 'id': club.id }) }}">{{ club.id }}</a></td>
+                <td>{{ club.soustitre11 }}</td>
+                <td>{{ club.soustitre12 }}</td>
+                <td>{{ club.soustitre13 }}</td>
+                <td>{{ club.soustitre14 }}</td>
+                <td>{{ club.soustitre15 }}</td>
+                <td>{{ club.soustitre21 }}</td>
+                <td>{{ club.soustitre22 }}</td>
+                <td>{{ club.soustitre23 }}</td>
+                <td>{{ club.soustitre31 }}</td>
+                <td>{{ club.soustitre32 }}</td>
+                <td>{{ club.soustitre33 }}</td>
+                <td>{{ club.blocktitle1 }}</td>
+                <td>{{ club.blockparagraph1 }}</td>
+                <td>{{ club.blocktitle2 }}</td>
+                <td>{{ club.blockparagraph2 }}</td>
+                <td>{{ club.blocktitle3 }}</td>
+                <td>{{ club.blockparagraph3 }}</td>
+                <td>{{ club.blocktitle4 }}</td>
+                <td>{{ club.blockparagraph4 }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('club_show', { 'id': club.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('club_edit', { 'id': club.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('club_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

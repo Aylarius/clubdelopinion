@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Club</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ club.id }}</td>
+            </tr>
+            <tr>
+            <tr>
+                <th>Soustitre11</th>
+                <td>{{ club.soustitre11 }}</td>
+            </tr>
+            <tr>
+                <th>Soustitre12</th>
+                <td>{{ club.soustitre12 }}</td>
+            </tr>
+                <th>Soustitre13</th>
+                <td>{{ club.soustitre13 }}</td>
+            </tr>
+            <tr>
+                <th>Soustitre14</th>
+                <td>{{ club.soustitre14 }}</td>
+            </tr>
+            <tr>
+                <th>Soustitre15</th>
+                <td>{{ club.soustitre15 }}</td>
+            </tr>
+            <tr>
+                <th>Soustitre21</th>
+                <td>{{ club.soustitre21 }}</td>
+            </tr>
+            <tr>
+                <th>Soustitre22</th>
+                <td>{{ club.soustitre22 }}</td>
+            </tr>
+            <tr>
+                <th>Soustitre23</th>
+                <td>{{ club.soustitre23 }}</td>
+            </tr>
+            <tr>
+                <th>Soustitre31</th>
+                <td>{{ club.soustitre31 }}</td>
+            </tr>
+            <tr>
+                <th>Soustitre32</th>
+                <td>{{ club.soustitre32 }}</td>
+            </tr>
+            <tr>
+                <th>Soustitre33</th>
+                <td>{{ club.soustitre33 }}</td>
+            </tr>
+            <tr>
+                <th>Blocktitle1</th>
+                <td>{{ club.blocktitle1 }}</td>
+            </tr>
+            <tr>
+                <th>Blockparagraph1</th>
+                <td>{{ club.blockparagraph1 }}</td>
+            </tr>
+            <tr>
+                <th>Blocktitle2</th>
+                <td>{{ club.blocktitle2 }}</td>
+            </tr>
+            <tr>
+                <th>Blockparagraph2</th>
+                <td>{{ club.blockparagraph2 }}</td>
+            </tr>
+            <tr>
+                <th>Blocktitle3</th>
+                <td>{{ club.blocktitle3 }}</td>
+            </tr>
+            <tr>
+                <th>Blockparagraph3</th>
+                <td>{{ club.blockparagraph3 }}</td>
+            </tr>
+            <tr>
+                <th>Blocktitle4</th>
+                <td>{{ club.blocktitle4 }}</td>
+            </tr>
+            <tr>
+                <th>Blockparagraph4</th>
+                <td>{{ club.blockparagraph4 }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('club_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('club_edit', { 'id': club.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
