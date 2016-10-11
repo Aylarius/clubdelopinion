@@ -5,3 +5,7 @@ club_club:
 club_homepage:
     path:     /
     defaults: { _controller: ClubBundle:Default:index }
+
+club_av2:
+        resource: "@ClubBundle/Resources/config/routing/av2.yml"
+        prefix:   /av2
