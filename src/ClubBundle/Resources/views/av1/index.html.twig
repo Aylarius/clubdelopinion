@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>av1 list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titleav1</th>
+                <th>Paragraphav1</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for av1 in av1s %}
+            <tr>
+                <td><a href="{{ path('av1_show', { 'id': av1.id }) }}">{{ av1.id }}</a></td>
+                <td>{{ av1.titleAv1 }}</td>
+                <td>{{ av1.paragraphAv1 }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('av1_show', { 'id': av1.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('av1_edit', { 'id': av1.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('av1_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}
