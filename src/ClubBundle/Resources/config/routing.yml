@@ -5,3 +5,7 @@ club_club:
 club_homepage:
     path:     /
     defaults: { _controller: ClubBundle:Default:index }
+
+club_contact:
+    resource: "@ClubBundle/Resources/config/routing/contact.yml"
+    prefix:   /contact

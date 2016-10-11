@@ -1,0 +1,21 @@
+ClubBundle\Entity\contact:
+    type: entity
+    table: null
+    repositoryClass: ClubBundle\Repository\contactRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        soustitre:
+            type: string
+            length: 255
+        paragraph:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
