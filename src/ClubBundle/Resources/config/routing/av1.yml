@@ -1,0 +1,24 @@
+av1_index:
+    path:     /
+    defaults: { _controller: "ClubBundle:av1:index" }
+    methods:  GET
+
+av1_show:
+    path:     /{id}/show
+    defaults: { _controller: "ClubBundle:av1:show" }
+    methods:  GET
+
+av1_new:
+    path:     /new
+    defaults: { _controller: "ClubBundle:av1:new" }
+    methods:  [GET, POST]
+
+av1_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ClubBundle:av1:edit" }
+    methods:  [GET, POST]
+
+av1_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ClubBundle:av1:delete" }
+    methods:  DELETE
