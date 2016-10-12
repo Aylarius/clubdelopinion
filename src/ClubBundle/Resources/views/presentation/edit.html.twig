@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>mode édition</h1>
+
+    {{ form_start(edit_form) }}
+    {{ form_errors(edit_form) }}
+
+
+
+    <h1>{{ presentation.title }}</h1>
+    {{ form_label(edit_form.title) }}
+    {{ form_errors(edit_form.title) }}
+    {{ form_widget(edit_form.title) }}
+    <input type="submit" value="Edit" />
+
+
+
+
+    <div class="container-fluid">
+        <div class="row blockGray homepageBlock"><!--******************* 1er bloc ***************-->
+            <div class="col-xs-6 homepageBlock2">
+                <img src="{{ asset('bundles/club/img/1.jpg') }}" alt="" width="100%"/>
+            </div>
+            <div class="col-xs-6 homepageBlock2">
+                <h2>{{ presentation.soustitre1 }}</h2>
+                {{ form_label(edit_form.soustitre1) }}
+                {{ form_errors(edit_form.soustitre1) }}
+                {{ form_widget(edit_form.soustitre1) }}
+                <input type="submit" value="Edit" />
+
+                <p>{{ presentation.paragraph1 }}</p>
+                {{ form_label(edit_form.paragraph1) }}
+                {{ form_errors(edit_form.paragraph1) }}
+                {{ form_widget(edit_form.paragraph1,{'attr':{'class':'form-control'}}) }}
+                <input type="submit" value="Edit" />
+
+            </div>
+        </div>
+        <div class="row homepageBlock"><!--**************** 2ème bloc *****************-->
+            <div class="col-xs-6 homepageBlock2">
+                <h2>{{ presentation.soustitre2 }}</h2>
+                {{ form_label(edit_form.soustitre2) }}
+                {{ form_errors(edit_form.soustitre2) }}
+                {{ form_widget(edit_form.soustitre2) }}
+                <input type="submit" value="Edit" />
+
+                <p>{{ presentation.paragraph2 }}</p>
+                {{ form_label(edit_form.paragraph2) }}
+                {{ form_errors(edit_form.paragraph2) }}
+                {{ form_widget(edit_form.paragraph2) }}
+                <input type="submit" value="Edit" />
+            </div>
+            <div class="col-xs-6 homepageBlock2">
+                <img src="{{ asset('bundles/club/img/historique.jpg') }}" alt="" width="100%"/>
+            </div>
+        </div>
+    </div>
+    <ul>
+        <li>
+            <a href="{{ path('presentation_index') }}">Back to the list</a>
+        </li>
+    </ul>
+
+    {{ form_end(edit_form) }}
+
+{% endblock %}

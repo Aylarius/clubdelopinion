@@ -22,3 +22,6 @@ club_av1:
         resource: "@ClubBundle/Resources/config/routing/av1.yml"
         prefix:   /av1
 
+club_presentation:
+        resource: "@ClubBundle/Resources/config/routing/presentation.yml"
+        prefix:   /presentation

@@ -2,40 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bad654b-0a9f-4de1-9dda-6747484c850c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Controller/av1Controller.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Controller/av2Controller.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Controller/contactController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Entity/av1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Entity/av2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Entity/contact.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Form/av1Type.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Form/av2Type.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Form/contactType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Repository/av1Repository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Repository/av2Repository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Repository/contactRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/doctrine/av1.orm.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/doctrine/av2.orm.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/doctrine/contact.orm.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/routing/av1.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/routing/av2.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/routing/contact.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av1/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av1/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av1/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av1/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av2/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av2/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av2/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av2/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/contact/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/contact/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/contact/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/contact/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Tests/Controller/av1ControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Tests/Controller/av2ControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ClubBundle/Tests/Controller/contactControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/clubdelopinion.iml" afterPath="$PROJECT_DIR$/.idea/clubdelopinion.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Controller/av1Controller.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Controller/av1Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Controller/av2Controller.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Controller/av2Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Controller/av3Controller.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Controller/av3Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Controller/contactController.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Controller/contactController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Entity/av1.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Entity/av1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Entity/av2.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Entity/av2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Entity/av3.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Entity/av3.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Entity/contact.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Entity/contact.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Form/av1Type.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Form/av1Type.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Form/av2Type.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Form/av2Type.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Form/av3Type.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Form/av3Type.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Form/contactType.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Form/contactType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Repository/av1Repository.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Repository/av1Repository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Repository/av2Repository.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Repository/av2Repository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Repository/av3Repository.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Repository/av3Repository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Repository/contactRepository.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Repository/contactRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/config/doctrine/av1.orm.yml" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/doctrine/av1.orm.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/config/doctrine/av2.orm.yml" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/doctrine/av2.orm.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/config/doctrine/av3.orm.yml" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/doctrine/av3.orm.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/config/doctrine/contact.orm.yml" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/doctrine/contact.orm.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/config/routing/av1.yml" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/routing/av1.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/config/routing/av2.yml" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/routing/av2.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/config/routing/av3.yml" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/routing/av3.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/config/routing/contact.yml" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/config/routing/contact.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av1/edit.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av1/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av1/index.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av1/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av1/new.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av1/new.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av1/show.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av1/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av2/edit.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av2/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av2/index.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av2/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av2/new.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av2/new.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av2/show.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av2/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av3/edit.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av3/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av3/index.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av3/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av3/new.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av3/new.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av3/show.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/av3/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/contact/edit.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/contact/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/contact/index.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/contact/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/contact/new.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/contact/new.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Resources/views/contact/show.html.twig" afterPath="$PROJECT_DIR$/src/ClubBundle/Resources/views/contact/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Tests/Controller/av1ControllerTest.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Tests/Controller/av1ControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Tests/Controller/av2ControllerTest.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Tests/Controller/av2ControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Tests/Controller/av3ControllerTest.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Tests/Controller/av3ControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClubBundle/Tests/Controller/contactControllerTest.php" afterPath="$PROJECT_DIR$/src/ClubBundle/Tests/Controller/contactControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
     </list>
     <ignored path="clubdelopinion.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,33 +69,37 @@
     <favorites_list name="clubdelopinion" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ClubBundle/Resources/views/presentation/edit.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="915">
+              <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ClubBundle/Resources/views/presentation/show.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="657">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ClubBundle/Resources/views/club/index.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/ClubBundle/Resources/views/presentation/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ClubBundle/Resources/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="av3Controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ClubBundle/Controller/av3Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="91" column="11" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="600">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,6 +114,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/ClubBundle/Controller/av3Controller.php" />
         <option value="$PROJECT_DIR$/src/ClubBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/ClubBundle/Controller/presentationController.php" />
+        <option value="$PROJECT_DIR$/src/ClubBundle/Resources/views/presentation/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/ClubBundle/Resources/views/presentation/edit.html.twig" />
       </list>
     </option>
   </component>
@@ -107,10 +128,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="134" />
-    <option name="y" value="64" />
-    <option name="width" value="1400" />
-    <option name="height" value="836" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1535" />
+    <option name="height" value="904" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -137,8 +158,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -268,6 +287,36 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentation" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clubdelopinion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clubdelopinion" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClubBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -296,6 +345,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="club" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clubdelopinion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clubdelopinion" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClubBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="av1" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -473,6 +552,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -504,6 +585,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -537,32 +624,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476195592969</updated>
-      <workItem from="1476195595836" duration="2857000" />
+      <workItem from="1476195595836" duration="3131000" />
+      <workItem from="1476256369519" duration="13292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2857000" />
+    <option name="totallyTimeSpent" value="16423000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="134" y="64" width="1400" height="836" extended-state="0" />
+    <frame x="65" y="-4" width="1535" height="904" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19413681" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298292" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3008739" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -583,6 +671,30 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ClubBundle/Resources/views/club/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClubBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClubBundle/Controller/av3Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="91" column="11" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ClubBundle/Entity/Club.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45">
@@ -599,19 +711,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClubBundle/Controller/av3Controller.php">
+    <entry file="file://$PROJECT_DIR$/src/ClubBundle/Controller/presentationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="91" column="11" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="-132">
+          <caret line="87" column="68" selection-start-line="87" selection-start-column="68" selection-end-line="87" selection-end-column="68" />
+          <folding>
+            <element signature="e#577#618#0#PHP" expanded="true" />
+            <element signature="e#1304#1343#0#PHP" expanded="true" />
+            <element signature="e#1688#1728#0#PHP" expanded="true" />
+            <element signature="e#2553#2593#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClubBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="405">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClubBundle/Controller/av3Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="91" column="11" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClubBundle/Resources/views/presentation/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClubBundle/Resources/views/presentation/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClubBundle/Resources/views/club/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="9" selection-start-line="10" selection-start-column="2" selection-end-line="19" selection-end-column="9" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClubBundle/Resources/views/av1/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClubBundle/Resources/views/presentation/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClubBundle/Resources/views/presentation/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

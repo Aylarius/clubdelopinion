@@ -1,0 +1,24 @@
+presentation_index:
+    path:     /
+    defaults: { _controller: "ClubBundle:presentation:index" }
+    methods:  GET
+
+presentation_show:
+    path:     /{id}/show
+    defaults: { _controller: "ClubBundle:presentation:show" }
+    methods:  GET
+
+presentation_new:
+    path:     /new
+    defaults: { _controller: "ClubBundle:presentation:new" }
+    methods:  [GET, POST]
+
+presentation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ClubBundle:presentation:edit" }
+    methods:  [GET, POST]
+
+presentation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ClubBundle:presentation:delete" }
+    methods:  DELETE

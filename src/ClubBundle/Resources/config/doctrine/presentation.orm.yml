@@ -1,7 +1,7 @@
-ClubBundle\Entity\contact:
+ClubBundle\Entity\presentation:
     type: entity
     table: null
-    repositoryClass: ClubBundle\Repository\contactRepository
+    repositoryClass: ClubBundle\Repository\presentationRepository
     id:
         id:
             type: integer
@@ -12,10 +12,16 @@ ClubBundle\Entity\contact:
         title:
             type: string
             length: 255
-        soustitre:
+        soustitre1:
             type: string
             length: 255
-        paragraph:
+        paragraph1:
+            type: string
+            length: 255
+        soustitre2:
+            type: string
+            length: 255
+        paragraph2:
             type: string
             length: 255
     lifecycleCallbacks: {  }
