@@ -25,3 +25,7 @@ club_av1:
 club_presentation:
         resource: "@ClubBundle/Resources/config/routing/presentation.yml"
         prefix:   /presentation
+
+club_club_sup:
+        resource: "@ClubBundle/Resources/config/routing/club_sup.yml"
+        prefix:   /club_sup

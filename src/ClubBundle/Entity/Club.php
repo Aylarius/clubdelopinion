@@ -43,6 +43,11 @@ class Club
     /**
      * @var string
      */
+    private $soustitre16 = null;
+
+    /**
+     * @var string
+     */
     private $soustitre21;
 
     /**
@@ -53,7 +58,7 @@ class Club
     /**
      * @var string
      */
-    private $soustitre23;
+    private $soustitre23 = null;
 
     /**
      * @var string
@@ -68,7 +73,7 @@ class Club
     /**
      * @var string
      */
-    private $soustitre33;
+    private $soustitre33 = null;
 
     /**
      * @var string
@@ -103,12 +108,12 @@ class Club
     /**
      * @var string
      */
-    private $blocktitle4;
+    private $blocktitle4 = null;
 
     /**
      * @var string
      */
-    private $blockparagraph4;
+    private $blockparagraph4 = null;
 
 
     /**
@@ -559,5 +564,28 @@ class Club
     public function getSoustitre13()
     {
         return $this->soustitre13;
+    }
+
+    /**
+     * Set soustitre16
+     *
+     * @param string $soustitre16
+     * @return Club
+     */
+    public function setSoustitre16($soustitre16)
+    {
+        $this->soustitre16 = $soustitre16;
+
+        return $this;
+    }
+
+    /**
+     * Get soustitre16
+     *
+     * @return string 
+     */
+    public function getSoustitre16()
+    {
+        return $this->soustitre16;
     }
 }

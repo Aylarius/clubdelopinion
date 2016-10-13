@@ -24,7 +24,7 @@ class av3Controller extends Controller
 
         $av3s = $em->getRepository('ClubBundle:av3')->findAll();
 
-        return $this->render('av3/index.html.twig', array(
+        return $this->render('ClubBundle:av3:index.html.twig', array(
             'av3s' => $av3s,
         ));
     }
@@ -47,7 +47,7 @@ class av3Controller extends Controller
             return $this->redirectToRoute('av3_show', array('id' => $av3->getId()));
         }
 
-        return $this->render('av3/new.html.twig', array(
+        return $this->render('ClubBundle:av3:new.html.twig', array(
             'av3' => $av3,
             'form' => $form->createView(),
         ));
@@ -61,7 +61,7 @@ class av3Controller extends Controller
     {
         $deleteForm = $this->createDeleteForm($av3);
 
-        return $this->render('av3/show.html.twig', array(
+        return $this->render('ClubBundle:av3:show.html.twig', array(
             'av3' => $av3,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -85,7 +85,7 @@ class av3Controller extends Controller
             return $this->redirectToRoute('av3_edit', array('id' => $av3->getId()));
         }
 
-        return $this->render('av3/edit.html.twig', array(
+        return $this->render('ClubBundle:av3:edit.html.twig', array(
             'av3' => $av3,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
