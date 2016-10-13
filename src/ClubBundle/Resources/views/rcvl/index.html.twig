@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>contact list</h1>
+    <h1>Rcvl list</h1>
 
     <table>
         <thead>
@@ -14,19 +14,19 @@
             </tr>
         </thead>
         <tbody>
-        {% for contact in contacts %}
+        {% for rcvl in rcvls %}
             <tr>
-                <td><a href="{{ path('contact_show', { 'id': contact.id }) }}">{{ contact.id }}</a></td>
-                <td>{{ contact.title }}</td>
-                <td>{{ contact.soustitre }}</td>
-                <td>{{ contact.paragraph }}</td>
+                <td><a href="{{ path('rcvl_show', { 'id': rcvl.id }) }}">{{ rcvl.id }}</a></td>
+                <td>{{ rcvl.title }}</td>
+                <td>{{ rcvl.soustitre }}</td>
+                <td>{{ rcvl.paragraph }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('contact_show', { 'id': contact.id }) }}">show</a>
+                            <a href="{{ path('rcvl_show', { 'id': rcvl.id }) }}">show</a>
                         </li>
                         <li>
-                            <a href="{{ path('contact_edit', { 'id': contact.id }) }}">edit</a>
+                            <a href="{{ path('rcvl_edit', { 'id': rcvl.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -37,7 +37,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('contact_new') }}">Create a new entry</a>
+            <a href="{{ path('rcvl_new') }}">Create a new entry</a>
         </li>
     </ul>
 {% endblock %}

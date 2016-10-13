@@ -1,7 +1,7 @@
-ClubBundle\Entity\av3:
+ClubBundle\Entity\Rcvl:
     type: entity
     table: null
-    repositoryClass: ClubBundle\Repository\av3Repository
+    repositoryClass: ClubBundle\Repository\RcvlRepository
     id:
         id:
             type: integer
@@ -9,12 +9,14 @@ ClubBundle\Entity\av3:
             generator:
                 strategy: AUTO
     fields:
-        titleAv3:
+        title:
             type: string
             length: 255
-            column: title_av3
-        paragraphAv3:
+        soustitre:
             type: string
-            length: 600
-            column: paragraph_av3
+            length: 255
+            column: Soustitre
+        paragraph:
+            type: string
+            length: '600'
     lifecycleCallbacks: {  }

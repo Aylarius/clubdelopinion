@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>mode édition</h1>
+
+    {{ form_start(edit_form) }}
+    {{ form_errors(edit_form) }}
+
+        <input type="submit" value="Edit" />
+
+
+    <ul>
+        <li>
+            <a href="{{ path('rcvl_index') }}">Back to the list</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+
+    <h1>Le Club Centre-Val de Loire</h1>
+    {{ form_label(edit_form.title) }}
+    {{ form_errors(edit_form.title) }}
+    {{ form_widget(edit_form.title) }}
+    <input type="submit" value="Edit" />
+
+    <div class="container-fluid">
+        <div class="row blockGray homepageBlock"><!--******************* 1er bloc ***************-->
+            <div class="col-xs-6 homepageBlock2">
+                <img src="{{ asset('bundles/club/img/logo_cvl_blanc.jpg') }}" alt="logo" width="100%"/>
+            </div>
+
+
+            <div class="col-xs-6 homepageBlock2">
+                <h2>Présentation du club</h2>
+                {{ form_label(edit_form.soustitre) }}
+                {{ form_errors(edit_form.soustitre) }}
+                {{ form_widget(edit_form.soustitre) }}
+                <input type="submit" value="Edit" />
+                <p>{{ rcvl.paragraph }}</p>
+                {{ form_label(edit_form.paragraph) }}
+                {{ form_errors(edit_form.paragraph) }}
+                {{ form_widget(edit_form.paragraph) }}
+                <input type="submit" value="Edit" />
+            </div>
+        </div>
+    </div>
+    {{ form_end(edit_form) }}
+
+{% endblock %}

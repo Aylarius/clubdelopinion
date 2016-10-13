@@ -5,9 +5,9 @@ namespace ClubBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * contact
+ * Rcvl
  */
-class contact
+class Rcvl
 {
     /**
      * @var int
@@ -44,7 +44,7 @@ class contact
      * Set title
      *
      * @param string $title
-     * @return contact
+     * @return Rcvl
      */
     public function setTitle($title)
     {
@@ -67,7 +67,7 @@ class contact
      * Set soustitre
      *
      * @param string $soustitre
-     * @return contact
+     * @return Rcvl
      */
     public function setSoustitre($soustitre)
     {
@@ -90,7 +90,7 @@ class contact
      * Set paragraph
      *
      * @param string $paragraph
-     * @return contact
+     * @return Rcvl
      */
     public function setParagraph($paragraph)
     {
