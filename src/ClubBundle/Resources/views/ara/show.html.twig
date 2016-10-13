@@ -1,31 +1,35 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>av2</h1>
+    <h1>Ara</h1>
 
     <table>
         <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ av2.id }}</td>
+                <td>{{ ara.id }}</td>
             </tr>
             <tr>
-                <th>Titleav2</th>
-                <td>{{ av2.titleAv2 }}</td>
+                <th>Title</th>
+                <td>{{ ara.title }}</td>
             </tr>
             <tr>
-                <th>Paragraphav2</th>
-                <td>{{ av2.paragraphAv2 }}</td>
+                <th>Soustitre</th>
+                <td>{{ ara.soustitre }}</td>
+            </tr>
+            <tr>
+                <th>Paragraph</th>
+                <td>{{ ara.paragraph }}</td>
             </tr>
         </tbody>
     </table>
 
     <ul>
         <li>
-            <a href="{{ path('av2_index') }}">Back to the list</a>
+            <a href="{{ path('ara_index') }}">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('av2_edit', { 'id': av2.id }) }}">Edit</a>
+            <a href="{{ path('ara_edit', { 'id': ara.id }) }}">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}

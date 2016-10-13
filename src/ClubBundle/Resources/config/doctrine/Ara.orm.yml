@@ -1,7 +1,7 @@
-ClubBundle\Entity\contact:
+ClubBundle\Entity\Ara:
     type: entity
     table: null
-    repositoryClass: ClubBundle\Repository\contactRepository
+    repositoryClass: ClubBundle\Repository\AraRepository
     id:
         id:
             type: integer
@@ -15,7 +15,8 @@ ClubBundle\Entity\contact:
         soustitre:
             type: string
             length: 255
+            column: Soustitre
         paragraph:
             type: string
-            length: 255
+            length: 600
     lifecycleCallbacks: {  }

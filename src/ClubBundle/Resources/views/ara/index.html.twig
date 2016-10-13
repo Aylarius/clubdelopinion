@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <!-- ****************************************** -->
+{% for ara in aras %}
+
+    <div class="container-fluid">
+        <h1>{{ ara.title }}</h1>
+
+        <div class="row blockGray homepageBlock">
+            <div class="col-xs-6 homepageBlock2">
+                <img src="{{ asset('bundles/club/img/logo_ara.jpg') }}" alt="" width="100%"/>
+            </div>
+            <div class="col-xs-6 homepageBlock2">
+                <h2>{{ ara.soustitre }}</h2>
+
+                <p>{{ ara.paragraph }}</p>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+    <ul>
+        <li>
+            <a href="{{ path('ara_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

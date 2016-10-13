@@ -15,6 +15,6 @@ ClubBundle\Entity\av1:
             column: title_av1
         paragraphAv1:
             type: string
-            length: 255
+            length: 800
             column: paragraph_av1
     lifecycleCallbacks: {  }

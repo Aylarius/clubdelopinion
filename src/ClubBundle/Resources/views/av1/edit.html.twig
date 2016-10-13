@@ -1,21 +1,35 @@
 {% extends 'base.html.twig' %}
 
+
+
 {% block body %}
-    <h1>av1 edit</h1>
+    <h1>mode édition</h1>
 
     {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
+    {{ form_errors(edit_form) }}
+
+    <!-- ********************************************** -->
+
+    <h1><i class="fa fa-newspaper-o fa-1x" aria-hidden="true"></i> {{ av1.titleAv1 }}</h1>
+    {{ form_label(edit_form.titleAv1) }}
+    {{ form_errors(edit_form.titleAv1) }}
+    {{ form_widget(edit_form.titleAv1) }}
+    <input type="submit" value="Edit" />
+    <div class="container-fluid">
+        <div class="row blockGray"><!--******************* 1er bloc ***************-->
+            <div class="col-xs-6 homepageBlock2">
+                <img src="{{ asset('bundles/club/img/magazine1.jpg') }}" class="center-block" alt="" height="400px"/>
+            </div>
+            <div class="col-xs-6 homepageBlock2">
+                <p>{{ av1.paragraphAv1|raw }}</p>
+                {{ form_label(edit_form.paragraphAv1) }}
+                {{ form_errors(edit_form.paragraphAv1) }}
+                {{ form_widget(edit_form.paragraphAv1) }}
+                <input type="submit" value="Edit" />
+            </div>
+        </div>
+    </div>
+
     {{ form_end(edit_form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('av1_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
 {% endblock %}

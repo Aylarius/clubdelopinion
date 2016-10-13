@@ -47,23 +47,23 @@ ClubBundle\Entity\Club:
             length: 255
         blockparagraph1:
             type: string
-            length: 500
+            length: 800
         blocktitle2:
             type: string
             length: 255
         blockparagraph2:
             type: string
-            length: 500
+            length: 800
         blocktitle3:
             type: string
             length: 255
         blockparagraph3:
             type: string
-            length: 500
+            length: 800
         blocktitle4:
             type: string
             length: 255
         blockparagraph4:
             type: string
-            length: 500
+            length: 800
     lifecycleCallbacks: {  }
