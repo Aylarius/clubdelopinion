@@ -72,4 +72,46 @@
             <a href="{{ path('club_new') }}">Create a new entry</a>
         </li>
     </ul>
+
+<!-- *********************-->
+
+    <video autoplay loop poster="img/background.jpg" width="100%" height="auto">
+        <source src="video/home.webm" />
+    </video>
+    <div class="container-fluid">
+        <div class="row blockGray"><!--******************* 1er bloc ***************-->
+            <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                <img src="{{ asset('bundles/club/img/1.jpg') }}" alt="logo" width="100%"/>
+            </div>
+            <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                <h2>{{ club.blocktitle1 }}</h2>
+                <p> {{ club.blockparagraph1 }} <br><br>
+                    <a href="presentation.html">Découvrir le Club de l'Opinion</a>
+                </p>
+            </div>
+        </div>
+        <div class="row"><!--**************** 2ème bloc *****************-->
+            <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                <h2> {{ club.blocktitle2 }} </h2>
+                <p>{{ club.blockparagraph2 }}<br><br>
+                    <a href="clubrcvl.html">Découvrir notre Club Centre-Val de Loire</a>
+                </p>
+            </div>
+            <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                <img src="{{ asset('bundles/club/img/logo_cvl_blanc.jpg') }}" alt="" width="100%"/>
+            </div>
+        </div>
+        <div class="row blockGray"><!--************* 3ème bloc ***************-->
+            <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                <img src="{{ asset('bundles/club/img/logo_ara.jpg') }}" alt="" width="100%"/>
+            </div>
+            <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                <h2>{{ club.blocktitle3 }}</h2 >
+                <p>{{ club.blockparagraph3 }}<br><br>
+                    <a href="clubara.html">Découvrir notre Club Auvergne-Rhône-Alpes</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

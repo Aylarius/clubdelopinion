@@ -7,25 +7,30 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use ClubBundle\Entity\av1;
 use ClubBundle\Form\av1Type;
+use ClubBundle\Entity\Club;
 
 /**
  * av1 controller.
  *
  */
+
 class av1Controller extends Controller
 {
     /**
      * Lists all av1 entities.
      *
      */
+    
+
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $av1s = $em->getRepository('ClubBundle:av1')->findAll();
-
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
         return $this->render('ClubBundle:av1:index.html.twig', array(
             'av1s' => $av1s,
+            'clubs' => $clubs,
         ));
     }
 

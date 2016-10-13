@@ -33,3 +33,7 @@ club_club_sup:
 club_rcvl:
         resource: "@ClubBundle/Resources/config/routing/rcvl.yml"
         prefix:   /rcvl
+
+club_ara:
+        resource: "@ClubBundle/Resources/config/routing/ara.yml"
+        prefix:   /ara
