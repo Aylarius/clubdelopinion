@@ -26,12 +26,8 @@
                 <input type="submit" value="Edit" />
 
                 <hr/>
-                <p>{{ contact.paragraph }}</p>
+                <p>{{ contact.paragraph|raw }}</p>
 
-                <p id="contact">Le secrétariat des Clubs de l’Opinion Centre-Val de Loire et Auvergne-Rhône-Alpes est assuré par :<br /><br />
-                <div id="adresse"><strong>SAS MCM Presse<br>BP 2031 – 37020 Tours Cedex 1<br>02 47 70 60 00</strong></div></p>
-
-<br>
                 {{ form_label(edit_form.paragraph) }}
                 {{ form_errors(edit_form.paragraph) }}
                 {{ form_widget(edit_form.paragraph) }}
