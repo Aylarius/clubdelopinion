@@ -17,12 +17,33 @@ class Club
     /**
      * @var string
      */
+
+    private $soustitre11;
+
+    /**
+     * @var string
+     */
+    private $soustitre12;
+
+    /**
+     * @var string
+     */
+    private $soustitre13;
+
+    /**
+     * @var string
+     */
     private $soustitre14;
 
     /**
      * @var string
      */
     private $soustitre15;
+
+    /**
+     * @var string
+     */
+    private $soustitre16 = null;
 
     /**
      * @var string
@@ -37,7 +58,7 @@ class Club
     /**
      * @var string
      */
-    private $soustitre23;
+    private $soustitre23 = null;
 
     /**
      * @var string
@@ -52,7 +73,7 @@ class Club
     /**
      * @var string
      */
-    private $soustitre33;
+    private $soustitre33 = null;
 
     /**
      * @var string
@@ -87,12 +108,12 @@ class Club
     /**
      * @var string
      */
-    private $blocktitle4;
+    private $blocktitle4 = null;
 
     /**
      * @var string
      */
-    private $blockparagraph4;
+    private $blockparagraph4 = null;
 
 
     /**
@@ -111,6 +132,8 @@ class Club
      * @param string $soustitre14
      * @return Club
      */
+
+
     public function setSoustitre14($soustitre14)
     {
         $this->soustitre14 = $soustitre14;
@@ -471,5 +494,98 @@ class Club
     public function getBlockparagraph4()
     {
         return $this->blockparagraph4;
+    }
+    
+
+    /**
+     * Set soustitre11
+     *
+     * @param string $soustitre11
+     * @return Club
+     */
+    public function setSoustitre11($soustitre11)
+    {
+        $this->soustitre11 = $soustitre11;
+
+        return $this;
+    }
+
+    /**
+     * Get soustitre11
+     *
+     * @return string 
+     */
+    public function getSoustitre11()
+    {
+        return $this->soustitre11;
+    }
+
+    /**
+     * Set soustitre12
+     *
+     * @param string $soustitre12
+     * @return Club
+     */
+    public function setSoustitre12($soustitre12)
+    {
+        $this->soustitre12 = $soustitre12;
+
+        return $this;
+    }
+
+    /**
+     * Get soustitre12
+     *
+     * @return string 
+     */
+    public function getSoustitre12()
+    {
+        return $this->soustitre12;
+    }
+
+    /**
+     * Set soustitre13
+     *
+     * @param string $soustitre13
+     * @return Club
+     */
+    public function setSoustitre13($soustitre13)
+    {
+        $this->soustitre13 = $soustitre13;
+
+        return $this;
+    }
+
+    /**
+     * Get soustitre13
+     *
+     * @return string 
+     */
+    public function getSoustitre13()
+    {
+        return $this->soustitre13;
+    }
+
+    /**
+     * Set soustitre16
+     *
+     * @param string $soustitre16
+     * @return Club
+     */
+    public function setSoustitre16($soustitre16)
+    {
+        $this->soustitre16 = $soustitre16;
+
+        return $this;
+    }
+
+    /**
+     * Get soustitre16
+     *
+     * @return string 
+     */
+    public function getSoustitre16()
+    {
+        return $this->soustitre16;
     }
 }

@@ -1,32 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>contact list</h1>
+    <h1>club_sup list</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Title</th>
-                <th>Soustitre</th>
+                <th>Soutitre</th>
                 <th>Paragraph</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for contact in contacts %}
+        {% for club_sup in club_sups %}
             <tr>
-                <td><a href="{{ path('contact_show', { 'id': contact.id }) }}">{{ contact.id }}</a></td>
-                <td>{{ contact.title }}</td>
-                <td>{{ contact.soustitre }}</td>
-                <td>{{ contact.paragraph }}</td>
+                <td><a href="{{ path('club_sup_show', { 'id': club_sup.id }) }}">{{ club_sup.id }}</a></td>
+                <td>{{ club_sup.title }}</td>
+                <td>{{ club_sup.soutitre }}</td>
+                <td>{{ club_sup.paragraph }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('contact_show', { 'id': contact.id }) }}">show</a>
+                            <a href="{{ path('club_sup_show', { 'id': club_sup.id }) }}">show</a>
                         </li>
                         <li>
-                            <a href="{{ path('contact_edit', { 'id': contact.id }) }}">edit</a>
+                            <a href="{{ path('club_sup_edit', { 'id': club_sup.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -37,7 +37,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('contact_new') }}">Create a new entry</a>
+            <a href="{{ path('club_sup_new') }}">Create a new entry</a>
         </li>
     </ul>
 {% endblock %}

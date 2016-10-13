@@ -1,21 +1,51 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>contact edit</h1>
+    <h1>Mode édition</h1>
 
     {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+    {{ form_errors(edit_form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('contact_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    <h1>{{ contact.title }}</h1>
+    {{ form_label(edit_form.title) }}
+    {{ form_errors(edit_form.title) }}
+    {{ form_widget(edit_form.title) }}
+    <input type="submit" value="Edit" />
+
+
+    <div class="container-fluid" id="contact">
+        <div class="row blockGray">
+            <div class="col-xs-6 homepageBlock2">
+                <img src="{{ asset('bundles/club/img/1.jpg') }}" alt="" width="100%"/>
+            </div>
+            <div class="col-xs-6 homepageBlock2">
+                <h2>{{ contact.soustitre }}</h2>
+                {{ form_label(edit_form.soustitre) }}
+                {{ form_errors(edit_form.soustitre) }}
+                {{ form_widget(edit_form.soustitre) }}
+                <input type="submit" value="Edit" />
+
+                <hr/>
+                <p>{{ contact.paragraph }}</p>
+
+                <p id="contact">Le secrétariat des Clubs de l’Opinion Centre-Val de Loire et Auvergne-Rhône-Alpes est assuré par :<br /><br />
+                <div id="adresse"><strong>SAS MCM Presse<br>BP 2031 – 37020 Tours Cedex 1<br>02 47 70 60 00</strong></div></p>
+
+<br>
+                {{ form_label(edit_form.paragraph) }}
+                {{ form_errors(edit_form.paragraph) }}
+                {{ form_widget(edit_form.paragraph) }}
+
+                <br>
+
+                <input type="submit" value="Edit" />
+
+                {{ form_end(edit_form) }}
+            </div>
+        </div>
+    </div>
+
+
+
+
 {% endblock %}

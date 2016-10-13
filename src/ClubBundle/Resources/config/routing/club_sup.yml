@@ -1,0 +1,24 @@
+club_sup_index:
+    path:     /
+    defaults: { _controller: "ClubBundle:club_sup:index" }
+    methods:  GET
+
+club_sup_show:
+    path:     /{id}/show
+    defaults: { _controller: "ClubBundle:club_sup:show" }
+    methods:  GET
+
+club_sup_new:
+    path:     /new
+    defaults: { _controller: "ClubBundle:club_sup:new" }
+    methods:  [GET, POST]
+
+club_sup_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ClubBundle:club_sup:edit" }
+    methods:  [GET, POST]
+
+club_sup_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ClubBundle:club_sup:delete" }
+    methods:  DELETE

@@ -24,6 +24,10 @@ ClubBundle\Entity\Club:
         soustitre15:
             type: string
             length: 255
+        soustitre16:
+            type: string
+            length: 255
+            nullable: TRUE
         soustitre21:
             type: string
             length: 255
@@ -33,6 +37,7 @@ ClubBundle\Entity\Club:
         soustitre23:
             type: string
             length: 255
+            nullable: TRUE
         soustitre31:
             type: string
             length: 255
@@ -42,6 +47,7 @@ ClubBundle\Entity\Club:
         soustitre33:
             type: string
             length: 255
+            nullable: TRUE
         blocktitle1:
             type: string
             length: 255
@@ -63,7 +69,9 @@ ClubBundle\Entity\Club:
         blocktitle4:
             type: string
             length: 255
+            nullable: TRUE
         blockparagraph4:
             type: string
             length: 500
+            nullable: TRUE
     lifecycleCallbacks: {  }

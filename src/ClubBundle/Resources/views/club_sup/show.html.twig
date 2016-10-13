@@ -1,35 +1,35 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>contact</h1>
+    <h1>club_sup</h1>
 
     <table>
         <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ contact.id }}</td>
+                <td>{{ club_sup.id }}</td>
             </tr>
             <tr>
                 <th>Title</th>
-                <td>{{ contact.title }}</td>
+                <td>{{ club_sup.title }}</td>
             </tr>
             <tr>
-                <th>Soustitre</th>
-                <td>{{ contact.soustitre }}</td>
+                <th>Soutitre</th>
+                <td>{{ club_sup.soutitre }}</td>
             </tr>
             <tr>
                 <th>Paragraph</th>
-                <td>{{ contact.paragraph }}</td>
+                <td>{{ club_sup.paragraph }}</td>
             </tr>
         </tbody>
     </table>
 
     <ul>
         <li>
-            <a href="{{ path('contact_index') }}">Back to the list</a>
+            <a href="{{ path('club_sup_index') }}">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('contact_edit', { 'id': contact.id }) }}">Edit</a>
+            <a href="{{ path('club_sup_edit', { 'id': club_sup.id }) }}">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
