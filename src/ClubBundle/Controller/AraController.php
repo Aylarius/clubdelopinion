@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use ClubBundle\Entity\Ara;
 use ClubBundle\Form\AraType;
+use ClubBundle\Entity\Club;
 
 /**
  * Ara controller.
@@ -21,11 +22,13 @@ class AraController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $aras = $em->getRepository('ClubBundle:Ara')->findAll();
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
 
         return $this->render('ClubBundle:ara:index.html.twig', array(
             'aras' => $aras,
+            'clubs' => $clubs,
         ));
     }
 
@@ -84,9 +87,11 @@ class AraController extends Controller
 
             return $this->redirectToRoute('ara_edit', array('id' => $ara->getId()));
         }
-
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
         return $this->render('ClubBundle:ara:edit.html.twig', array(
             'ara' => $ara,
+            'clubs' => $clubs,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));

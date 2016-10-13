@@ -89,9 +89,12 @@ class av1Controller extends Controller
 
             return $this->redirectToRoute('av1_edit', array('id' => $av1->getId()));
         }
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
 
         return $this->render('ClubBundle:av1:edit.html.twig', array(
             'av1' => $av1,
+            'clubs' => $clubs,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));

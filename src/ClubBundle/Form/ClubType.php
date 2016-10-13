@@ -20,6 +20,7 @@ class ClubType extends AbstractType
             ->add('soustitre13')
             ->add('soustitre14')
             ->add('soustitre15')
+            ->add('soustitre16')
             ->add('soustitre21')
             ->add('soustitre22')
             ->add('soustitre23')

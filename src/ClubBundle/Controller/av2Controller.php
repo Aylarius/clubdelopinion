@@ -21,11 +21,12 @@ class av2Controller extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $av2s = $em->getRepository('ClubBundle:av2')->findAll();
-
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
         return $this->render('ClubBundle:av2:index.html.twig', array(
             'av2s' => $av2s,
+            'clubs' => $clubs,
         ));
     }
 
@@ -84,9 +85,12 @@ class av2Controller extends Controller
 
             return $this->redirectToRoute('av2_edit', array('id' => $av2->getId()));
         }
-
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
+        
         return $this->render('ClubBundle:av2:edit.html.twig', array(
             'av2' => $av2,
+            'clubs' => $clubs,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
