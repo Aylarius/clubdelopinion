@@ -84,9 +84,13 @@ class ClubController extends Controller
 
             return $this->redirectToRoute('club_edit', array('id' => $club->getId()));
         }
+        $em = $this->getDoctrine()->getManager();
+
+        $clubs = $em->getRepository('ClubBundle:Club')->findAll();
 
         return $this->render('ClubBundle:club:edit.html.twig', array(
             'club' => $club,
+            'clubs' => $clubs,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));

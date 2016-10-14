@@ -17,11 +17,11 @@ ClubBundle\Entity\presentation:
             length: 255
         paragraph1:
             type: string
-            length: 255
+            length: 1500
         soustitre2:
             type: string
             length: 255
         paragraph2:
             type: string
-            length: 255
+            length: 1500
     lifecycleCallbacks: {  }
