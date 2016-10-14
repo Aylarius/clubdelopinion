@@ -17,5 +17,5 @@ ClubBundle\Entity\contact:
             length: 255
         paragraph:
             type: string
-            length: 500
+            length: 800
     lifecycleCallbacks: {  }
