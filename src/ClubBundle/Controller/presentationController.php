@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use ClubBundle\Entity\presentation;
 use ClubBundle\Form\presentationType;
+use ClubBundle\Entity\Club;
 
 /**
  * presentation controller.
@@ -21,11 +22,12 @@ class presentationController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $presentations = $em->getRepository('ClubBundle:presentation')->findAll();
-
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
         return $this->render('ClubBundle:presentation:index.html.twig', array(
             'presentations' => $presentations,
+            'clubs' => $clubs,
         ));
     }
 
@@ -85,8 +87,11 @@ class presentationController extends Controller
             return $this->redirectToRoute('presentation_edit', array('id' => $presentation->getId()));
         }
 
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
         return $this->render('ClubBundle:presentation:edit.html.twig', array(
             'presentation' => $presentation,
+            'clubs' => $clubs,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));

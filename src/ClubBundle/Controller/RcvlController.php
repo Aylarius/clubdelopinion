@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use ClubBundle\Entity\Rcvl;
 use ClubBundle\Form\RcvlType;
+use ClubBundle\Entity\Club;
 
 /**
  * Rcvl controller.
@@ -21,11 +22,12 @@ class RcvlController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $rcvls = $em->getRepository('ClubBundle:Rcvl')->findAll();
-
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
         return $this->render('ClubBundle:rcvl:index.html.twig', array(
             'rcvls' => $rcvls,
+            'clubs' => $clubs,
         ));
     }
 
@@ -85,8 +87,11 @@ class RcvlController extends Controller
             return $this->redirectToRoute('rcvl_edit', array('id' => $rcvl->getId()));
         }
 
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
         return $this->render('ClubBundle:rcvl:edit.html.twig', array(
             'rcvl' => $rcvl,
+            'clubs' => $clubs,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));

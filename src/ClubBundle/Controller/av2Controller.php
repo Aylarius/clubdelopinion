@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use ClubBundle\Entity\av2;
 use ClubBundle\Form\av2Type;
-
+use ClubBundle\Entity\Club;
 /**
  * av2 controller.
  *

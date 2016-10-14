@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use ClubBundle\Entity\contact;
 use ClubBundle\Form\contactType;
+use ClubBundle\Entity\Club;
 
 /**
  * contact controller.
@@ -21,11 +22,12 @@ class contactController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $contacts = $em->getRepository('ClubBundle:contact')->findAll();
-
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
         return $this->render('ClubBundle:contact:index.html.twig', array(
             'contacts' => $contacts,
+            'clubs' => $clubs,
         ));
     }
 
@@ -85,8 +87,11 @@ class contactController extends Controller
             return $this->redirectToRoute('contact_edit', array('id' => $contact->getId()));
         }
 
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
         return $this->render('ClubBundle:contact:edit.html.twig', array(
             'contact' => $contact,
+            'clubs' => $clubs,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
