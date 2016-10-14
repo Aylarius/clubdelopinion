@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use ClubBundle\Entity\av3;
 use ClubBundle\Form\av3Type;
+use ClubBundle\Entity\Club;
 
 /**
  * av3 controller.
@@ -21,11 +22,12 @@ class av3Controller extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $av3s = $em->getRepository('ClubBundle:av3')->findAll();
-
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
         return $this->render('ClubBundle:av3:index.html.twig', array(
             'av3s' => $av3s,
+            'clubs' => $clubs,
         ));
     }
 
@@ -85,8 +87,11 @@ class av3Controller extends Controller
             return $this->redirectToRoute('av3_edit', array('id' => $av3->getId()));
         }
 
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
         return $this->render('ClubBundle:av3:edit.html.twig', array(
             'av3' => $av3,
+            'clubs' => $clubs,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));

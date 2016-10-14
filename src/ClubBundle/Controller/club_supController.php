@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use ClubBundle\Entity\club_sup;
 use ClubBundle\Form\club_supType;
+use ClubBundle\Entity\Club;
 
 /**
  * club_sup controller.
@@ -21,11 +22,12 @@ class club_supController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $club_sups = $em->getRepository('ClubBundle:club_sup')->findAll();
-
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
         return $this->render('ClubBundle:club_sup:index.html.twig', array(
             'club_sups' => $club_sups,
+            'clubs' => $clubs,
         ));
     }
 
@@ -81,12 +83,14 @@ class club_supController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($club_sup);
             $em->flush();
-
             return $this->redirectToRoute('club_sup_edit', array('id' => $club_sup->getId()));
         }
 
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
         return $this->render('ClubBundle:club_sup:edit.html.twig', array(
             'club_sup' => $club_sup,
+            'clubs' => $clubs,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
