@@ -1,0 +1,18 @@
+ClubBundle\Entity\Membres:
+    type: entity
+    table: null
+    repositoryClass: ClubBundle\Repository\MembresRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

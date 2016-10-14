@@ -37,3 +37,11 @@ club_rcvl:
 club_ara:
         resource: "@ClubBundle/Resources/config/routing/ara.yml"
         prefix:   /ara
+
+club_pagemembre:
+        resource: "@ClubBundle/Resources/config/routing/pagemembre.yml"
+        prefix:   /pagemembre
+
+club_membres:
+        resource: "@ClubBundle/Resources/config/routing/membres.yml"
+        prefix:   /membres
