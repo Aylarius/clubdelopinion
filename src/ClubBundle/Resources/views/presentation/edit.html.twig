@@ -77,10 +77,10 @@
 
     <div class="container-fluid">
         <div class="row blockGray homepageBlock"><!--******************* 1er bloc ***************-->
-            <div class="col-xs-6 homepageBlock2">
+            <div class="col-xs-6 col-xxs-12 homepageBlock2">
                 <img src="{{ asset('bundles/club/img/1.jpg') }}" alt="" width="100%"/>
             </div>
-            <div class="col-xs-6 homepageBlock2">
+            <div class="col-xs-6 col-xxs-12 homepageBlock2">
                 <h2>{{ presentation.soustitre1 }}</h2>
                 <span class="bold">Sous-titre 1</span>
                 {{ form_errors(edit_form.soustitre1) }}
@@ -96,7 +96,7 @@
             </div>
         </div>
         <div class="row homepageBlock"><!--**************** 2ème bloc *****************-->
-            <div class="col-xs-6 homepageBlock2">
+            <div class="col-xs-6 col-xxs-12 homepageBlock2">
                 <h2>{{ presentation.soustitre2 }}</h2>
                 <span class="bold">Sous-titre 2</span>
                 {{ form_errors(edit_form.soustitre2) }}
@@ -109,11 +109,11 @@
                 {{ form_widget(edit_form.paragraph2) }}
                 <input type="submit" value="Edit" />
             </div>
-            <div class="col-xs-6 homepageBlock2">
+            <div class="col-xs-6 col-xxs-12 homepageBlock2">
                 <img src="{{ asset('bundles/club/img/historique.jpg') }}" alt="" width="100%"/>
             </div>
         </div>
-    </div>git a
+    </div>
     <ul>
         <li>
             <a href="{{ path('presentation_index') }}">Back to the list</a>
