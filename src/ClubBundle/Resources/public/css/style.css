@@ -31,8 +31,9 @@ main {
   	background-color: white;
 }
 .bold {
-  font-weight: 600;
+  font-weight: 700;
 }
+
 @media (max-width: 550px){
   .col-xxs-12 {
     width: 100%;

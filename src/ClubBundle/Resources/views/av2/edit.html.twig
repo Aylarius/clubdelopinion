@@ -78,7 +78,7 @@
     </ul>
 
     <h1><img src="{{ asset('bundles/club/img/signs.png') }}" width="30px" id="fireworks" /> {{ av2.titleAv2 }}</h1>
-    {{ form_label(edit_form.titleAv2) }}
+    <span class="bold">Titre</span>
     {{ form_errors(edit_form.titleAv2) }}
     {{ form_widget(edit_form.titleAv2) }}
     <input type="submit" value="Edit" />
@@ -88,7 +88,7 @@
             <div class="row"><!--**************** 2ème bloc *****************-->
                 <div class="col-xs-6 homepageBlock2">
                     <p>{{ av2.paragraphAv2 }}</p>
-                    {{ form_label(edit_form.paragraphAv2) }}
+                    <span class="bold">Paragraphe</span>
                     {{ form_errors(edit_form.paragraphAv2) }}
                     {{ form_widget(edit_form.paragraphAv2) }}
                     <input type="submit" value="Edit" />

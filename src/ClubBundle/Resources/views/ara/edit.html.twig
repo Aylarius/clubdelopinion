@@ -68,7 +68,7 @@
 
     <div class="container-fluid">
         <h1>{{ ara.title }}</h1>
-        {{ form_label(edit_form.title) }}
+        <span class="bold">Titre</span>
         {{ form_errors(edit_form.title) }}
         {{ form_widget(edit_form.title) }}
         <input type="submit" value="Edit" />
@@ -78,12 +78,12 @@
             </div>
             <div class="col-xs-6 homepageBlock2">
                 <h2>{{ ara.soustitre }}</h2>
-                {{ form_label(edit_form.soustitre) }}
+                <span class="bold">Sous-titre</span>
                 {{ form_errors(edit_form.soustitre) }}
                 {{ form_widget(edit_form.soustitre) }}
                 <input type="submit" value="Edit" />
                 <p>{{ ara.paragraph }}</p>
-                {{ form_label(edit_form.paragraph) }}
+                <span class="bold">Paragraphe</span>
                 {{ form_errors(edit_form.paragraph) }}
                 {{ form_widget(edit_form.paragraph) }}
                 <input type="submit" value="Edit" />
