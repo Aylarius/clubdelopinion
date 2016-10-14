@@ -34,6 +34,7 @@ class ClubType extends AbstractType
             ->add('blockparagraph3')
             ->add('blocktitle4')
             ->add('blockparagraph4')
+            
         ;
     }
     

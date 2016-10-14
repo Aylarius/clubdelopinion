@@ -9,6 +9,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Club
 {
+    
+
+
+    //CODE GENERE//
     /**
      * @var int
      */

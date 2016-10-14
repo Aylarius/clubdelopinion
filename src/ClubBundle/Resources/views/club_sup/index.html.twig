@@ -1,43 +1,40 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>club_sup list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Soutitre</th>
-                <th>Paragraph</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for club_sup in club_sups %}
-            <tr>
-                <td><a href="{{ path('club_sup_show', { 'id': club_sup.id }) }}">{{ club_sup.id }}</a></td>
-                <td>{{ club_sup.title }}</td>
-                <td>{{ club_sup.soutitre }}</td>
-                <td>{{ club_sup.paragraph }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('club_sup_show', { 'id': club_sup.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('club_sup_edit', { 'id': club_sup.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    {% for club_sup in club_sups %}
 
+    <h1>club supplémentaire</h1>
     <ul>
+        <li>
+            <a href="{{ path('club_sup_show', { 'id': club_sup.id }) }}">show</a>
+        </li>
+        <li>
+            <a href="{{ path('club_sup_edit', { 'id': club_sup.id }) }}">edit</a>
+        </li>
         <li>
             <a href="{{ path('club_sup_new') }}">Create a new entry</a>
         </li>
     </ul>
+
+        <div class="container-fluid">
+            <div class="row blockGray homepageBlock"><!--******************* 1er bloc ***************-->
+                <div class="col-xs-6 homepageBlock2">
+                    <img src="{{ asset('') }}" alt="" width="100%"/>
+                </div>
+
+
+                <div class="col-xs-6 homepageBlock2">
+                    <h2></h2>
+
+                    <p>{{ club_sup.paragraph }}</p>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        {% endfor %}
 {% endblock %}
