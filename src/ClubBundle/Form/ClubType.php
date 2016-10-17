@@ -5,6 +5,7 @@ namespace ClubBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ClubType extends AbstractType
 {
@@ -28,13 +29,13 @@ class ClubType extends AbstractType
             ->add('soustitre32')
             ->add('soustitre33')
             ->add('blocktitle1')
-            ->add('blockparagraph1')
+            ->add('blockparagraph1', TextareaType::class)
             ->add('blocktitle2')
-            ->add('blockparagraph2')
+            ->add('blockparagraph2', TextareaType::class)
             ->add('blocktitle3')
-            ->add('blockparagraph3')
+            ->add('blockparagraph3', TextareaType::class)
             ->add('blocktitle4')
-            ->add('blockparagraph4')
+            ->add('blockparagraph4', TextareaType::class)
             
         ;
     }

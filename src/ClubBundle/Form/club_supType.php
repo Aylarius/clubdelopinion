@@ -5,6 +5,7 @@ namespace ClubBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class club_supType extends AbstractType
 {
@@ -17,7 +18,7 @@ class club_supType extends AbstractType
         $builder
             ->add('title')
             ->add('soutitre')
-            ->add('paragraph')
+            ->add('paragraph', TextareaType::class)
         ;
     }
     

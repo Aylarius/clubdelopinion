@@ -5,6 +5,7 @@ namespace ClubBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class av2Type extends AbstractType
 {
@@ -16,7 +17,7 @@ class av2Type extends AbstractType
     {
         $builder
             ->add('titleAv2')
-            ->add('paragraphAv2')
+            ->add('paragraphAv2', TextareaType::class)
         ;
     }
     

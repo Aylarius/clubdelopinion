@@ -5,6 +5,7 @@ namespace ClubBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class presentationType extends AbstractType
 {
@@ -17,9 +18,9 @@ class presentationType extends AbstractType
         $builder
             ->add('title')
             ->add('soustitre1')
-            ->add('paragraph1')
+            ->add('paragraph1', TextareaType::class)
             ->add('soustitre2')
-            ->add('paragraph2')
+            ->add('paragraph2', TextareaType::class)
         ;
     }
     
