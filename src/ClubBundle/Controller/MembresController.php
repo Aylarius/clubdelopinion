@@ -5,6 +5,7 @@ namespace ClubBundle\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+use ClubBundle\Entity\Club;
 use ClubBundle\Entity\Membres;
 use ClubBundle\Form\MembresType;
 
@@ -14,58 +15,6 @@ use ClubBundle\Form\MembresType;
  */
 class MembresController extends Controller
 {
-    /**
-     * Lists all Membres entities.
-     *
-     */
-    public function indexAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-        $membres = $em->getRepository('ClubBundle:Membres')->findAll();
-
-        return $this->render('ClubBundle:Membres:index.html.twig', array(
-            'membres' => $membres,
-        ));
-    }
-
-    /**
-     * Creates a new Membres entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-        $membre = new Membres();
-        $form = $this->createForm('ClubBundle\Form\MembresType', $membre);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($membre);
-            $em->flush();
-
-            return $this->redirectToRoute('membres_show', array('id' => $membre->getId()));
-        }
-
-        return $this->render('ClubBundle:Membres:new.html.twig', array(
-            'membre' => $membre,
-            'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a Membres entity.
-     *
-     */
-    public function showAction(Membres $membre)
-    {
-        $deleteForm = $this->createDeleteForm($membre);
-
-        return $this->render('ClubBundle:Membres:show.html.twig', array(
-            'membre' => $membre,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
     /**
      * Displays a form to edit an existing Membres entity.
      *
@@ -81,11 +30,15 @@ class MembresController extends Controller
             $em->persist($membre);
             $em->flush();
 
-            return $this->redirectToRoute('membres_edit', array('id' => $membre->getId()));
+            return $this->redirectToRoute('pagemembre_edit', array('id'=> 1));
         }
+        /* Récupération des données de l'entité Club pour afficher la barre de navigation */
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
 
         return $this->render('ClubBundle:Membres:edit.html.twig', array(
             'membre' => $membre,
+            'clubs' => $clubs,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
@@ -106,7 +59,7 @@ class MembresController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('membres_index');
+        return $this->redirectToRoute('pagemembre_edit', array('id'=> 1));
     }
 
     /**
@@ -124,4 +77,60 @@ class MembresController extends Controller
             ->getForm()
         ;
     }
+
+    /**
+     * Lists all Membres entities.
+     *
+
+    public function indexAction()
+    {
+    $em = $this->getDoctrine()->getManager();
+    $membres = $em->getRepository('ClubBundle:Membres')->findAll();
+    $clubEm = $this->getDoctrine()->getManager();
+    $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
+
+    return $this->render('ClubBundle:Membres:index.html.twig', array(
+    'membres' => $membres,
+    'clubs' => $clubs,
+    ));
+    }*/
+    /**
+     * Creates a new Membres entity.
+     *
+
+    public function newAction(Request $request, PageMembre $pageMembre)
+    {
+    $membre = new Membres();
+    $form = $this->createForm('ClubBundle\Form\MembresType', $membre);
+    $form->handleRequest($request);
+
+    if ($form->isSubmitted() && $form->isValid()) {
+    $em = $this->getDoctrine()->getManager();
+    $em->persist($membre);
+    $em->flush();
+
+    return $this->redirectToRoute('pagemembre_edit', array('id' => $pageMembre->getId()));
+    }
+
+    return $this->render('ClubBundle:Membres:new.html.twig', array(
+    'membre' => $membre,
+    'form' => $form->createView(),
+    ));
+    }*/
+
+    /**
+     * Finds and displays a Membres entity.
+     *
+
+    public function showAction(Membres $membre)
+    {
+    $deleteForm = $this->createDeleteForm($membre);
+
+    return $this->render('ClubBundle:Membres:show.html.twig', array(
+    'membre' => $membre,
+    'delete_form' => $deleteForm->createView(),
+    ));
+    }*/
+
+
 }

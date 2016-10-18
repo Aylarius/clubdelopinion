@@ -26,7 +26,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="{{ path('club_index') }}">{{ club.soustitre11|raw }}</a></li>
                                     <li><a href="{{ path('presentation_index') }}">{{ club.soustitre12|raw }}</a></li>
-                                    <li><a href="{{ path('club_index') }}">{{ club.soustitre13|raw }}</a></li>
+                                    <li><a href="{{ path('pagemembre_index') }}">{{ club.soustitre13|raw }}</a></li>
                                     <li><a href="{{ path('rcvl_index') }}">{{ club.soustitre14|raw }}</a></li>
                                     <li><a href="{{ path('ara_index') }}">{{ club.soustitre15|raw }}</a></li>
                                     <li><a href="{{ path('club_sup_index') }}">{{ club.soustitre16|raw }}</a></li>
@@ -61,8 +61,6 @@
 {% block body %}
         {% for pageMembre in pageMembres %}
             <h1>{{ pageMembre.title }}</h1><br>
-            </div>
-            </div>
             <div class="row center-block row-diners">
             {% for membre in membres %}
 
@@ -70,19 +68,14 @@
                     <div class="thumbnail">
                         <img src="img/1.jpg" alt="diner">
                         <div class="caption">
-                            <h3>{{ membre.name }}</h3>
+                            <h4>{{ membre.name }}</h4>
                             <p>{{ membre.description }}</p>
+
                         </div>
                     </div>
                 </div>
             {% endfor %}
             </div>
-            <ul>
-                <li>
-                    <a href="{{ path('membres_new') }}">Create a new entry</a>
-                </li>
-            </ul>
-
         {% endfor %}
 
 
