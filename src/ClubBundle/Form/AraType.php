@@ -19,6 +19,8 @@ class AraType extends AbstractType
             ->add('title')
             ->add('soustitre')
             ->add('paragraph', TextareaType::class)
+            ->add('file', 'file', array('label' => 'image', 'required' => false));
+
         ;
     }
     

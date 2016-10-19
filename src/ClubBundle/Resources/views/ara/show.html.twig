@@ -32,9 +32,11 @@
             <a href="{{ path('ara_edit', { 'id': ara.id }) }}">Edit</a>
         </li>
         <li>
+                <img src="{{ app.request.basepath }}/uploads/{{ clubdelopinion.image }}">
             {{ form_start(delete_form) }}
                 <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
         </li>
     </ul>
 {% endblock %}
+

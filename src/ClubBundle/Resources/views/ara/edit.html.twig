@@ -64,6 +64,10 @@
     {{ form_start(edit_form) }}
     {{ form_errors(edit_form) }}
 
+    <p>image1</p>
+    {{ form_errors(edit_form.file) }}
+    {{ form_widget(edit_form.file) }}
+
     <!-- ****************************************** -->
 
     <div class="container-fluid">
