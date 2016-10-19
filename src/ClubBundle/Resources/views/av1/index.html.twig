@@ -26,7 +26,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="{{ path('club_index') }}">{{ club.soustitre11|raw }}</a></li>
                                     <li><a href="{{ path('presentation_index') }}">{{ club.soustitre12|raw }}</a></li>
-                                    <li><a href="{{ path('club_index') }}">{{ club.soustitre13|raw }}</a></li>
+                                    <li><a href="{{ path('pagemembre_index') }}">{{ club.soustitre13|raw }}</a></li>
                                     <li><a href="{{ path('rcvl_index') }}">{{ club.soustitre14|raw }}</a></li>
                                     <li><a href="{{ path('ara_index') }}">{{ club.soustitre15|raw }}</a></li>
                                     <li><a href="{{ path('club_sup_index') }}">{{ club.soustitre16|raw }}</a></li>
@@ -66,7 +66,7 @@
     <div class="container-fluid">
         <div class="row blockGray"><!--******************* 1er bloc ***************-->
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <img src="{{ asset('bundles/club/img/magazine1.jpg') }}" class="center-block" alt="" height="400px"/>
+                <img src="{{ vich_uploader_asset(av1, 'image', 'ClubBundle\\Entity\\av1') }}" alt="{{ av1.titleAv1 }}" class="center-block" height="400px"/>
             </div>
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
                 <p>{{ av1.paragraphAv1|raw }}</p>

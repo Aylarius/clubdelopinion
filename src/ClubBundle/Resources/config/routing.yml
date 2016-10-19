@@ -7,33 +7,57 @@ club_homepage:
     defaults: { _controller: ClubBundle:Default:index }
 
 club_av3:
-            resource: "@ClubBundle/Resources/config/routing/av3.yml"
-            prefix:   /av3
+    resource: "@ClubBundle/Resources/config/routing/av3.yml"
+    prefix:   /av3
 
 club_contact:
     resource: "@ClubBundle/Resources/config/routing/contact.yml"
     prefix:   /contact
 
 club_av2:
-        resource: "@ClubBundle/Resources/config/routing/av2.yml"
-        prefix:   /av2
+    resource: "@ClubBundle/Resources/config/routing/av2.yml"
+    prefix:   /av2
 
 club_av1:
-        resource: "@ClubBundle/Resources/config/routing/av1.yml"
-        prefix:   /av1
+    resource: "@ClubBundle/Resources/config/routing/av1.yml"
+    prefix:   /av1
 
 club_presentation:
-        resource: "@ClubBundle/Resources/config/routing/presentation.yml"
-        prefix:   /presentation
+    resource: "@ClubBundle/Resources/config/routing/presentation.yml"
+    prefix:   /presentation
 
 club_club_sup:
-        resource: "@ClubBundle/Resources/config/routing/club_sup.yml"
-        prefix:   /club_sup
+    resource: "@ClubBundle/Resources/config/routing/club_sup.yml"
+    prefix:   /club_sup
 
 club_rcvl:
-        resource: "@ClubBundle/Resources/config/routing/rcvl.yml"
-        prefix:   /rcvl
+    resource: "@ClubBundle/Resources/config/routing/rcvl.yml"
+    prefix:   /rcvl
 
 club_ara:
-        resource: "@ClubBundle/Resources/config/routing/ara.yml"
-        prefix:   /ara
+    resource: "@ClubBundle/Resources/config/routing/ara.yml"
+    prefix:   /ara
+
+club_pagemembre:
+    resource: "@ClubBundle/Resources/config/routing/pagemembre.yml"
+    prefix:   /pagemembre
+
+club_membres:
+    resource: "@ClubBundle/Resources/config/routing/Membres.yml"
+    prefix:   /membres
+
+club_evrcvl:
+    resource: "@ClubBundle/Resources/config/routing/evrcvl.yml"
+    prefix:   /evrcvl
+
+club_evara:
+    resource: "@ClubBundle/Resources/config/routing/evara.yml"
+    prefix:   /evara
+
+club_evsup:
+    resource: "@ClubBundle/Resources/config/routing/evsup.yml"
+    prefix:   /evsup
+
+club_evenements:
+    resource: "@ClubBundle/Resources/config/routing/evenements.yml"
+    prefix:   /evenements

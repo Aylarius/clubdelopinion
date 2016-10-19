@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Evaras list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for evAra in evAras %}
+            <tr>
+                <td><a href="{{ path('evara_show', { 'id': evAra.id }) }}">{{ evAra.id }}</a></td>
+                <td>{{ evAra.title }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('evara_show', { 'id': evAra.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('evara_edit', { 'id': evAra.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('evara_new') }}">Create a new evAra</a>
+        </li>
+    </ul>
+{% endblock %}

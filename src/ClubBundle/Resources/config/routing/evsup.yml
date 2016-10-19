@@ -1,0 +1,24 @@
+evsup_index:
+    path:     /
+    defaults: { _controller: "ClubBundle:EvSup:index" }
+    methods:  GET
+
+evsup_show:
+    path:     /{id}/show
+    defaults: { _controller: "ClubBundle:EvSup:show" }
+    methods:  GET
+
+evsup_new:
+    path:     /new
+    defaults: { _controller: "ClubBundle:EvSup:new" }
+    methods:  [GET, POST]
+
+evsup_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ClubBundle:EvSup:edit" }
+    methods:  [GET, POST]
+
+evsup_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ClubBundle:EvSup:delete" }
+    methods:  DELETE
