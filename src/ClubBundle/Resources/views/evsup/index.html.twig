@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Evsups list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for evSup in evSups %}
+            <tr>
+                <td><a href="{{ path('evsup_show', { 'id': evSup.id }) }}">{{ evSup.id }}</a></td>
+                <td>{{ evSup.title }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('evsup_show', { 'id': evSup.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('evsup_edit', { 'id': evSup.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('evsup_new') }}">Create a new evSup</a>
+        </li>
+    </ul>
+{% endblock %}
