@@ -35,6 +35,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form_themes:
+        - 'VichUploaderBundle:Form:fields.html.twig'
 
 # Doctrine Configuration
 doctrine:
@@ -65,3 +67,25 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        membres_image:
+            uri_prefix:         /~thifainenoirault/clubdelopinion/web/images/membres
+            upload_destination: '%kernel.root_dir%/../web/images/membres'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        folder_images:
+            uri_prefix:         /~thifainenoirault/clubdelopinion/web/images
+            upload_destination: '%kernel.root_dir%/../web/images'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        evenements_image:
+            uri_prefix:         /~thifainenoirault/clubdelopinion/web/images/evenements
+            upload_destination: '%kernel.root_dir%/../web/images/evenements'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true

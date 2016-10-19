@@ -17,7 +17,11 @@ class av1Type extends AbstractType
         $builder
             ->add('titleAv1')
             ->add('paragraphAv1')
-        ;
+            ->add('image', 'vich_image', array(
+                'required'      => false,
+                'allow_delete'  => true, // not mandatory, default is true
+                'download_link' => true, // not mandatory, default is true
+            ));
     }
     
     /**

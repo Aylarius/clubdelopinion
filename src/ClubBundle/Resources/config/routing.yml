@@ -43,5 +43,5 @@ club_pagemembre:
         prefix:   /pagemembre
 
 club_membres:
-        resource: "@ClubBundle/Resources/config/routing/membres.yml"
+        resource: "@ClubBundle/Resources/config/routing/Membres.yml"
         prefix:   /membres

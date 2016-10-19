@@ -69,6 +69,10 @@
         {{ form_errors(edit_form.description) }}
         {{ form_widget(edit_form.description) }}
         <br><br>
+        <span class="bold">Image</span><br>
+        {{ form_errors(edit_form.image) }}
+        {{ form_widget(edit_form.image) }}
+        <br><br>
         <input type="submit" value="Modifier" />
     {{ form_end(edit_form) }}
     <br>

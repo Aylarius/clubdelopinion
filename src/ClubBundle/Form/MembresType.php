@@ -17,9 +17,12 @@ class MembresType extends AbstractType
         $builder
             ->add('name')
             ->add('description')
-        ;
+            ->add('image', 'vich_image', array(
+                'required'      => false,
+                'allow_delete'  => true, // not mandatory, default is true
+                'download_link' => true, // not mandatory, default is true
+            ));
     }
-    
     /**
      * @param OptionsResolver $resolver
      */

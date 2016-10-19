@@ -66,7 +66,7 @@
     <div class="container-fluid">
         <div class="row blockGray"><!--******************* 1er bloc ***************-->
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <img src="{{ asset('bundles/club/img/magazine1.jpg') }}" class="center-block" alt="" height="400px"/>
+                <img src="{{ vich_uploader_asset(av1, 'image', 'ClubBundle\\Entity\\av1') }}" alt="{{ av1.titleAv1 }}" class="center-block" height="400px"/>
             </div>
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
                 <p>{{ av1.paragraphAv1|raw }}</p>

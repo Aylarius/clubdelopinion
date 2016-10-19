@@ -8,6 +8,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class AraType extends AbstractType
 {
+
     /**
      * @param FormBuilderInterface $builder
      * @param array $options
@@ -30,4 +31,6 @@ class AraType extends AbstractType
             'data_class' => 'ClubBundle\Entity\Ara'
         ));
     }
+
+
 }

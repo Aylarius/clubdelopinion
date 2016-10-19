@@ -1,0 +1,4 @@
+ClubBundle\Entity\Membres:
+    image:
+        mapping:           membres_image
+        filename_property: iname

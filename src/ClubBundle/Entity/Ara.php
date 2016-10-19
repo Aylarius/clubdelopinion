@@ -29,7 +29,6 @@ class Ara
      */
     private $paragraph;
 
-
     /**
      * Get id
      *

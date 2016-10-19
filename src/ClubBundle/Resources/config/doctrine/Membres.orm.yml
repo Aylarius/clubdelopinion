@@ -15,4 +15,6 @@ ClubBundle\Entity\Membres:
         description:
             type: string
             length: 255
+        iname:
+            type: string
     lifecycleCallbacks: {  }
