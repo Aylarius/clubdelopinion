@@ -40,10 +40,10 @@ club_ara:
 
 club_pagemembre:
     resource: "@ClubBundle/Resources/config/routing/pagemembre.yml"
-    prefix:   /pagemembre
+    prefix:   /nosmembres
 
 club_membres:
-    resource: "@ClubBundle/Resources/config/routing/Membres.yml"
+    resource: "@ClubBundle/Resources/config/routing/membres.yml"
     prefix:   /membres
 
 club_evrcvl:
@@ -61,3 +61,11 @@ club_evsup:
 club_evenements:
     resource: "@ClubBundle/Resources/config/routing/evenements.yml"
     prefix:   /evenements
+
+club_araevenements:
+    resource: "@ClubBundle/Resources/config/routing/araevenements.yml"
+    prefix:   /araevenements
+
+club_supevenements:
+    resource: "@ClubBundle/Resources/config/routing/supevenements.yml"
+    prefix:   /supevenements

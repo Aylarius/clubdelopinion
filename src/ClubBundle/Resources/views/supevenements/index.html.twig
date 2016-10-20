@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Supevenements list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Paragraph</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for supEvenement in supEvenements %}
+            <tr>
+                <td><a href="{{ path('supevenements_show', { 'id': supEvenement.id }) }}">{{ supEvenement.id }}</a></td>
+                <td>{{ supEvenement.title }}</td>
+                <td>{{ supEvenement.paragraph }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('supevenements_show', { 'id': supEvenement.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('supevenements_edit', { 'id': supEvenement.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('supevenements_new') }}">Create a new supEvenement</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -34,7 +34,7 @@ class EvenementsController extends Controller
         $clubEm = $this->getDoctrine()->getManager();
         $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
 
-        return $this->render('ClubBundle:Evenements:edit.html.twig', array(
+        return $this->render('ClubBundle:evenements:edit.html.twig', array(
             'evenement' => $evenement,
             'clubs' => $clubs,
             'edit_form' => $editForm->createView(),
@@ -80,16 +80,19 @@ class EvenementsController extends Controller
     /**
      * Finds and displays a evenement entity.
      *
-
+     */
     public function showAction(Evenements $evenement)
     {
-    $deleteForm = $this->createDeleteForm($evenement);
-
-    return $this->render('ClubBundle:Evenements:show.html.twig', array(
-    'evenement' => $evenement,
-    'delete_form' => $deleteForm->createView(),
+        $deleteForm = $this->createDeleteForm($evenement);
+        $clubEm = $this->getDoctrine()->getManager();
+        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
+        
+    return $this->render('ClubBundle:evenements:show.html.twig', array(
+        'evenement' => $evenement,
+        'clubs' => $clubs,
+        'delete_form' => $deleteForm->createView(),
     ));
-    }*/
+    }
 
     /**
      * Creates a new evenement entity.

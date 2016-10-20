@@ -1,0 +1,18 @@
+ClubBundle\Entity\AraEvenements:
+    type: entity
+    table: null
+    repositoryClass: ClubBundle\Repository\AraEvenementsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        paragraph:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

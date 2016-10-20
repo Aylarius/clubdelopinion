@@ -30,7 +30,7 @@ class EvRcvlController extends Controller
         $EvEm = $this->getDoctrine()->getManager();
         $evenements = $EvEm->getRepository('ClubBundle:Evenements')->findAll();
 
-        return $this->render('ClubBundle:EvRcvl:index.html.twig', array(
+        return $this->render('ClubBundle:evrcvl:index.html.twig', array(
             'evRcvls' => $evRcvls,
             'clubs' => $clubs,
             'evenements' => $evenements,
@@ -41,7 +41,7 @@ class EvRcvlController extends Controller
     {
         /*$deleteForm = $this->createDeleteForm($evRcvl);*/
 
-        /* Formulaire Edition de la Page Membre */
+        /* Formulaire Edition de la Page Evenements RCVL */
         $editForm = $this->createForm('ClubBundle\Form\EvRcvlType', $evRcvl);
         $editForm->handleRequest($request);
 
@@ -71,7 +71,7 @@ class EvRcvlController extends Controller
         $clubEm = $this->getDoctrine()->getManager();
         $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
 
-        return $this->render('ClubBundle:EvRcvl:edit.html.twig', array(
+        return $this->render('ClubBundle:evrcvl:edit.html.twig', array(
             'evRcvl' => $evRcvl,
             'clubs' => $clubs,
             'evenements' => $evenements,

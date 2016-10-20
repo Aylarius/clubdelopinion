@@ -31,7 +31,7 @@ class PageMembreController extends Controller
         $Mem = $this->getDoctrine()->getManager();
         $membres = $Mem->getRepository('ClubBundle:Membres')->findAll();
 
-        return $this->render('ClubBundle:PageMembre:index.html.twig', array(
+        return $this->render('ClubBundle:pagemembre:index.html.twig', array(
             'pageMembres' => $pageMembres,
             'clubs' => $clubs,
             'membres' => $membres,
@@ -95,7 +95,7 @@ class PageMembreController extends Controller
                 'edit_form_membre' => $editFormMembre->createView(),
             ));
         }*/
-        return $this->render('ClubBundle:PageMembre:edit.html.twig', array(
+        return $this->render('ClubBundle:pagemembre:edit.html.twig', array(
             'pageMembre' => $pageMembre,
             'membre' => $membre,
             'clubs' => $clubs,

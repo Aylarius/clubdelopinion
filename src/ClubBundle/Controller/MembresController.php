@@ -36,7 +36,7 @@ class MembresController extends Controller
         $clubEm = $this->getDoctrine()->getManager();
         $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
 
-        return $this->render('ClubBundle:Membres:edit.html.twig', array(
+        return $this->render('ClubBundle:membres:edit.html.twig', array(
             'membre' => $membre,
             'clubs' => $clubs,
             'edit_form' => $editForm->createView(),

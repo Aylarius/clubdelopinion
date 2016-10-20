@@ -1,36 +1,112 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-    <h1>Evenement</h1>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ evenement.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ evenement.title }}</td>
-            </tr>
-            <tr>
-                <th>Paragraph</th>
-                <td>{{ evenement.paragraph }}</td>
-            </tr>
-        </tbody>
-    </table>
+{% block header %}
+    {% for club in clubs %}
+        <header>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <div class="navbar-brand">
+                            <a href="{{ path('club_index') }}"><img id="logo" src="{{ asset('bundles/club/img/club_opinion_sans_fond.png') }}" alt="Logo" /></a>
+                        </div>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <br>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home" aria-hidden="true"></i> Accueil <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ path('club_index') }}">{{ club.soustitre11|raw }}</a></li>
+                                    <li><a href="{{ path('presentation_index') }}">{{ club.soustitre12|raw }}</a></li>
+                                    <li><a href="{{ path('pagemembre_index') }}">{{ club.soustitre13|raw }}</a></li>
+                                    <li><a href="{{ path('rcvl_index') }}">{{ club.soustitre14|raw }}</a></li>
+                                    <li><a href="{{ path('ara_index') }}">{{ club.soustitre15|raw }}</a></li>
+                                    <li><a href="{{ path('club_sup_index') }}">{{ club.soustitre16|raw }}</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i> Nos évènements <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ path('club_index') }}">{{ club.soustitre21|raw }}</a></li>
+                                    <li><a href="{{ path('club_index') }}">{{ club.soustitre22|raw }}</a></li>
+                                    <li><a href="{{ path('club_index') }}">{{ club.soustitre23|raw }}</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-trophy" aria-hidden="true"></i> Avantages du club <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ path('av1_index') }}">{{ club.soustitre31|raw }}</a></li>
+                                    <li><a href="{{ path('av2_index') }}">{{ club.soustitre32|raw }}</a></li>
+                                    <li><a href="{{ path('av3_index') }}">{{ club.soustitre33|raw }}</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{{ path('contact_index') }}"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </header>
 
-    <ul>
-        <li>
-            <a href="{{ path('evenements_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('evenements_edit', { 'id': evenement.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    {% endfor %}
 {% endblock %}
+
+
+{% block body %}
+<h1>{{ evenement.title }}</h1>
+<p>{{ evenement.paragraph }}</p>
+</div>
+</div>
+<div id="carousel-evenement" class="carousel slide center-block" data-ride="carousel">
+    <!-- Carousel Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-evenement" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-evenement" data-slide-to="1"></li>
+        <li data-target="#carousel-evenement" data-slide-to="2"></li>
+        <li data-target="#carousel-evenement" data-slide-to="3"></li>
+        <li data-target="#carousel-evenement" data-slide-to="4"></li>
+        <li data-target="#carousel-evenement" data-slide-to="5"></li>
+    </ol>
+    <!-- Carousel Wrapper -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="photos_diners/chateau_gaillard_chateau_de_pray/IMG_3838.jpg" alt="Image 1 - Evènement du 12/11/2015">
+        </div>
+        <div class="item">
+            <img src="photos_diners/chateau_gaillard_chateau_de_pray/IMG_3844.jpg" alt="Image 2 - Evènement du 12/11/2015">
+        </div>
+        <div class="item">
+            <img src="photos_diners/chateau_gaillard_chateau_de_pray/IMG_3861.jpg" alt="Image 3 - Evènement du 12/11/2015">
+        </div>
+        <div class="item">
+            <img src="photos_diners/chateau_gaillard_chateau_de_pray/IMG_3866.jpg" alt="Image 4 - Evènement du 12/11/2015">
+        </div>
+        <div class="item">
+            <img src="photos_diners/chateau_gaillard_chateau_de_pray/IMG_3882.jpg" alt="Image 5 - Evènement du 12/11/2015">
+        </div>
+        <div class="item">
+            <img src="photos_diners/chateau_gaillard_chateau_de_pray/IMG_3886.jpg" alt="Image 6 - Evènement du 12/11/2015">
+        </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <a class="left carousel-control" href="#carousel-evenement" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-evenement" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+    </a>
+
+    <a href="{{ path('evrcvl_edit', { 'id': 1 }) }}">Retour à la page précédente</a>
+
+    {% endblock %}
