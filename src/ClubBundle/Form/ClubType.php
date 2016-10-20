@@ -29,15 +29,26 @@ class ClubType extends AbstractType
             ->add('soustitre32')
             ->add('soustitre33')
             ->add('blocktitle1')
-            ->add('blockparagraph1', TextareaType::class)
+            ->add('blockparagraph1', TextareaType::class, array(
+                'required'      => false,
+            ))
             ->add('blocktitle2')
-            ->add('blockparagraph2', TextareaType::class)
+            ->add('blockparagraph2', TextareaType::class, array(
+                'required'      => false,
+            ))
             ->add('blocktitle3')
-            ->add('blockparagraph3', TextareaType::class)
+            ->add('blockparagraph3', TextareaType::class, array(
+                'required'      => false,
+            ))
             ->add('blocktitle4')
-            ->add('blockparagraph4', TextareaType::class)
-            
-        ;
+            ->add('blockparagraph4', TextareaType::class, array(
+                'required'      => false,
+            ))
+            ->add('video', 'vich_image', array(
+                'required'      => false,
+                'allow_delete'  => false, // not mandatory, default is true
+                'download_link' => false, // not mandatory, default is true
+            ));
     }
     
     /**

@@ -1,61 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block header %}
-    {% for club in clubs %}
-        <header>
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <div class="navbar-brand">
-                            <a href="{{ path('club_index') }}"><img id="logo" src="{{ asset('bundles/club/img/club_opinion_sans_fond.png') }}" alt="Logo" /></a>
-                        </div>
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <br>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home" aria-hidden="true"></i> Accueil <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{ path('club_index') }}">{{ club.soustitre11|raw }}</a></li>
-                                    <li><a href="{{ path('presentation_index') }}">{{ club.soustitre12|raw }}</a></li>
-                                    <li><a href="{{ path('pagemembre_index') }}">{{ club.soustitre13|raw }}</a></li>
-                                    <li><a href="{{ path('rcvl_index') }}">{{ club.soustitre14|raw }}</a></li>
-                                    <li><a href="{{ path('ara_index') }}">{{ club.soustitre15|raw }}</a></li>
-                                    <li><a href="{{ path('club_sup_index') }}">{{ club.soustitre16|raw }}</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i> Nos évènements <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{ path('club_index') }}">{{ club.soustitre21|raw }}</a></li>
-                                    <li><a href="{{ path('club_index') }}">{{ club.soustitre22|raw }}</a></li>
-                                    <li><a href="{{ path('club_index') }}">{{ club.soustitre23|raw }}</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-trophy" aria-hidden="true"></i> Avantages du club <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{ path('av1_index') }}">{{ club.soustitre31|raw }}</a></li>
-                                    <li><a href="{{ path('av2_index') }}">{{ club.soustitre32|raw }}</a></li>
-                                    <li><a href="{{ path('av3_index') }}">{{ club.soustitre33|raw }}</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="{{ path('contact_index') }}"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a></li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-            </nav>
-        </header>
 
-    {% endfor %}
+{% block main %}
+<main class="container-fluid" id="container-club">
+    <div class="row">
+        <div class="col-xs-12">
 {% endblock %}
 
 {% block body %}
@@ -63,11 +12,11 @@
     <!-- *********************************************** -->
     {% for club in clubs %}
 
-    <video autoplay loop poster="img/background.jpg" width="100%" height="auto">
-        <source src="video/home.webm" />
+    <video autoplay loop poster="img/background.jpg" width="100%" height="auto" class="hidden-xs">
+        <source src="{{ vich_uploader_asset(club, 'video', 'ClubBundle\\Entity\\Club') }}" />
     </video>
     <div class="container-fluid">
-        <div class="row blockGray"><!--******************* 1er bloc ***************-->
+        <div class="row blockGray" id="blockhp"><!--******************* 1er bloc ***************-->
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
                 <img src="{{ asset('bundles/club/img/1.jpg') }}" alt="logo" width="100%"/>
             </div>
@@ -94,24 +43,19 @@
                 <p>{{ club.blockparagraph3|raw }}</p>
             </div>
         </div>
-        <div class="row"><!--************* 4ème bloc ***************-->
-            <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <h2>{{ club.blocktitle4 }}</h2 >
-                <p>{{ club.blockparagraph4|raw }}</p>
+        {% if club.blocktitle4 %}
+            <div class="row"><!--************* 4ème bloc ***************-->
+                <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                    <h2>{{ club.blocktitle4 }}</h2 >
+                    <p>{{ club.blockparagraph4|raw }}</p>
+                </div>
+                <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                    <img src="" alt="" width="100%"/>
+                </div>
             </div>
-            <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <img src="" alt="" width="100%"/>
-            </div>
-        </div>
+        {% else %}
+        {% endif %}
     </div>
     {% endfor %}
-
-    <ul>
-        <li>
-            <a href="{{ path('club_new') }}">Create a new entry</a>
-        </li>
-    </ul>
-
-
 
 {% endblock %}

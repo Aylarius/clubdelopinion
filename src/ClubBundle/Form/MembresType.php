@@ -5,6 +5,8 @@ namespace ClubBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+
 
 class MembresType extends AbstractType
 {
@@ -16,7 +18,9 @@ class MembresType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('description')
+            ->add('description', TextareaType::class, array(
+                'required'      => false,
+            ))
             ->add('image', 'vich_image', array(
                 'required'      => false,
                 'allow_delete'  => true, // not mandatory, default is true

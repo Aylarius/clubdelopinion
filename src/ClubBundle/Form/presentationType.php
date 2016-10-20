@@ -18,9 +18,13 @@ class presentationType extends AbstractType
         $builder
             ->add('title')
             ->add('soustitre1')
-            ->add('paragraph1', TextareaType::class)
+            ->add('paragraph1', TextareaType::class, array(
+                'required'      => false,
+            ))
             ->add('soustitre2')
-            ->add('paragraph2', TextareaType::class)
+            ->add('paragraph2', TextareaType::class, array(
+                'required'      => false,
+            ))
         ;
     }
     

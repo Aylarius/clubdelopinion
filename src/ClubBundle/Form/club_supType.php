@@ -18,7 +18,9 @@ class club_supType extends AbstractType
         $builder
             ->add('title')
             ->add('soutitre')
-            ->add('paragraph', TextareaType::class)
+            ->add('paragraph', TextareaType::class, array(
+                'required'      => false,
+            ))
         ;
     }
     

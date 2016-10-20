@@ -10,7 +10,54 @@ use Doctrine\ORM\Mapping as ORM;
 class Club
 {
     
+    private $video;
+    private $vname;
 
+    /**
+     * Set video
+     *
+     * @param string $video
+     * @return Club
+     */
+    public function setVideo($video)
+    {
+        $this->video = $video;
+
+        return $this;
+    }
+
+    /**
+     * Get video
+     *
+     * @return string
+     */
+    public function getVideo()
+    {
+        return $this->video;
+    }
+
+    /**
+     * Set vname
+     *
+     * @param string $vname
+     * @return Club
+     */
+    public function setVname($vname)
+    {
+        $this->vname = $vname;
+
+        return $this;
+    }
+
+    /**
+     * Get vname
+     *
+     * @return string
+     */
+    public function getVname()
+    {
+        return $this->vname;
+    }
 
     //CODE GENERE//
     /**

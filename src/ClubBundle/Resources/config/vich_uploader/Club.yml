@@ -1,0 +1,4 @@
+ClubBundle\Entity\Club:
+    video:
+        mapping:           folder_images
+        filename_property: vname

@@ -18,7 +18,9 @@ class RcvlType extends AbstractType
         $builder
             ->add('title')
             ->add('soustitre')
-            ->add('paragraph', TextareaType::class)
+            ->add('paragraph', TextareaType::class, array(
+                'required'      => false,
+            ))
         ;
     }
     

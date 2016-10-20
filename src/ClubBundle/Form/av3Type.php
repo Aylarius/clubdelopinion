@@ -17,7 +17,9 @@ class av3Type extends AbstractType
     {
         $builder
             ->add('titleAv3')
-            ->add('paragraphAv3', TextareaType::class)
+            ->add('paragraphAv3', TextareaType::class, array(
+                'required'      => false,
+            ))
         ;
     }
     

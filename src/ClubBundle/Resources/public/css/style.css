@@ -59,6 +59,13 @@ input[type=file]{
   height:280px;
   width:auto;
 }
+
+#container-club {
+  padding: 0px !important;
+}
+#blockhp {
+  margin-top: -6px;
+}
 /**************************************************/
 /********************  HEADER  ********************/
 /**************************************************/
@@ -217,10 +224,6 @@ input[type=file]{
 }
 
 /********************* HOMEPAGE *******************/
-
-video {
-	padding: 0px 50px;
-}
 
 .blockGray {
 	background-color: #ebebeb;

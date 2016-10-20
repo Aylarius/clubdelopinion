@@ -72,6 +72,8 @@ ClubBundle\Entity\Club:
             nullable: TRUE
         blockparagraph4:
             type: string
-            nullable: TRUE
             length: 800
+            nullable: TRUE
+        vname:
+            type: string
     lifecycleCallbacks: {  }
