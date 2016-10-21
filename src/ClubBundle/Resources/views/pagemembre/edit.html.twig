@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Mode édition</h1>
+
+    {{ form_start(edit_form) }}
+    {{ form_errors(edit_form) }}
+        <h1>{{ pageMembre.title }}</h1><br>
+        <span class="bold">Titre</span>
+        {{ form_errors(edit_form.title) }}
+        {{ form_widget(edit_form.title) }}
+        <input type="submit" value="Edit" />
+    {{ form_end(edit_form) }}
+
+    <br>
+
+        <div class="row center-block row-diners">
+            {% for membre in membres %}
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail" id="thumbnail-membre">
+                        {% if membre.iname %}
+                            <div class="image" style="background-image: url({{ vich_uploader_asset(membre, 'image', 'ClubBundle\\Entity\\Membres') }})"></div>
+                        {% else %}
+                            Pas d'image chargée !
+                        {% endif %}
+                        <div class="caption">
+                            <h4>{{ membre.name }}</h4>
+                            <p>{{ membre.description }}</p>
+                            <br>
+                            <a href="{{ path('membres_edit', { 'id': membre.id }) }}">Modifier</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="thumbnail" id="thumbnail-membre">
+                    <div class="caption">
+                        {{ form_start(newForm) }}
+                            <span class="bold">Photo</span><br>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    {{ form_errors(newForm.image) }}
+                                    {{ form_widget(newForm.image) }}
+                                </div>
+                            </div>
+                            <br>
+                            <span class="bold">Nom</span><br>
+                            {{ form_errors(newForm.name) }}
+                            {{ form_widget(newForm.name) }}
+                            <br>
+                            <span class="bold">Description</span><br>
+                            {{ form_errors(newForm.description) }}
+                            {{ form_widget(newForm.description) }}
+                            <br><br>
+                            <input type="submit" value="Créer" />
+                        {{ form_end(newForm) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    <a href="{{ path('pagemembre_index') }}">Retour à la page précédente</a>
+
+
+
+{% endblock %}

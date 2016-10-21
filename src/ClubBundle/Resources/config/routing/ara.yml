@@ -1,0 +1,24 @@
+ara_index:
+    path:     /
+    defaults: { _controller: "ClubBundle:Ara:index" }
+    methods:  GET
+
+ara_show:
+    path:     /{id}/show
+    defaults: { _controller: "ClubBundle:Ara:show" }
+    methods:  GET
+
+ara_new:
+    path:     /new
+    defaults: { _controller: "ClubBundle:Ara:new" }
+    methods:  [GET, POST]
+
+ara_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ClubBundle:Ara:edit" }
+    methods:  [GET, POST]
+
+ara_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ClubBundle:Ara:delete" }
+    methods:  DELETE

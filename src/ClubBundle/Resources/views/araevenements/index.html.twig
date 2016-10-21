@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Araevenements list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Paragraph</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for araEvenement in araEvenements %}
+            <tr>
+                <td><a href="{{ path('araevenements_show', { 'id': araEvenement.id }) }}">{{ araEvenement.id }}</a></td>
+                <td>{{ araEvenement.title }}</td>
+                <td>{{ araEvenement.paragraph }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('araevenements_show', { 'id': araEvenement.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('araevenements_edit', { 'id': araEvenement.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('araevenements_new') }}">Create a new araEvenement</a>
+        </li>
+    </ul>
+{% endblock %}

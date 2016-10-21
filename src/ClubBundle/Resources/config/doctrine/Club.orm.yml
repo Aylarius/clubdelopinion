@@ -1,0 +1,87 @@
+ClubBundle\Entity\Club:
+    type: entity
+    table: null
+    repositoryClass: ClubBundle\Repository\ClubRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        soustitre11:
+            type: string
+            length: 255
+        soustitre12:
+            type: string
+            length: 255
+        soustitre13:
+            type: string
+            length: 255
+        soustitre14:
+            type: string
+            length: 255
+        soustitre15:
+            type: string
+            length: 255
+        soustitre16:
+            type: string
+            length: 255
+            nullable: TRUE
+        soustitre21:
+            type: string
+            length: 255
+        soustitre22:
+            type: string
+            length: 255
+        soustitre23:
+            type: string
+            length: 255
+            nullable: TRUE
+        soustitre31:
+            type: string
+            length: 255
+        soustitre32:
+            type: string
+            length: 255
+        soustitre33:
+            type: string
+            length: 255
+            nullable: TRUE
+        blocktitle1:
+            type: string
+            length: 255
+        blockparagraph1:
+            type: string
+            length: 800
+        blocktitle2:
+            type: string
+            length: 255
+        blockparagraph2:
+            type: string
+            length: 800
+        blocktitle3:
+            type: string
+            length: 255
+        blockparagraph3:
+            type: string
+            length: 800
+        blocktitle4:
+            type: string
+            length: 255
+            nullable: TRUE
+        blockparagraph4:
+            type: string
+            length: 800
+            nullable: TRUE
+        vname:
+            type: string
+        iname:
+            type: string
+        iname2:
+            type: string
+        iname3:
+            type: string
+        iname4:
+            type: string
+    lifecycleCallbacks: {  }

@@ -1,0 +1,27 @@
+ClubBundle\Entity\presentation:
+    type: entity
+    table: null
+    repositoryClass: ClubBundle\Repository\presentationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        soustitre1:
+            type: string
+            length: 255
+        paragraph1:
+            type: string
+            length: 1500
+        soustitre2:
+            type: string
+            length: 255
+        paragraph2:
+            type: string
+            length: 1500
+    lifecycleCallbacks: {  }

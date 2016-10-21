@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <!--************************* HEAD *************************************-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Le Club de l'Opinion{% endblock %}</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('bundles/club/css/style.css') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--************************* HEADER *********************************-->
+        {% block header %}
+            {% for club in clubs %}
+                <header>
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <div class="navbar-brand">
+                                    <a href="{{ path('club_index') }}"><img id="logo" src="{{ asset('bundles/club/img/club_opinion_sans_fond.png') }}" alt="Logo" /></a>
+                                </div>
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <br>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home" aria-hidden="true"></i> Accueil <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="{{ path('club_index') }}">{{ club.soustitre11|raw }}</a></li>
+                                            <li><a href="{{ path('presentation_index') }}">{{ club.soustitre12|raw }}</a></li>
+                                            <li><a href="{{ path('pagemembre_index') }}">{{ club.soustitre13|raw }}</a></li>
+                                            <li><a href="{{ path('rcvl_index') }}">{{ club.soustitre14|raw }}</a></li>
+                                            <li><a href="{{ path('ara_index') }}">{{ club.soustitre15|raw }}</a></li>
+                                            {% if club.soustitre16 %}
+                                                <li><a href="{{ path('club_sup_index') }}">{{ club.soustitre16|raw }}</a></li>
+                                            {% else %}{% endif %}
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i> Nos évènements <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="{{ path('evrcvl_index') }}">{{ club.soustitre21|raw }}</a></li>
+                                            <li><a href="{{ path('evara_index') }}">{{ club.soustitre22|raw }}</a></li>
+                                            {% if club.soustitre23 %}
+                                                <li><a href="{{ path('evsup_index') }}">{{ club.soustitre23|raw }}</a></li>
+                                            {% else %}{% endif %}
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-trophy" aria-hidden="true"></i> Avantages du club <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="{{ path('av1_index') }}">{{ club.soustitre31|raw }}</a></li>
+                                            <li><a href="{{ path('av2_index') }}">{{ club.soustitre32|raw }}</a></li>
+                                            {% if club.soustitre33 %}
+                                                <li><a href="{{ path('av3_index') }}">{{ club.soustitre33|raw }}</a></li>
+                                            {% else %}{% endif %}
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ path('contact_index') }}"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a></li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                    </nav>
+                </header>
+
+            {% endfor %}
+        {% endblock %}
+
+    <!--*********************************** MAIN *****************************-->
+        {% block main %}
+        <main class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+        {% endblock %}
+
+        {% block body %}{% endblock %}
+
+            </div>
+        </div>
+    </main>
+    <!--********************************* FOOTER *****************************-->
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul>
+                    <li><a data-toggle="modal" data-target="#credits">Crédits</a></li><span>|</span>
+                    <li><a data-toggle="modal" data-target="#mentions_légales" >Mentions légales</a></li>
+                </ul>
+            </div>
+            <div class="modal fade" id="credits" tabindex="-1" role="dialog" aria-labelledby="creditsmodal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+                            <h3 class="modal-title">Crédits</h3>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Développé par les étudiants de la Wild Code School :</h4>
+                            <div class="center-block">
+                                <a href="https://fr.linkedin.com/in/véronique-lejeune">Véronique Lejeune</a><br>
+                                <a href="https://fr.linkedin.com/in/julien-saint-laurent">Julien Saint-Laurent</a><br>
+                                <a href="https://fr.linkedin.com/in/maxime-coustes">Maxime Coustès</a><br>
+                                <a href="https://fr.linkedin.com/in/thifainenoirault">Thifaine Noirault</a>
+                            </div>
+                            <br>
+                        </div>
+                        <a href="http://www.wildcodeschool.fr"><img src="{{ asset('bundles/club/img/wcs.jpg') }}" width="20%"/></a>
+                        <br><br>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <div class="modal fade" id="mentions_légales" tabindex="-1" role="dialog" aria-labelledby="LargeMentionslégalesmodal">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+                            <h4 class="modal-title">Mentions légales</h4>
+                        </div>
+                            <br>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="center-block">
+
+                                                SAS MCM Presse <br>
+                                                BP 2031 – 37020 Tours Cedex 1 <br>
+                                                02 47 70 60 00 <br>
+
+                                        </div>
+                                            <br>
+                                            <br>
+                                        <p>
+                                            Droits de propriété du site <br>
+                                            <br>
+                                            Les informations diffusées sur le site www.leclubdelopinion.com sont la propriété de CLUBDELOPINION.<br>
+                                            La diffusion intégrale ou partielle sur des sites Internet privés de documents scientifiques (articles, fiches techniques…),
+                                            sans accord de Clubdelopinion, est interdite. La modification ou l’altération de ces informations est également interdite.
+                                            Malgré toute la rigueur apportée au contenu du site www.leclubdelopinion.com, CLUBDELOPINION ne peut être tenue responsable des informations publiées.<br>
+                                            D’une manière générale, l’association CLUBDELOPINOIN ne saurait garantir la qualité et la compatibilité du site à un usage spécifique,
+                                            ni que le site soit exhaustif ou dépourvu de toute erreur. Toute utilisation d’information doit faire l’objet d’une demande d’autorisation auprès de
+                                            CLUBDELOPINION (contact (at) clubdelopinion (dot) com). Celle-ci sera accordée si sa finalité est conforme à l’engagement de l’association.
+                                            La mise en place de liens hypertextes vers des pages ou des documents diffusés sur le site www.leclubdelopinion.com est autorisée si les liens garantissent
+                                            la possibilité d’identifier l’origine du document. <br>
+                                            Les utilisateurs sont responsables de l’usage qu’ils en font, conformément aux réglementations en vigueur
+                                            (loi n°78-17 du 6 janvier 1978, relative à l’informatique, aux fichiers et aux libertés, dite « Loi Informatique et Liberté »).
+                                            Loi informatique et Libertés<br>
+                                            <br>
+                                            La délibération n°2006-130 du 09/05/2006 dispense les associations à but non lucratif régies par la loi du 1er juillet 1901 de déclaration des traitements
+                                            relatifs à la gestion des membres et donateurs. Le traitement de données personnelles ne fait donc pas l’objet d’une déclaration auprès de la
+                                            Commission Nationale de l’Informatique et des Libertés (CNIL).<br>
+                                            La dispense prévoit que seules peuvent être enregistrées les données relatives à l’identité,
+                                            l’identité bancaire, vie associative à l’exception des données sensibles telles que les origines raciales ou ethniques, les opinions politiques,
+                                            philosophiques ou religieuses, l’appartenance syndicale, l’état de santé ou la vie sexuelle des personnes, les infractions, condamnations ou mesure de justice.
+                                            Ces données ne peuvent être conservées au delà de la démission ou de la radiation du membre (sauf s’il fait la demande contraire) et pour les donateurs
+                                            au-delà de deux sollicitations restées infructueuses.<br>
+
+                                            CLUBDELOPINION s’engage à préserver la confidentialité des informations éventuellement fournies en ligne par l’internaute qui ne seront pas utilisées par
+                                            d’autres entités que l’association CLUBDELOPINION. Conformément à l’article 34 de la loi « Informatique et Libertés » n°78-17 du 6 janvier 1978,
+                                            l’utilisateur dispose d’un droit d’accès, de modification, de rectification et de suppression des données éventuelles qui le concernent.
+                                            Il suffit d’en faire la demande par courrier simple à CLUBDELOPINION, SAS MCM Presse, BP 2031 – 37020 Tours Cedex 1 France.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+        </div>
+    </footer>
+
+        <!--************* SCRIPTS ***************-->
+        <script src="https://use.fontawesome.com/f0f4368368.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="http://cufon.shoqolate.com/js/cufon-yui.js" type="text/javascript"></script>
+        <script src="{{ asset('bundles/club/js/gotham-htf-book.cufonfonts.js') }}" type="text/javascript"></script>
+        <script type="text/javascript">
+            Cufon.replace('.gothamhtf-book', { fontFamily: 'GothamHTF-Book', hover: true });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>{{ evenement.title }}</h1>
+<p>{{ evenement.paragraph }}</p>
+</div>
+</div>
+<div id="carousel-evenement" class="carousel slide center-block" data-ride="carousel">
+    <!-- Carousel Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-evenement" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-evenement" data-slide-to="1"></li>
+        <li data-target="#carousel-evenement" data-slide-to="2"></li>
+        <li data-target="#carousel-evenement" data-slide-to="3"></li>
+        <li data-target="#carousel-evenement" data-slide-to="4"></li>
+        <li data-target="#carousel-evenement" data-slide-to="5"></li>
+    </ol>
+    <!-- Carousel Wrapper -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="photos_diners/chateau_gaillard_chateau_de_pray/IMG_3838.jpg" alt="Image 1 - Evènement du 12/11/2015">
+        </div>
+        <div class="item">
+            <img src="photos_diners/chateau_gaillard_chateau_de_pray/IMG_3844.jpg" alt="Image 2 - Evènement du 12/11/2015">
+        </div>
+        <div class="item">
+            <img src="photos_diners/chateau_gaillard_chateau_de_pray/IMG_3861.jpg" alt="Image 3 - Evènement du 12/11/2015">
+        </div>
+        <div class="item">
+            <img src="photos_diners/chateau_gaillard_chateau_de_pray/IMG_3866.jpg" alt="Image 4 - Evènement du 12/11/2015">
+        </div>
+        <div class="item">
+            <img src="photos_diners/chateau_gaillard_chateau_de_pray/IMG_3882.jpg" alt="Image 5 - Evènement du 12/11/2015">
+        </div>
+        <div class="item">
+            <img src="photos_diners/chateau_gaillard_chateau_de_pray/IMG_3886.jpg" alt="Image 6 - Evènement du 12/11/2015">
+        </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <a class="left carousel-control" href="#carousel-evenement" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-evenement" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+    </a>
+
+    <a href="{{ path('evrcvl_edit', { 'id': 1 }) }}">Retour à la page précédente</a>
+
+    {% endblock %}

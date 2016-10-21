@@ -1,0 +1,25 @@
+araevenements_index:
+    path:     /
+    defaults: { _controller: "ClubBundle:AraEvenements:index" }
+    methods:  GET
+
+araevenements_show:
+    path:     /{id}/show
+    defaults: { _controller: "ClubBundle:AraEvenements:show" }
+    methods:  GET
+
+araevenements_new:
+    path:     /new
+    defaults: { _controller: "ClubBundle:AraEvenements:new" }
+    methods:  [GET, POST]
+
+araevenements_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ClubBundle:AraEvenements:edit" }
+    methods:  [GET, POST]
+
+araevenements_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ClubBundle:AraEvenements:delete" }
+    methods:  DELETE
+

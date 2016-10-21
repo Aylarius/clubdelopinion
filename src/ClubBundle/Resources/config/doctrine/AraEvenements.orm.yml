@@ -1,0 +1,78 @@
+ClubBundle\Entity\AraEvenements:
+    type: entity
+    table: null
+    repositoryClass: ClubBundle\Repository\AraEvenementsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        paragraph:
+            type: string
+            length: 255
+        iname:
+            type: string
+        iname2:
+            type: string
+        iname3:
+            type: string
+        iname4:
+            type: string
+        iname5:
+            type: string
+        iname6:
+            type: string
+        iname7:
+            type: string
+        iname8:
+            type: string
+        iname9:
+            type: string
+        iname10:
+            type: string
+        iname11:
+            type: string
+        iname12:
+            type: string
+        iname13:
+            type: string
+        iname14:
+            type: string
+        iname15:
+            type: string
+        iname16:
+            type: string
+        iname17:
+            type: string
+        iname18:
+            type: string
+        iname19:
+            type: string
+        iname20:
+            type: string
+        iname21:
+            type: string
+        iname22:
+            type: string
+        iname23:
+            type: string
+        iname24:
+            type: string
+        iname25:
+            type: string
+        iname26:
+            type: string
+        iname27:
+            type: string
+        iname28:
+            type: string
+        iname29:
+            type: string
+        iname30:
+            type: string
+    lifecycleCallbacks: {  }

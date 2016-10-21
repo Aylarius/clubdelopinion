@@ -1,0 +1,16 @@
+ClubBundle\Entity\Club:
+    video:
+        mapping:           folder_images
+        filename_property: vname
+    image:
+        mapping:           folder_images
+        filename_property: iname
+    image2:
+        mapping:           folder_images
+        filename_property: iname2
+    image3:
+        mapping:           folder_images
+        filename_property: iname3
+    image4:
+        mapping:           folder_images
+        filename_property: iname4

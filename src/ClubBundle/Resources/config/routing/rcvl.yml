@@ -1,0 +1,24 @@
+rcvl_index:
+    path:     /
+    defaults: { _controller: "ClubBundle:Rcvl:index" }
+    methods:  GET
+
+rcvl_show:
+    path:     /{id}/show
+    defaults: { _controller: "ClubBundle:Rcvl:show" }
+    methods:  GET
+
+rcvl_new:
+    path:     /new
+    defaults: { _controller: "ClubBundle:Rcvl:new" }
+    methods:  [GET, POST]
+
+rcvl_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ClubBundle:Rcvl:edit" }
+    methods:  [GET, POST]
+
+rcvl_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ClubBundle:Rcvl:delete" }
+    methods:  DELETE

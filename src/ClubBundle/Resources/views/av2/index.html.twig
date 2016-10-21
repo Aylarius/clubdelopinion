@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% for av2 in av2s %}
+        <h1><img src="{{ asset('bundles/club/img/signs.png') }}" width="30px" id="fireworks" /> {{ av2.titleAv2 }}</h1>
+
+    <ul>
+        <li>
+            <a href="{{ path('av2_show', { 'id': av2.id }) }}">show</a>
+        </li>
+        <li>
+            <a href="{{ path('av2_edit', { 'id': av2.id }) }}">edit</a>
+        </li>
+        <li>
+            <a href="{{ path('av2_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+
+
+
+    <div class="container-fluid">
+        <div class="row blockGray">
+            <div class="row"><!--**************** 2ème bloc *****************-->
+                <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                    <p>{{ av2.paragraphAv2 }}</p>
+
+                </div>
+                <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                    <img src="{{ asset('bundles/club/img/historique.jpg') }}" alt="vieille image" width="100%"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        {% endfor %}
+
+{% endblock %}

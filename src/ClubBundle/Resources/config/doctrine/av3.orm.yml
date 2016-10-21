@@ -1,0 +1,20 @@
+ClubBundle\Entity\av3:
+    type: entity
+    table: null
+    repositoryClass: ClubBundle\Repository\av3Repository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titleAv3:
+            type: string
+            length: 255
+            column: title_av3
+        paragraphAv3:
+            type: string
+            length: 600
+            column: paragraph_av3
+    lifecycleCallbacks: {  }

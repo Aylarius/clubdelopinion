@@ -1,0 +1,353 @@
+/***************************************************/
+/******************** GENERAL **********************/
+/***************************************************/
+
+body {
+  font-size: 16px;
+  font-family: GothamHTF-Book, Arial, sans-serif;
+  background-color: #C5A99B;
+}
+
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+    text-align: center;
+	padding-bottom: 30px;
+}
+
+p {
+  text-align: justify;
+}
+
+a {
+  cursor: pointer;
+}
+
+hr {
+    height: 1px;
+    background-color: black;
+}
+
+main {
+	padding-bottom: 20px;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+	padding-top: 20px !important;
+  	background-color: white;
+}
+.bold {
+  font-weight: 700;
+}
+
+@media (max-width: 550px){
+  .col-xxs-12 {
+    width: 100%;
+  } 
+}
+
+@media (min-width: 1200px){
+	main {
+		width: 1200px;
+	}
+}
+input[type=file]{
+  width:100% !important;
+}
+
+.image {
+  background-size: cover;
+  background-position: center;
+  height:280px;
+  width:auto;
+}
+
+#container-club {
+  padding: 0px !important;
+}
+#blockhp {
+  margin-top: -6px;
+}
+/**************************************************/
+/********************  HEADER  ********************/
+/**************************************************/
+
+.navbar {
+  background-color: #0C1319;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  border-radius: inherit;
+}
+
+.navbar-collapse {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.navbar-brand {
+  left: calc(50% - 125px);
+  position: absolute;
+}
+
+#logo{
+  width: 250px;
+  margin-top: 40px;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+}
+
+.navbar-brand a {
+  text-decoration: inherit;
+  color: white;
+}
+
+.navbar-default {
+  border: inherit;
+}
+
+.navbar-default .navbar-nav > li {
+  margin-left: 60px;
+}
+
+.navbar-default .navbar-nav > li:first-child {
+  margin-left: 0px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  font-size: 1.2em;
+  padding-bottom: 30px;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+  color: #E0071E;
+}
+
+.nav-icon {
+  padding-right: 5px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: #E0071E;
+}
+
+/********************* NAV DROPDOWN **********************/
+.dropdown-menu {
+  background-color: #0C1319;
+}
+
+.dropdown-menu>li>a {
+  background-color: #0C1319;
+  color: white;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  background-color: #0C1319;
+  color: #E0071E;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  background-color:  #0C1319;
+  color: #E0071E;
+}
+
+/********************* MEDIA QUERIES - NAV **********************/
+
+@media (max-width: 992px) {
+  .navbar-default .navbar-nav > li {
+    margin-left: 0px;
+  }
+  
+  .nav>li>a {
+    padding: 10px;
+  }
+
+}
+
+@media (max-width: 1060px) {
+
+
+  .navbar-default .navbar-nav > li > a {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    left: 0;
+    position: inherit;
+  }
+  
+  #logo{
+    width: 100px;
+    margin-top: 0px;
+  }
+  
+  .navbar-collapse {
+    margin-top: 0px;
+    text-align: right;
+  }
+  
+  .navbar-toggle {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-right: 20px;
+  }
+  
+  .navbar-default .navbar-nav > li {
+    margin-right: 20px;
+  }
+  
+  .navbar-default .navbar-nav > li > a {
+    padding-bottom: 10px;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: white;
+    text-align: right;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    color: #E0071E;
+  }
+}
+
+/************************************************/
+/******************** MAIN **********************/
+/************************************************/
+
+#fireworks {
+	padding-bottom: 10px;
+}
+
+/********************* HOMEPAGE *******************/
+
+.blockGray {
+	background-color: #ebebeb;
+}
+
+.homepageBlock2 {
+	padding: 50px;
+}
+
+.homepageBlock2 a {
+	color: #E0071E;
+}
+
+.homepageBlock2 a:focus, .homepageBlock2 a:hover {
+	color: #E0071E;
+	cursor: pointer;
+}	
+
+@media (max-width: 768px) {
+  .homepageBlock2 {
+    padding: 10px;
+  }
+}
+
+/********************* DINERS **********************/
+
+.thumbnail a>img, .thumbnail>img {
+  padding:10px;
+}
+
+.thumbnail {
+  background-color: #F3F3F3;
+  border-radius: inherit;
+}
+
+.thumbnail:hover {
+  box-shadow: 0px 0px 5px 2px #cfcfcf;
+}
+
+.thumbnail:hover {
+  box-shadow: 0px 0px 5px 2px #cfcfcf;
+}
+
+#thumbnail-membre:hover {
+  box-shadow: none;
+}
+
+.thumbnail .caption {
+  padding: 10px;
+}
+
+.row-diners{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#diners h3 {
+  font-size: 1.2em;
+  margin-top: 0px;
+}
+
+#btn-photo p {
+	text-align: right;
+	color: #E0071E;
+}
+
+#btn-photo:focus, #btn-photo:hover {
+	color: #E0071E;
+	cursor: pointer;
+}
+
+.caption {
+  padding-bottom: 50px;
+}
+
+.glyphicon-camera, .glyphicon-picture, .glyphicon-share-alt {
+  padding-left: 5px;
+}
+
+#carousel-evenement {
+	margin-top: 20px;
+}
+
+
+#adresse {
+	margin-left: 10%;	
+}
+
+/**************************************************/
+/******************** FOOTER **********************/
+/**************************************************/
+
+footer {
+  background-color: #0C1319;
+  text-align: center;
+}
+
+footer li {
+  list-style-type: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+footer li a {
+  color: white;
+}
+
+footer li a:hover {
+  color: #E0071E;
+  text-decoration: none;
+}
+
+footer span {
+  color: white;
+}
+
+.modal span {
+	color: black;
+}
+
+@media (max-width: 550px){
+  footer li {
+    padding: 5px;
+}
+}

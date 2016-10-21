@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+        {% for contact in contacts %}
+            <h1>{{ contact.title }}</h1>
+
+            <div class="container-fluid" id="contact">
+                <div class="row blockGray">
+                    <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                        <img src="{{ asset('bundles/club/img/1.jpg') }}" alt="" width="100%"/>
+                    </div>
+                    <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                        <h2>{{ contact.soustitre }}</h2>
+
+                        <hr/>
+                        <p>{{ contact.paragraph|raw }}</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+                    <ul>
+                        <li>
+                            <a href="{{ path('contact_show', { 'id': contact.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('contact_edit', { 'id': contact.id }) }}">edit</a>
+                        </li>
+                    </ul>
+        {% endfor %}
+
+    <ul>
+        <li>
+            <a href="{{ path('contact_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

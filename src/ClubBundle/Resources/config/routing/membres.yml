@@ -1,0 +1,24 @@
+membres_index:
+    path:     /
+    defaults: { _controller: "ClubBundle:Membres:index" }
+    methods:  GET
+
+membres_show:
+    path:     /{id}/show
+    defaults: { _controller: "ClubBundle:Membres:show" }
+    methods:  GET
+
+membres_new:
+    path:     /new
+    defaults: { _controller: "ClubBundle:Membres:new" }
+    methods:  [GET, POST]
+
+membres_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ClubBundle:Membres:edit" }
+    methods:  [GET, POST]
+
+membres_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ClubBundle:Membres:delete" }
+    methods:  DELETE

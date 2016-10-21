@@ -1,0 +1,24 @@
+evara_index:
+    path:     /
+    defaults: { _controller: "ClubBundle:EvAra:index" }
+    methods:  GET
+
+evara_show:
+    path:     /{id}/show
+    defaults: { _controller: "ClubBundle:EvAra:show" }
+    methods:  GET
+
+evara_new:
+    path:     /new
+    defaults: { _controller: "ClubBundle:EvAra:new" }
+    methods:  [GET, POST]
+
+evara_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ClubBundle:EvAra:edit" }
+    methods:  [GET, POST]
+
+evara_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ClubBundle:EvAra:delete" }
+    methods:  DELETE

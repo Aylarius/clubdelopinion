@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <h1>Mode édition</h1>
+
+    {{ form_start(edit_form) }}
+    {{ form_errors(edit_form) }}
+    <h1>{{ evSup.title }}</h1><br>
+    <span class="bold">Titre</span>
+    {{ form_errors(edit_form.title) }}
+    {{ form_widget(edit_form.title) }}
+    <input type="submit" value="Edit" />
+    {{ form_end(edit_form) }}
+
+    <br>
+
+    <div class="row center-block row-diners">
+        {% for supEvenement in supEvenements %}
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h4>{{ supEvenement.title }}</h4>
+                        <p>{{ supEvenement.paragraph }}</p>
+                        <br>
+                        <a href="{{ path('supevenements_edit', { 'id': supEvenement.id }) }}">Modifier</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="thumbnail" id="thumbnail-membre">
+                <div class="caption">
+                    {{ form_start(new_form) }}
+                    <span class="bold">Nom</span><br>
+                    {{ form_errors(new_form.title) }}
+                    {{ form_widget(new_form.title) }}
+                    <br>
+                    <span class="bold">Description</span><br>
+                    {{ form_errors(new_form.paragraph) }}
+                    {{ form_widget(new_form.paragraph) }}
+                    <br><br>
+                    <input type="submit" value="Créer" />
+                    {{ form_end(new_form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="{{ path('evsup_index') }}">Retour à la page précédente</a>
+
+{% endblock %}

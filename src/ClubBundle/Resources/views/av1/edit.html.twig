@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>mode édition</h1>
+
+    {{ form_start(edit_form) }}
+    {{ form_errors(edit_form) }}
+
+    <!-- ********************************************** -->
+
+    <h1><i class="fa fa-newspaper-o fa-1x" aria-hidden="true"></i> {{ av1.titleAv1 }}</h1>
+    <span class="bold">Titre</span>
+    {{ form_errors(edit_form.titleAv1) }}
+    {{ form_widget(edit_form.titleAv1) }}
+    <input type="submit" value="Edit" />
+    <div class="container-fluid">
+        <div class="row blockGray"><!--******************* 1er bloc ***************-->
+            <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                <span class="bold">Image</span><br>
+                {{ form_errors(edit_form.image) }}
+                {{ form_widget(edit_form.image) }}
+                <br><br>
+            </div>
+            <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                <p>{{ av1.paragraphAv1|raw }}</p>
+                <span class="bold">Paragraphe</span>
+                {{ form_errors(edit_form.paragraphAv1) }}
+                {{ form_widget(edit_form.paragraphAv1) }}
+                <input type="submit" value="Edit" />
+            </div>
+        </div>
+    </div>
+
+    {{ form_end(edit_form) }}
+
+{% endblock %}

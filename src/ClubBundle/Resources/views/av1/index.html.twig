@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% for av1 in av1s %}
+    <h1><i class="fa fa-newspaper-o fa-1x" aria-hidden="true"></i> {{ av1.titleAv1 }}</h1>
+
+    <div class="container-fluid">
+        <div class="row blockGray"><!--******************* 1er bloc ***************-->
+            <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                <img src="{{ vich_uploader_asset(av1, 'image', 'ClubBundle\\Entity\\av1') }}" alt="{{ av1.titleAv1 }}" class="center-block" height="400px"/>
+            </div>
+            <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                <p>{{ av1.paragraphAv1|raw }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <ul>
+        <li>
+            <a href="{{ path('av1_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

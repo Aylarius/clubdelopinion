@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>ara édition</h1>
+
+    {{ form_start(edit_form) }}
+    {{ form_errors(edit_form) }}
+
+    <!-- ****************************************** -->
+
+    <div class="container-fluid">
+        <h1>{{ ara.title }}</h1>
+        <span class="bold">Titre</span>
+        {{ form_errors(edit_form.title) }}
+        {{ form_widget(edit_form.title) }}
+        <input type="submit" value="Edit" />
+        <div class="row blockGray homepageBlock"><!--******************* 1er bloc ***************-->
+            <div class="col-xs-6 homepageBlock2">
+                <img src="{{ vich_uploader_asset(club, 'image', 'ClubBundle\\Entity\\Ara') }}" alt="logo" width="100%"/>
+                {{ form_errors(edit_form.image ) }}
+                {{ form_widget(edit_form.image ) }}
+            </div>
+            <div class="col-xs-6 homepageBlock2">
+                <h2>{{ ara.soustitre }}</h2>
+                <span class="bold">Sous-titre</span>
+                {{ form_errors(edit_form.soustitre) }}
+                {{ form_widget(edit_form.soustitre) }}
+                <input type="submit" value="Edit" />
+                <p>{{ ara.paragraph }}</p>
+                <span class="bold">Paragraphe</span>
+                {{ form_errors(edit_form.paragraph) }}
+                {{ form_widget(edit_form.paragraph) }}
+                <input type="submit" value="Edit" />
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

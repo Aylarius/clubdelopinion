@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+        {% for pageMembre in pageMembres %}
+            <h1>{{ pageMembre.title }}</h1><br>
+            <div class="row center-block row-diners">
+            {% for membre in membres %}
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail" id="thumbnail-membre">
+                        {% if membre.iname %}
+                            <div class="image" style="background-image: url({{ vich_uploader_asset(membre, 'image', 'ClubBundle\\Entity\\Membres') }})"></div>
+                        {% else %}
+                            Pas d'image chargée !
+                        {% endif %}
+                        <div class="caption">
+                            <h4>{{ membre.name }}</h4>
+                            <p>{{ membre.description }}</p>
+
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        {% endfor %}
+
+
+{% endblock %}

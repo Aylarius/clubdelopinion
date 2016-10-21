@@ -1,0 +1,24 @@
+ClubBundle\Entity\Ara:
+    type: entity
+    table: null
+    repositoryClass: ClubBundle\Repository\AraRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        soustitre:
+            type: string
+            length: 255
+            column: Soustitre
+        paragraph:
+            type: string
+            length: 600
+        iname:
+            type: string
+    lifecycleCallbacks: {  }

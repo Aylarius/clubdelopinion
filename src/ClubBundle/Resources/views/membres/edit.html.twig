@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Modifier un membre</h1>
+
+    {{ form_start(edit_form) }}
+        <span class="bold">Nom</span><br>
+        {{ form_errors(edit_form.name) }}
+        {{ form_widget(edit_form.name) }}
+        <br><br>
+        <span class="bold">Description</span><br>
+        {{ form_errors(edit_form.description) }}
+        {{ form_widget(edit_form.description) }}
+        <br><br>
+        <span class="bold">Image</span><br>
+        {{ form_errors(edit_form.image) }}
+        {{ form_widget(edit_form.image) }}
+        <br><br>
+        <input type="submit" value="Modifier" />
+    {{ form_end(edit_form) }}
+    <br>
+    {{ form_start(delete_form) }}
+    <input type="submit" value="Supprimer">
+    {{ form_end(delete_form) }}
+    <br>
+    <a href="{{ path('pagemembre_edit', { 'id': 1 }) }}">Retour à la page précédente</a>
+    <br>
+
+{% endblock %}
