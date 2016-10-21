@@ -48,8 +48,6 @@ class ClubType extends AbstractType
                 'required'      => false,
                 'allow_delete'  => false, // not mandatory, default is true
                 'download_link' => false, // not mandatory, default is true
-<<<<<<< HEAD
-=======
             ))
             ->add('image', 'vich_image', array(
                 'required'      => false,
@@ -70,7 +68,6 @@ class ClubType extends AbstractType
                 'required'      => false,
                 'allow_delete'  => false, // not mandatory, default is true
                 'download_link' => false, // not mandatory, default is true
->>>>>>> VL
             ));
     }
     

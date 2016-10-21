@@ -14,65 +14,96 @@ ClubBundle\Entity\Evenements:
             length: 255
         paragraph:
             type: string
-            length: 255
+            length: 600
+            nullable: TRUE
         iname:
             type: string
+            nullable: TRUE
         iname2:
             type: string
+            nullable: TRUE
         iname3:
             type: string
+            nullable: TRUE
         iname4:
             type: string
+            nullable: TRUE
         iname5:
             type: string
+            nullable: TRUE
         iname6:
             type: string
+            nullable: TRUE
         iname7:
             type: string
+            nullable: TRUE
         iname8:
             type: string
+            nullable: TRUE
         iname9:
             type: string
+            nullable: TRUE
         iname10:
             type: string
+            nullable: TRUE
         iname11:
             type: string
+            nullable: TRUE
         iname12:
             type: string
+            nullable: TRUE
         iname13:
             type: string
+            nullable: TRUE
         iname14:
             type: string
+            nullable: TRUE
         iname15:
             type: string
+            nullable: TRUE
         iname16:
             type: string
+            nullable: TRUE
         iname17:
             type: string
+            nullable: TRUE
         iname18:
             type: string
+            nullable: TRUE
         iname19:
             type: string
+            nullable: TRUE
         iname20:
             type: string
+            nullable: TRUE
         iname21:
             type: string
+            nullable: TRUE
         iname22:
             type: string
+            nullable: TRUE
         iname23:
             type: string
+            nullable: TRUE
         iname24:
             type: string
+            nullable: TRUE
         iname25:
             type: string
+            nullable: TRUE
         iname26:
             type: string
+            nullable: TRUE
         iname27:
             type: string
+            nullable: TRUE
         iname28:
             type: string
+            nullable: TRUE
         iname29:
             type: string
+            nullable: TRUE
         iname30:
             type: string
+            nullable: TRUE
     lifecycleCallbacks: {  }
