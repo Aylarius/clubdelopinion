@@ -9,6 +9,30 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Ara
 {
+
+    private $image;
+    private $iname;
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+        return $this;
+    }
+    public function getImage ()
+    {
+        return $this->image;
+    }
+    public function setIname($iname)
+    {
+        $this->iname = $iname;
+        return $this;
+    }
+    public function getIname()
+    {
+        return $this->iname;
+    }
+    /** CODE GENERE **/
+
     /**
      * @var int
      */

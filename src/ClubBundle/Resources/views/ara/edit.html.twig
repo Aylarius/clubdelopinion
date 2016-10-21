@@ -16,7 +16,9 @@
         <input type="submit" value="Edit" />
         <div class="row blockGray homepageBlock"><!--******************* 1er bloc ***************-->
             <div class="col-xs-6 homepageBlock2">
-                <img src="{{ asset('bundles/club/img/logo_ara.jpg') }}" alt="" width="100%"/>
+                <img src="{{ vich_uploader_asset(club, 'image', 'ClubBundle\\Entity\\Ara') }}" alt="logo" width="100%"/>
+                {{ form_errors(edit_form.image ) }}
+                {{ form_widget(edit_form.image ) }}
             </div>
             <div class="col-xs-6 homepageBlock2">
                 <h2>{{ ara.soustitre }}</h2>

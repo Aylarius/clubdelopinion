@@ -76,4 +76,12 @@ ClubBundle\Entity\Club:
             nullable: TRUE
         vname:
             type: string
+        iname:
+            type: string
+        iname2:
+            type: string
+        iname3:
+            type: string
+        iname4:
+            type: string
     lifecycleCallbacks: {  }

@@ -9,7 +9,99 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Club
 {
-    
+
+    private $image;
+    private $iname;
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+        return $this;
+    }
+    public function getImage ()
+    {
+        return $this->image;
+    }
+    public function setIname($iname)
+    {
+        $this->iname = $iname;
+        return $this;
+    }
+    public function getIname()
+    {
+        return $this->iname;
+    }
+
+    private $image2;
+    private $iname2;
+
+    public function setImage2($image2)
+    {
+        $this->image2 = $image2;
+        return $this;
+    }
+    public function getImage2 ()
+    {
+        return $this->image2;
+    }
+    public function setIname2($iname2)
+    {
+        $this->iname2 = $iname2;
+        return $this;
+    }
+    public function getIname2()
+    {
+        return $this->iname2;
+    }
+
+    private $image3;
+    private $iname3;
+    public function setImage3($image3)
+    {
+        $this->image3 = $image3;
+        return $this;
+    }
+    public function getImage3 ()
+    {
+        return $this->image3;
+    }
+
+
+    public function setIname3($iname3)
+    {
+        $this->iname3 = $iname3;
+        return $this;
+    }
+    public function getIname3()
+    {
+        return $this->iname3;
+    }
+
+    private $image4;
+    private $iname4;
+
+    public function setImage4($image4)
+    {
+        $this->image4 = $image4;
+        return $this;
+    }
+    public function getImage4 ()
+    {
+        return $this->image4;
+    }
+
+    public function setIname4($iname4)
+    {
+        $this->iname4 = $iname4;
+        return $this;
+    }
+    public function getIname4()
+    {
+        return $this->iname4;
+    }
+
+
+
     private $video;
     private $vname;
 

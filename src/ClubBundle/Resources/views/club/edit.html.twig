@@ -100,7 +100,9 @@
     <div class="container-fluid">
         <div class="row blockGray" id="blockhp"><!--******************* 1er bloc ***************-->
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <img src="{{ asset('bundles/club/img/1.jpg') }}" alt="logo" width="100%"/>
+                <img src="{{ vich_uploader_asset(club, 'image', 'ClubBundle\\Entity\\Club') }}" alt="logo" width="100%"/>
+                {{ form_errors(edit_form.image ) }}
+                {{ form_widget(edit_form.image ) }}
             </div>
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
                 <h2>{{ club.blocktitle1 }}</h2>
@@ -142,12 +144,16 @@
 
             </div>
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <img src="{{ asset('bundles/club/img/logo_cvl_blanc.jpg') }}" alt="" width="100%"/>
+                <img src="{{ vich_uploader_asset(club, 'image2', 'ClubBundle\\Entity\\Club') }}" alt="logo" width="100%"/>
+                {{ form_errors(edit_form.image2 ) }}
+                {{ form_widget(edit_form.image2 ) }}
             </div>
         </div>
         <div class="row blockGray"><!--************* 3ème bloc ***************-->
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <img src="{{ asset('bundles/club/img/logo_ara.jpg') }}" alt="" width="100%"/>
+                <img src="{{ vich_uploader_asset(club, 'image3', 'ClubBundle\\Entity\\Club') }}" alt="logo" width="100%"/>
+                {{ form_errors(edit_form.image3 ) }}
+                {{ form_widget(edit_form.image3 ) }}
             </div>
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
                 <h2>{{ club.blocktitle3 }}</h2 >
@@ -188,7 +194,9 @@
 
             </div>
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <img src="" alt="" width="100%"/>
+                <img src="{{ vich_uploader_asset(club, 'image4', 'ClubBundle\\Entity\\Club') }}" alt="logo" width="100%"/>
+                {{ form_errors(edit_form.image4 ) }}
+                {{ form_widget(edit_form.image4 ) }}
             </div>
         </div>
     </div>
