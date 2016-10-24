@@ -6,7 +6,7 @@
     {% for evAra in evAras %}
         <h1>{{ evAra.title }}</h1><br>
         <div class="row center-block row-diners">
-            {% for araEvenement in araEvenements %}
+            {% for araEvenement in araEvenements|sort %}
 
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="thumbnail" id="thumbnail-membre">
