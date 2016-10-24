@@ -17,7 +17,7 @@
             <tr>
                 <td><a href="{{ path('araevenements_show', { 'id': araEvenement.id }) }}">{{ araEvenement.id }}</a></td>
                 <td>{{ araEvenement.title }}</td>
-                <td>{{ araEvenement.paragraph }}</td>
+                <td>{{ araEvenement.paragraph|raw  }}</td>
                 <td>
                     <ul>
                         <li>

@@ -9,6 +9,36 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Rcvl
 {
+
+    public $image;
+
+    public $iname;
+
+    public function setIname($iname)
+    {
+        $this->iname = $iname;
+
+        return $this;
+    }
+
+    public function getIname()
+    {
+        return $this->iname;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /* CODE GENERE */
     /**
      * @var int
      */

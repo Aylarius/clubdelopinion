@@ -1,0 +1,4 @@
+ClubBundle\Entity\club_sup:
+    image:
+        mapping:           folder_images
+        filename_property: iname

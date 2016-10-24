@@ -38,9 +38,6 @@ class av1
         return $this->image;
     }
 
-
-
-
     /* CODE GENERE */
 
     /**

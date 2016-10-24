@@ -29,14 +29,17 @@
         <div class="row blockGray">
             <div class="row"><!--**************** 2ème bloc *****************-->
                 <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                    <p>{{ av2.paragraphAv2 }}</p>
+                    <p>{{ av2.paragraphAv2|raw  }}</p>
                     <span class="bold">Paragraphe</span>
                     {{ form_errors(edit_form.paragraphAv2) }}
                     {{ form_widget(edit_form.paragraphAv2) }}
                     <input type="submit" value="Edit" />
                 </div>
                 <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                    <img src="{{ asset('bundles/club/img/historique.jpg') }}" alt="vieille image" width="100%"/>
+                    <span class="bold">Image</span><br>
+                    {{ form_errors(edit_form.image) }}
+                    {{ form_widget(edit_form.image) }}
+                    <br><br>
                 </div>
             </div>
         </div>

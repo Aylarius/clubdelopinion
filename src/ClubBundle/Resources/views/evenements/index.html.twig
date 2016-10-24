@@ -17,7 +17,7 @@
             <tr>
                 <td><a href="{{ path('evenements_show', { 'id': evenement.id }) }}">{{ evenement.id }}</a></td>
                 <td>{{ evenement.title }}</td>
-                <td>{{ evenement.paragraph }}</td>
+                <td>{{ evenement.paragraph|raw  }}</td>
                 <td>
                     <ul>
                         <li>

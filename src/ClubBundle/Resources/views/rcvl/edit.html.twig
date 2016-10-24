@@ -30,7 +30,10 @@
     <div class="container-fluid">
         <div class="row blockGray homepageBlock"><!--******************* 1er bloc ***************-->
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <img src="{{ asset('bundles/club/img/logo_cvl_blanc.jpg') }}" alt="logo" width="100%"/>
+                <span class="bold">Image</span><br>
+                {{ form_errors(edit_form.image) }}
+                {{ form_widget(edit_form.image) }}
+                <br><br>
             </div>
 
 

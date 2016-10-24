@@ -9,6 +9,52 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class presentation
 {
+    private $image;
+    private $iname;
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+        return $this;
+    }
+    public function getImage ()
+    {
+        return $this->image;
+    }
+    public function setIname($iname)
+    {
+        $this->iname = $iname;
+        return $this;
+    }
+    public function getIname()
+    {
+        return $this->iname;
+    }
+
+    private $image2;
+    private $iname2;
+
+    public function setImage2($image2)
+    {
+        $this->image2 = $image2;
+        return $this;
+    }
+    public function getImage2 ()
+    {
+        return $this->image2;
+    }
+    public function setIname2($iname2)
+    {
+        $this->iname2 = $iname2;
+        return $this;
+    }
+    public function getIname2()
+    {
+        return $this->iname2;
+    }
+
+    //CODE GENERE//
+
     /**
      * @var int
      */
