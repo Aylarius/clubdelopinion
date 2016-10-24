@@ -3,11 +3,8 @@
 
 {% block body %}
     <h1>mode édition</h1>
-
     {{ form_start(edit_form) }}
     {{ form_errors(edit_form) }}
-
-
 
     <h1>{{ presentation.title }}</h1>
     <span class="bold">Titre</span>
@@ -15,13 +12,13 @@
     {{ form_widget(edit_form.title) }}
     <input type="submit" value="Edit" />
 
-
-
-
     <div class="container-fluid">
         <div class="row blockGray homepageBlock"><!--******************* 1er bloc ***************-->
             <div class="col-xs-6 col-xxs-12 homepageBlock2">
-                <img src="{{ asset('bundles/club/img/1.jpg') }}" alt="" width="100%"/>
+                <span class="bold">Image</span><br>
+                {{ form_errors(edit_form.image) }}
+                {{ form_widget(edit_form.image) }}
+                <br><br>
             </div>
             <div class="col-xs-6 col-xxs-12 homepageBlock2">
                 <h2>{{ presentation.soustitre1 }}</h2>
@@ -53,7 +50,10 @@
                 <input type="submit" value="Edit" />
             </div>
             <div class="col-xs-6 col-xxs-12 homepageBlock2">
-                <img src="{{ asset('bundles/club/img/historique.jpg') }}" alt="" width="100%"/>
+                <span class="bold">Image</span><br>
+                {{ form_errors(edit_form.image) }}
+                {{ form_widget(edit_form.image) }}
+                <br><br>
             </div>
         </div>
     </div>

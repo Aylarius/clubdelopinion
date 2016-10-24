@@ -1,0 +1,4 @@
+ClubBundle\Entity\Rcvl:
+    image:
+        mapping:           folder_images
+        filename_property: iname

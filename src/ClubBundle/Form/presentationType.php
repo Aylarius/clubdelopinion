@@ -25,6 +25,16 @@ class presentationType extends AbstractType
             ->add('paragraph2', TextareaType::class, array(
                 'required'      => false,
             ))
+            ->add('image', 'vich_image', array(
+                'required'      => false,
+                'allow_delete'  => false, // not mandatory, default is true
+                'download_link' => false, // not mandatory, default is true
+            ))
+            ->add('image2', 'vich_image', array(
+                'required'      => false,
+                'allow_delete'  => false, // not mandatory, default is true
+                'download_link' => false, // not mandatory, default is true
+            ))
         ;
     }
     

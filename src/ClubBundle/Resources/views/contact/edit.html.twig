@@ -17,7 +17,10 @@
     <div class="container-fluid" id="contact">
         <div class="row blockGray">
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <img src="{{ asset('bundles/club/img/1.jpg') }}" alt="" width="100%"/>
+                <span class="bold">Image</span><br>
+                {{ form_errors(edit_form.image) }}
+                {{ form_widget(edit_form.image) }}
+                <br><br>
             </div>
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
                 <h2>{{ contact.soustitre }}</h2>

@@ -24,4 +24,8 @@ ClubBundle\Entity\presentation:
         paragraph2:
             type: string
             length: 1500
+        iname:
+            type: string
+        iname2:
+            type: string
     lifecycleCallbacks: {  }

@@ -5,23 +5,11 @@
 
         {% for rcvl in rcvls %}
             <h1>{{ rcvl.title }}</h1>
-            <ul>
-                <li>
-                    <a href="{{ path('rcvl_show', { 'id': rcvl.id }) }}">show</a>
-                </li>
-                <li>
-                    <a href="{{ path('rcvl_edit', { 'id': rcvl.id }) }}">edit</a>
-                </li>
-                <li>
-                    <a href="{{ path('rcvl_new') }}">Create a new entry</a>
-                </li>
-            </ul>
-
 
             <div class="container-fluid">
                 <div class="row blockGray homepageBlock"><!--******************* 1er bloc ***************-->
                     <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                        <img src="{{ asset('bundles/club/img/logo_cvl_blanc.jpg') }}" alt="logo" width="100%"/>
+                        <img src="{{ vich_uploader_asset(rcvl, 'image', 'ClubBundle\\Entity\\rcvl') }}" alt="{{ rcvl.title }}" class="center-block" height="400px"/>
                     </div>
 
 

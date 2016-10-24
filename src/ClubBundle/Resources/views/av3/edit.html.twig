@@ -31,7 +31,7 @@
         <div class="row blockGray">
             <div class="row"><!--**************** 2ème bloc *****************-->
                 <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                    <p>{{ av3.paragraphAv3 }}</p>
+                    <p>{{ av3.paragraphAv3|raw  }}</p>
                     <span class="bold">Paragraphe</span>
                     {{ form_errors(edit_form.paragraphAv3) }}
                     {{ form_widget(edit_form.paragraphAv3) }}

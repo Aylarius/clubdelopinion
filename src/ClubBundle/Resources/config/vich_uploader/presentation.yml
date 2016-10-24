@@ -1,0 +1,7 @@
+ClubBundle\Entity\presentation:
+    image:
+        mapping:           folder_images
+        filename_property: iname
+    image2:
+        mapping:           folder_images
+        filename_property: iname2

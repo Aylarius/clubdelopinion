@@ -20,7 +20,11 @@ class av2Type extends AbstractType
             ->add('paragraphAv2', TextareaType::class, array(
                 'required'      => false,
             ))
-        ;
+            ->add('image', 'vich_image', array(
+                'required'      => false,
+                'allow_delete'  => true, // not mandatory, default is true
+                'download_link' => true, // not mandatory, default is true
+            ));
     }
     
     /**

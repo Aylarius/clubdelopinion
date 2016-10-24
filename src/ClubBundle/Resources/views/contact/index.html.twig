@@ -8,7 +8,7 @@
             <div class="container-fluid" id="contact">
                 <div class="row blockGray">
                     <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                        <img src="{{ asset('bundles/club/img/1.jpg') }}" alt="" width="100%"/>
+                        <img src="{{ vich_uploader_asset(contact, 'image', 'ClubBundle\\Entity\\contact') }}" alt="{{ contact.title }}" class="center-block" height="400px"/>
                     </div>
                     <div class="col-xxs-12 col-xs-6 homepageBlock2">
                         <h2>{{ contact.soustitre }}</h2>
@@ -20,22 +20,6 @@
                 </div>
             </div>
 
-
-
-
-                    <ul>
-                        <li>
-                            <a href="{{ path('contact_show', { 'id': contact.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('contact_edit', { 'id': contact.id }) }}">edit</a>
-                        </li>
-                    </ul>
         {% endfor %}
 
-    <ul>
-        <li>
-            <a href="{{ path('contact_new') }}">Create a new entry</a>
-        </li>
-    </ul>
 {% endblock %}
