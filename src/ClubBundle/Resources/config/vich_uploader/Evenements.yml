@@ -1,0 +1,91 @@
+ClubBundle\Entity\Evenements:
+    image:
+        mapping:           folder_images
+        filename_property: iname
+    image2:
+        mapping:           folder_images
+        filename_property: iname2
+    image3:
+        mapping:           folder_images
+        filename_property: iname3
+    image4:
+        mapping:           folder_images
+        filename_property: iname4
+    image5:
+        mapping:           folder_images
+        filename_property: iname5
+    image6:
+        mapping:           folder_images
+        filename_property: iname6
+    image7:
+        mapping:           folder_images
+        filename_property: iname7
+    image8:
+        mapping:           folder_images
+        filename_property: iname8
+    image9:
+        mapping:           folder_images
+        filename_property: iname9
+    image10:
+        mapping:           folder_images
+        filename_property: iname10
+    image11:
+        mapping:           folder_images
+        filename_property: iname11
+    image12:
+        mapping:           folder_images
+        filename_property: iname12
+    image13:
+        mapping:           folder_images
+        filename_property: iname13
+    image14:
+        mapping:           folder_images
+        filename_property: iname14
+    image15:
+        mapping:           folder_images
+        filename_property: iname15
+    image16:
+        mapping:           folder_images
+        filename_property: iname16
+    image17:
+        mapping:           folder_images
+        filename_property: iname17
+    image18:
+        mapping:           folder_images
+        filename_property: iname18
+    image19:
+        mapping:           folder_images
+        filename_property: iname19
+    image20:
+        mapping:           folder_images
+        filename_property: iname20
+    image21:
+        mapping:           folder_images
+        filename_property: iname21
+    image22:
+        mapping:           folder_images
+        filename_property: iname22
+    image23:
+        mapping:           folder_images
+        filename_property: iname23
+    image24:
+        mapping:           folder_images
+        filename_property: iname24
+    image25:
+        mapping:           folder_images
+        filename_property: iname25
+    image26:
+        mapping:           folder_images
+        filename_property: iname26
+    image27:
+        mapping:           folder_images
+        filename_property: iname27
+    image28:
+        mapping:           folder_images
+        filename_property: iname28
+    image29:
+        mapping:           folder_images
+        filename_property: iname29
+    image30:
+        mapping:           folder_images
+        filename_property: iname30
