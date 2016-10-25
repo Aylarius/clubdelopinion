@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new ClubBundle\ClubBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
             //new Symfony\Bundle\SecurityBundle\SecurityBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
             
         );
 
