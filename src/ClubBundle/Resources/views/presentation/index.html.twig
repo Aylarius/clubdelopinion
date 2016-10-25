@@ -8,23 +8,38 @@
 
                 <h1>{{ presentation.title }}</h1>
                 <div class="container-fluid">
-                    <div class="row blockGray homepageBlock"><!--******************* 1er bloc ***************-->
-                        <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                            <img src="{{ vich_uploader_asset(presentation, 'image', 'ClubBundle\\Entity\\presentation') }}" alt="{{ presentation.title }}" class="center-block" height="400px"/>
-                        </div>
-                        <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                            <h2>{{ presentation.soustitre1 }}</h2>
-                            <p>{{ presentation.paragraph1|raw }}</p>
-                        </div>
+                    <div class="row blockGray homepageBlock ">
+                    <!--******************* 1er bloc ***************-->
+                        {% if presentation.iname %}
+                            <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                                    <img src="{{ vich_uploader_asset(presentation, 'image', 'ClubBundle\\Entity\\presentation') }}" alt="{{ presentation.title }}" class="center-block" height="100%"/>
+                            </div>
+                            <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                                <h2>{{ presentation.soustitre1 }}</h2>
+                                <p>{{ presentation.paragraph1|raw }}</p>
+                            </div>
+                        {% else %}
+                            <div class="col-xxs-12 col-xs-10 homepageBlock2 col-xs-offset-1">
+                                <h2>{{ presentation.soustitre1 }}</h2>
+                                <p>{{ presentation.paragraph1|raw }}</p>
+                            </div>
+                        {% endif %}
                     </div>
                     <div class="row homepageBlock"><!--**************** 2ème bloc *****************-->
+                        {% if presentation.iname2 %}
                         <div class="col-xxs-12 col-xs-6 homepageBlock2">
                             <h2>{{ presentation.soustitre2 }}</h2>
                             <p>{{ presentation.paragraph2|raw }}</p>
                         </div>
                         <div class="col-xs-6 col-xxs-12 homepageBlock2">
-                            <img src="{{ vich_uploader_asset(presentation, 'image', 'ClubBundle\\Entity\\presentation') }}" alt="{{ presentation.title }}" class="center-block" height="400px"/>
+                            <img src="{{ vich_uploader_asset(presentation, 'image', 'ClubBundle\\Entity\\presentation') }}" alt="{{ presentation.title }}" class="center-block" height="100%""/>
                         </div>
+                        {% else %}
+                            <div class="col-xxs-12 col-xs-10 homepageBlock2 col-xs-offset-1">
+                                <h2>{{ presentation.soustitre2 }}</h2>
+                                <p>{{ presentation.paragraph2|raw }}</p>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
 

@@ -21,7 +21,7 @@
                 <div class="thumbnail">
                     <div class="caption">
                         <h4>{{ araEvenement.title }}</h4>
-                        <p>{{ araEvenement.paragraph }}</p>
+                        <p>{{ araEvenement.paragraph|raw }}</p>
                         <br>
                         <a href="{{ path('araevenements_edit', { 'id': araEvenement.id }) }}">Modifier</a>
                     </div>

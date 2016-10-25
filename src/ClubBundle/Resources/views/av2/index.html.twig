@@ -7,18 +7,20 @@
 
     <div class="container-fluid">
         <div class="row blockGray">
-            <div class="row"><!--**************** 2ème bloc *****************-->
+            {% if av2.iname %}
+                <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                    <img src="{{ vich_uploader_asset(av2, 'image', 'ClubBundle\\Entity\\av2') }}" alt="{{ av2.titleAv2 }}" class="center-block" height="100%"/>
+                </div>
                 <div class="col-xxs-12 col-xs-6 homepageBlock2">
                     <p>{{ av2.paragraphAv2|raw  }}</p>
-
                 </div>
-                <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                    <img src="{{ vich_uploader_asset(av2, 'image', 'ClubBundle\\Entity\\av2') }}" alt="{{ av2.titleAv2 }}" class="center-block" height="400px"/>
+            {% else %}
+                <div class="col-xxs-12 col-xs-10 homepageBlock2 col-xs-offset-1">
+                    <p>{{ av2.paragraphAv2|raw  }}</p>
                 </div>
-            </div>
+            {% endif %}
         </div>
     </div>
 
-        {% endfor %}
-
+    {% endfor %}
 {% endblock %}

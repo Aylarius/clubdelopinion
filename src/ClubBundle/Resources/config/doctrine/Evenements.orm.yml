@@ -106,5 +106,4 @@ ClubBundle\Entity\Evenements:
         iname30:
             type: string
             nullable: TRUE
->>>>>>> 982d205bf8f7e78e612a5b8064eaaec4e80dfecb
     lifecycleCallbacks: {  }

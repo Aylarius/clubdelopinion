@@ -21,7 +21,7 @@
                 <div class="thumbnail">
                     <div class="caption">
                         <h4>{{ evenement.title }}</h4>
-                        <p>{{ evenement.paragraph }}</p>
+                        <p>{{ evenement.paragraph|raw }}</p>
                         <br>
                         <a href="{{ path('evenements_edit', { 'id': evenement.id }) }}">Modifier</a>
                     </div>

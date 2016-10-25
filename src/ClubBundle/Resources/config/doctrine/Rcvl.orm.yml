@@ -19,4 +19,6 @@ ClubBundle\Entity\Rcvl:
         paragraph:
             type: string
             length: '600'
+        iname:
+            type: string
     lifecycleCallbacks: {  }

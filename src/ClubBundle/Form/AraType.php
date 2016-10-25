@@ -22,15 +22,11 @@ class AraType extends AbstractType
             ->add('paragraph', TextareaType::class, array(
                 'required'      => false,
             ))
-<<<<<<< HEAD
-        ;
-=======
             ->add('image', 'vich_image', array(
                 'required'      => false,
                 'allow_delete'  => false, // not mandatory, default is true
                 'download_link' => false, // not mandatory, default is true
             ));
->>>>>>> VL
     }
     
     /**

@@ -12,7 +12,7 @@
                     <div class="thumbnail" id="thumbnail-membre">
                         <div class="caption">
                             <h4>{{ evenement.title }}</h4>
-                            <p>{{ evenement.paragraph }}</p>
+                            <p>{{ evenement.paragraph|raw }}</p>
                             <br>
                             <a id="btn-photo" href="{{ path('evenements_show', { 'id': evenement.id }) }}"><p>Plus d'infos<span class="glyphicon glyphicon-share-alt"></span></p></a>
                         </div>

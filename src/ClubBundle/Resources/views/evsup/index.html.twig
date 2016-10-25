@@ -11,7 +11,7 @@
                     <div class="thumbnail" id="thumbnail-membre">
                         <div class="caption">
                             <h4>{{ supEvenement.title }}</h4>
-                            <p>{{ supEvenement.paragraph }}</p>
+                            <p>{{ supEvenement.paragraph|raw }}</p>
                             <br>
                             <a id="btn-photo" href="{{ path('supevenements_show', { 'id': supEvenement.id }) }}"><p>Plus d'infos<span class="glyphicon glyphicon-share-alt"></span></p></a>
                         </div>

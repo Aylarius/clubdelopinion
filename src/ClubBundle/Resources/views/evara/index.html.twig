@@ -12,7 +12,7 @@
                     <div class="thumbnail" id="thumbnail-membre">
                         <div class="caption">
                             <h4>{{ araEvenement.title }}</h4>
-                            <p>{{ araEvenement.paragraph }}</p>
+                            <p>{{ araEvenement.paragraph|raw }}</p>
                             <br>
                             <a id="btn-photo" href="{{ path('araevenements_show', { 'id': araEvenement.id }) }}"><p>Plus d'infos<span class="glyphicon glyphicon-share-alt"></span></p></a>
                         </div>

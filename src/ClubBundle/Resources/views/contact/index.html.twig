@@ -7,16 +7,22 @@
 
             <div class="container-fluid" id="contact">
                 <div class="row blockGray">
-                    <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                        <img src="{{ vich_uploader_asset(contact, 'image', 'ClubBundle\\Entity\\contact') }}" alt="{{ contact.title }}" class="center-block" height="400px"/>
-                    </div>
-                    <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                        <h2>{{ contact.soustitre }}</h2>
-
-                        <hr/>
-                        <p>{{ contact.paragraph|raw }}</p>
-
-                    </div>
+                    {% if contact.iname %}
+                        <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                            <img src="{{ vich_uploader_asset(contact, 'image', 'ClubBundle\\Entity\\contact') }}" alt="{{ contact.title }}" class="center-block" height="100%"/>
+                        </div>
+                        <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                            <h2>{{ contact.soustitre }}</h2>
+                            <hr/>
+                            <p>{{ contact.paragraph|raw }}</p>
+                        </div>
+                    {% else %}
+                        <div class="col-xxs-12 col-xs-10 homepageBlock2 col-xs-offset-1">
+                            <h2>{{ contact.soustitre }}</h2>
+                            <hr/>
+                            <p>{{ contact.paragraph|raw }}</p>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
 
