@@ -2,13 +2,10 @@
 # http://symfony.com/doc/current/book/security.html
 security:
 
-<<<<<<< HEAD
-    acl:
-        connection: default
-=======
+
     encoders:
         FOS\UserBundle\Model\UserInterface: bcrypt
->>>>>>> Maxime
+
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
@@ -33,10 +30,7 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-<<<<<<< HEAD
-=======
 
->>>>>>> Maxime
         main:
             anonymous: ~
             # activate different ways to authenticate
@@ -49,13 +43,7 @@ security:
             pattern: ^/
             form_login:
                 provider: fos_userbundle
-<<<<<<< HEAD
-                csrf_provider: security.csrf.token_manager
 
-            logout:       true
-            anonymous:    true
-
-=======
                 csrf_token_generator: security.csrf.token_manager
                 #on ajoute ces deux lignes pour FOSUser pour la redirection
                 always_use_default_target_path: true
@@ -65,7 +53,7 @@ security:
             anonymous:    true
 
 
->>>>>>> Maxime
+
     access_control:
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
