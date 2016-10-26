@@ -223,6 +223,7 @@ class Club
      */
     private $blocktitle1;
 
+    
     /**
      * @var string
      */
@@ -477,6 +478,8 @@ class Club
     {
         return $this->blocktitle1;
     }
+    
+   
 
     /**
      * Set blockparagraph1
