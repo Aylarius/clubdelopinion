@@ -618,7 +618,7 @@ class SupEvenements
 
     public function getiname23()
     {
-        return $this->iname;
+        return $this->iname23;
     }
 
     public function setimage23($image23)
