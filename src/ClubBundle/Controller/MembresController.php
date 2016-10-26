@@ -79,9 +79,6 @@ class MembresController extends Controller
     }
 
     /**
-     * Lists all Membres entities.
-     *
-
     public function indexAction()
     {
     $em = $this->getDoctrine()->getManager();
@@ -89,14 +86,11 @@ class MembresController extends Controller
     $clubEm = $this->getDoctrine()->getManager();
     $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
 
-    return $this->render('ClubBundle:Membres:index.html.twig', array(
+    return $this->render('ClubBundle:membres:index.html.twig', array(
     'membres' => $membres,
     'clubs' => $clubs,
     ));
-    }*/
-    /**
-     * Creates a new Membres entity.
-     *
+    }
 
     public function newAction(Request $request, PageMembre $pageMembre)
     {
@@ -112,23 +106,20 @@ class MembresController extends Controller
     return $this->redirectToRoute('pagemembre_edit', array('id' => $pageMembre->getId()));
     }
 
-    return $this->render('ClubBundle:Membres:new.html.twig', array(
+    return $this->render('ClubBundle:membres:new.html.twig', array(
     'membre' => $membre,
     'form' => $form->createView(),
     ));
-    }*/
+    }
 
-    /**
-     * Finds and displays a Membres entity.
-     *
 
     public function showAction(Membres $membre)
     {
     $deleteForm = $this->createDeleteForm($membre);
 
-    return $this->render('ClubBundle:Membres:show.html.twig', array(
+    return $this->render('ClubBundle:membres:show.html.twig', array(
     'membre' => $membre,
     'delete_form' => $deleteForm->createView(),
     ));
-    }*/
+    }       */
 }
