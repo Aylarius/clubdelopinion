@@ -5,145 +5,265 @@
 <p>{{ evenement.paragraph }}</p>
 </div>
 </div>
-<div id="carousel-evenement" class="carousel slide center-block" data-ride="carousel">
-    <!-- Carousel Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#carousel-evenement" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-evenement" data-slide-to="1"></li>
-        <li data-target="#carousel-evenement" data-slide-to="2"></li>
-        <li data-target="#carousel-evenement" data-slide-to="3"></li>
-        <li data-target="#carousel-evenement" data-slide-to="4"></li>
-        <li data-target="#carousel-evenement" data-slide-to="5"></li>
-        <li data-target="#carousel-evenement" data-slide-to="6"></li>
-        <li data-target="#carousel-evenement" data-slide-to="7"></li>
-        <li data-target="#carousel-evenement" data-slide-to="8"></li>
-        <li data-target="#carousel-evenement" data-slide-to="9"></li>
-        <li data-target="#carousel-evenement" data-slide-to="10"></li>
-        <li data-target="#carousel-evenement" data-slide-to="11"></li>
-        <li data-target="#carousel-evenement" data-slide-to="12"></li>
-        <li data-target="#carousel-evenement" data-slide-to="13"></li>
-        <li data-target="#carousel-evenement" data-slide-to="14"></li>
-        <li data-target="#carousel-evenement" data-slide-to="15"></li>
-        <li data-target="#carousel-evenement" data-slide-to="16"></li>
-        <li data-target="#carousel-evenement" data-slide-to="17"></li>
-        <li data-target="#carousel-evenement" data-slide-to="18"></li>
-        <li data-target="#carousel-evenement" data-slide-to="19"></li>
-        <li data-target="#carousel-evenement" data-slide-to="20"></li>
-        <li data-target="#carousel-evenement" data-slide-to="21"></li>
-        <li data-target="#carousel-evenement" data-slide-to="22"></li>
-        <li data-target="#carousel-evenement" data-slide-to="23"></li>
-        <li data-target="#carousel-evenement" data-slide-to="24"></li>
-        <li data-target="#carousel-evenement" data-slide-to="25"></li>
-        <li data-target="#carousel-evenement" data-slide-to="26"></li>
-        <li data-target="#carousel-evenement" data-slide-to="27"></li>
-        <li data-target="#carousel-evenement" data-slide-to="28"></li>
-        <li data-target="#carousel-evenement" data-slide-to="29"></li>
-        <li data-target="#carousel-evenement" data-slide-to="30"></li>
-    </ol>
-    <!-- Carousel Wrapper -->
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="{{ vich_uploader_asset(evenement, 'image', 'ClubBundle\\Entity\\Evenements') }}" alt="">
+    <div id="carousel-evenement" class="carousel slide center-block" data-ride="carousel">
+        <!-- Carousel Indicators -->
+        <ol class="carousel-indicators">
+            {% if evenement.iname %}
+                <li data-target="#carousel-evenement" data-slide-to="0" class="active"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname2 %}
+                <li data-target="#carousel-evenement" data-slide-to="1"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname3 %}
+                <li data-target="#carousel-evenement" data-slide-to="2"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname4 %}
+                <li data-target="#carousel-evenement" data-slide-to="3"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname5 %}
+                <li data-target="#carousel-evenement" data-slide-to="4"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname6 %}
+                <li data-target="#carousel-evenement" data-slide-to="5"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname7 %}
+                <li data-target="#carousel-evenement" data-slide-to="6"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname8 %}
+                <li data-target="#carousel-evenement" data-slide-to="7"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname9 %}
+                <li data-target="#carousel-evenement" data-slide-to="8"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname10 %}
+                <li data-target="#carousel-evenement" data-slide-to="9"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname11 %}
+                <li data-target="#carousel-evenement" data-slide-to="10"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname12 %}
+                <li data-target="#carousel-evenement" data-slide-to="11"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname13 %}
+                <li data-target="#carousel-evenement" data-slide-to="12"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname14 %}
+                <li data-target="#carousel-evenement" data-slide-to="13"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname15 %}
+                <li data-target="#carousel-evenement" data-slide-to="14"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname16 %}
+                <li data-target="#carousel-evenement" data-slide-to="15"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname17 %}
+                <li data-target="#carousel-evenement" data-slide-to="16"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname18 %}
+                <li data-target="#carousel-evenement" data-slide-to="17"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname19 %}
+                <li data-target="#carousel-evenement" data-slide-to="18"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname20 %}
+                <li data-target="#carousel-evenement" data-slide-to="19"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname21 %}
+                <li data-target="#carousel-evenement" data-slide-to="20"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname22 %}
+                <li data-target="#carousel-evenement" data-slide-to="21"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname23 %}
+                <li data-target="#carousel-evenement" data-slide-to="22"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname24 %}
+                <li data-target="#carousel-evenement" data-slide-to="23"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname25 %}
+                <li data-target="#carousel-evenement" data-slide-to="24"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname26 %}
+                <li data-target="#carousel-evenement" data-slide-to="25"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname27 %}
+                <li data-target="#carousel-evenement" data-slide-to="26"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname28 %}
+                <li data-target="#carousel-evenement" data-slide-to="27"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname29 %}
+                <li data-target="#carousel-evenement" data-slide-to="28"></li>
+            {% else %}{% endif %}
+            {% if evenement.iname30 %}
+                <li data-target="#carousel-evenement" data-slide-to="29"></li>
+            {% else %}{% endif %}
+        </ol>
+        <!-- Carousel Wrapper -->
+        <div class="carousel-inner" role="listbox">
+            {% if evenement.iname %}
+                <div class="item active">
+                    <img src="{{ vich_uploader_asset(evenement, 'image', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname2 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image2', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname3 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image3', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname4 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image4', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname5 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image5', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname6 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image6', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname7 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image7', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname8 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image8', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname9 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image9', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname10 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image10', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname11 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image11', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname12 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image12', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname13 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image13', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname14 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image14', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname15 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image15', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname16 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image16', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname17 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image17', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname18 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image18', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname19 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image19', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname20 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image20', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname21 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image21', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname22 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image22', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname23 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image23', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname24 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image24', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname25 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image25', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname26 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image26', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname27 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image27', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname28 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image28', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname29 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image29', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
+            {% if evenement.iname30 %}
+                <div class="item">
+                    <img src="{{ vich_uploader_asset(evenement, 'image30', 'ClubBundle\\Entity\\Evenements') }}" alt="" class="img-responsive center-block">
+                </div>
+            {% else %}{% endif %}
         </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image2', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image3', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image4', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image5', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image6', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image7', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image8', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image9', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image10', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image11', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image12', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image13', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image14', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image15', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image16', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image17', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image18', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image19', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image20', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image21', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image22', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image23', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image24', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image25', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image26', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image27', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image28', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image29', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
-        <div class="item">
-            <img src="{{ vich_uploader_asset(evenement, 'image30', 'ClubBundle\\Entity\\Evenements') }}" alt="">
-        </div>
+
+        <!-- Carousel Controls -->
+        <a class="left carousel-control" href="#carousel-evenement" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Précédent</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-evenement" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Suivant</span>
+        </a>
     </div>
-
-    <!-- Carousel Controls -->
-    <a class="left carousel-control" href="#carousel-evenement" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Précédent</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-evenement" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Suivant</span>
-    </a>
-
-    <a href="{{ path('evrcvl_edit', { 'id': 1 }) }}">Retour à la page précédente</a>
+    <br>
+    <a href="{{ path('evrcvl_index') }}">Retour à la page précédente</a>
 
     {% endblock %}
