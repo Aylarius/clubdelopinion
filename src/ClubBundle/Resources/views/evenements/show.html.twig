@@ -2,7 +2,7 @@
 
 {% block body %}
 <h1>{{ evenement.title }}</h1>
-<p>{{ evenement.paragraph }}</p>
+<p>{{ evenement.paragraph|raw }}</p>
 </div>
 </div>
     <div id="carousel-evenement" class="carousel slide center-block" data-ride="carousel">
@@ -264,6 +264,6 @@
         </a>
     </div>
     <br>
-    <a href="{{ path('evrcvl_index') }}">Retour à la page précédente</a>
+    <a class="lienRouge" href="{{ path('evrcvl_index') }}">Retour à la page précédente</a>
 
     {% endblock %}

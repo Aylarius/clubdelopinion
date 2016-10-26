@@ -303,13 +303,28 @@ input[type=file]{
   padding-left: 5px;
 }
 
+#adresse {
+  margin-left: 10%;
+}
+
+/********************* CAROUSEL **********************/
+
 #carousel-evenement {
 	margin-top: 20px;
 }
 
+.carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive, .thumbnail a > img, .thumbnail > img {
+  display: block;
+  /*max-width: 100%;*/
+  max-height: 700px;
+}
 
-#adresse {
-	margin-left: 10%;	
+.carousel-inner {
+  background-color: black;
+}
+
+.lienRouge, .lienRouge:hover {
+  color: #E0071E;
 }
 
 /**************************************************/
