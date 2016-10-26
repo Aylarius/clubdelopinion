@@ -82,6 +82,13 @@ textarea {
 /********************  HEADER  ********************/
 /**************************************************/
 
+#logologin {
+  left: calc(50% - 125px);
+  position: relative;
+  width: 250px;
+  margin-top: 40px;
+}
+
 .navbar {
   background-color: #0C1319;
   margin-bottom: 0px;
