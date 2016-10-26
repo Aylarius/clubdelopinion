@@ -12,14 +12,13 @@
     {{ form_errors(edit_form.title) }}
     {{ form_widget(edit_form.title) }}
     <input type="submit" value="Edit" />
-
-
+    <br><br>
     <div class="container-fluid" id="contact">
         <div class="row blockGray">
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <span class="bold">Image</span><br>
-                {{ form_errors(edit_form.image) }}
-                {{ form_widget(edit_form.image) }}
+                <img src="{{ vich_uploader_asset(contact, 'image', 'ClubBundle\\Entity\\contact') }}" class="center-block" width="100%"/>
+                {{ form_errors(edit_form.image ) }}
+                {{ form_widget(edit_form.image, { label: false }) }}
                 <br><br>
             </div>
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
@@ -28,22 +27,16 @@
                 {{ form_errors(edit_form.soustitre) }}
                 {{ form_widget(edit_form.soustitre) }}
                 <input type="submit" value="Edit" />
-
                 <hr/>
                 <p>{{ contact.paragraph|raw }}</p>
-
+                <br>
                 <span class="bold">Paragraphe</span>
                 {{ form_errors(edit_form.paragraph) }}
                 {{ form_widget(edit_form.paragraph) }}
-
                 <input type="submit" value="Edit" />
-
-                {{ form_end(edit_form) }}
             </div>
         </div>
     </div>
-
-
-
+    {{ form_end(edit_form) }}
 
 {% endblock %}

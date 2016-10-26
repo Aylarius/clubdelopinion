@@ -11,23 +11,24 @@
     {{ form_errors(edit_form.title) }}
     {{ form_widget(edit_form.title) }}
     <input type="submit" value="Edit" />
-
+    <br><br>
     <div class="container-fluid">
         <div class="row blockGray homepageBlock"><!--******************* 1er bloc ***************-->
-            <div class="col-xs-6 col-xxs-12 homepageBlock2">
-                <span class="bold">Image</span><br>
-                {{ form_errors(edit_form.image) }}
-                {{ form_widget(edit_form.image) }}
+            <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                <img src="{{ vich_uploader_asset(presentation, 'image', 'ClubBundle\\Entity\\presentation') }}" class="center-block" width="100%"/>
+                {{ form_errors(edit_form.image ) }}
+                {{ form_widget(edit_form.image, { label: false }  ) }}
                 <br><br>
             </div>
-            <div class="col-xs-6 col-xxs-12 homepageBlock2">
+            <div class="col-xxs-12 col-xs-6 homepageBlock2">
                 <h2>{{ presentation.soustitre1 }}</h2>
                 <span class="bold">Sous-titre 1</span>
                 {{ form_errors(edit_form.soustitre1) }}
                 {{ form_widget(edit_form.soustitre1) }}
                 <input type="submit" value="Edit" />
-
+                <br><br>
                 <p>{{ presentation.paragraph1 }}</p>
+                <br>
                 <span class="bold">Paragraphe 1</span>
                 {{ form_errors(edit_form.paragraph1) }}
                 {{ form_widget(edit_form.paragraph1,{'attr':{'class':'form-control'}}) }}
@@ -36,30 +37,31 @@
             </div>
         </div>
         <div class="row homepageBlock"><!--**************** 2ème bloc *****************-->
-            <div class="col-xs-6 col-xxs-12 homepageBlock2">
+            <div class="col-xxs-12 col-xs-6 homepageBlock2">
                 <h2>{{ presentation.soustitre2 }}</h2>
                 <span class="bold">Sous-titre 2</span>
                 {{ form_errors(edit_form.soustitre2) }}
                 {{ form_widget(edit_form.soustitre2) }}
                 <input type="submit" value="Edit" />
-
+                <br><br>
                 <p>{{ presentation.paragraph2 }}</p>
+                <br>
                 <span class="bold">Paragraphe 2</span>
                 {{ form_errors(edit_form.paragraph2) }}
                 {{ form_widget(edit_form.paragraph2) }}
                 <input type="submit" value="Edit" />
             </div>
-            <div class="col-xs-6 col-xxs-12 homepageBlock2">
-                <span class="bold">Image</span><br>
-                {{ form_errors(edit_form.image) }}
-                {{ form_widget(edit_form.image) }}
+            <div class="col-xxs-12 col-xs-6 homepageBlock2">
+                <img src="{{ vich_uploader_asset(presentation, 'image2', 'ClubBundle\\Entity\\presentation') }}" class="center-block" width="100%"/>
+                {{ form_errors(edit_form.image2 ) }}
+                {{ form_widget(edit_form.image2, { label: false }  ) }}
                 <br><br>
             </div>
         </div>
     </div>
     <ul>
         <li>
-            <a href="{{ path('presentation_index') }}">Back to the list</a>
+            <a href="{{ path('presentation_index') }}" class="lienRouge">Retour à la page précédente</a>
         </li>
     </ul>
 

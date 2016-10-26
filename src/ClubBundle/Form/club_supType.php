@@ -22,9 +22,10 @@ class club_supType extends AbstractType
                 'required'      => false,
             ))
             ->add('image', 'vich_image', array(
+                'label' => 'Image',
                 'required'      => false,
-                'allow_delete'  => true, // not mandatory, default is true
-                'download_link' => true, // not mandatory, default is true
+                'allow_delete'  => false, // not mandatory, default is true
+                'download_link' => false, // not mandatory, default is true
             ));
     }
     

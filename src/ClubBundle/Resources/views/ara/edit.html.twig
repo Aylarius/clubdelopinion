@@ -13,24 +13,28 @@
         <span class="bold">Titre</span>
         {{ form_errors(edit_form.title) }}
         {{ form_widget(edit_form.title) }}
-        <input type="submit" value="Edit" />
+        <input type="submit" value="Modifier" />
+        <br><br>
         <div class="row blockGray homepageBlock"><!--******************* 1er bloc ***************-->
             <div class="col-xs-6 homepageBlock2">
-                <img src="{{ vich_uploader_asset(ara, 'image', 'ClubBundle\\Entity\\Ara') }}" alt="logo" width="100%"/>
+                <img src="{{ vich_uploader_asset(ara, 'image', 'ClubBundle\\Entity\\Ara') }}" class="center-block" width="100%"/>
                 {{ form_errors(edit_form.image ) }}
-                {{ form_widget(edit_form.image ) }}
+                {{ form_widget(edit_form.image, { label: false }  ) }}
+                <br><br>
             </div>
             <div class="col-xs-6 homepageBlock2">
                 <h2>{{ ara.soustitre }}</h2>
                 <span class="bold">Sous-titre</span>
                 {{ form_errors(edit_form.soustitre) }}
                 {{ form_widget(edit_form.soustitre) }}
-                <input type="submit" value="Edit" />
+                <input type="submit" value="Modifier" />
+                <br><br>
                 <p>{{ ara.paragraph }}</p>
+                <br>
                 <span class="bold">Paragraphe</span>
                 {{ form_errors(edit_form.paragraph) }}
                 {{ form_widget(edit_form.paragraph) }}
-                <input type="submit" value="Edit" />
+                <input type="submit" value="Modifier" />
             </div>
         </div>
     </div>

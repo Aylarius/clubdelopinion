@@ -45,26 +45,31 @@ class ClubType extends AbstractType
                 'required'      => false,
             ))
             ->add('video', 'vich_image', array(
+                'label' => 'Vidéo',
                 'required'      => false,
                 'allow_delete'  => false, // not mandatory, default is true
                 'download_link' => false, // not mandatory, default is true
             ))
             ->add('image', 'vich_image', array(
+                'label' => 'Image',
                 'required'      => false,
                 'allow_delete'  => false, // not mandatory, default is true
                 'download_link' => false, // not mandatory, default is true
             ))
             ->add('image2', 'vich_image', array(
+                'label' => 'Image',
                 'required'      => false,
                 'allow_delete'  => false, // not mandatory, default is true
                 'download_link' => false, // not mandatory, default is true
             ))
             ->add('image3', 'vich_image', array(
+                'label' => 'Image',
                 'required'      => false,
                 'allow_delete'  => false, // not mandatory, default is true
                 'download_link' => false, // not mandatory, default is true
             ))
             ->add('image4', 'vich_image', array(
+                'label' => 'Image',
                 'required'      => false,
                 'allow_delete'  => false, // not mandatory, default is true
                 'download_link' => false, // not mandatory, default is true
