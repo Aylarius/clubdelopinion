@@ -67,7 +67,7 @@
         <span class="bold">Titre</span>
         {{ form_errors(edit_form.title) }}
         {{ form_widget(edit_form.title) }}
-        <input type="submit" value="Edit" />
+        <input type="submit" value="Modifier" />
     {{ form_end(edit_form) }}
 
     <br>
@@ -85,7 +85,7 @@
                             <h4>{{ membre.name }}</h4>
                             <p>{{ membre.description }}</p>
                             <br>
-                            <a href="{{ path('membres_edit', { 'id': membre.id }) }}">Modifier</a>
+                            <a href="{{ path('membres_edit', { 'id': membre.id }) }}" class="lienRouge">Modifier</a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                 <div class="thumbnail" id="thumbnail-membre">
                     <div class="caption">
                         {{ form_start(newForm) }}
-                            <span class="bold">Photo</span><br>
+                            <span class="bold">Image</span><br>
                             <div class="row">
                                 <div class="col-xs-12">
                                     {{ form_errors(newForm.image) }}
@@ -118,7 +118,7 @@
                 </div>
             </div>
         </div>
-    <a href="{{ path('pagemembre_index') }}">Retour à la page précédente</a>
+    <a href="{{ path('pagemembre_index') }}" class="lienRouge">Retour à la page précédente</a>
 
 
 
