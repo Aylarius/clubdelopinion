@@ -18,9 +18,13 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new ClubBundle\ClubBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
+
             //new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             
+
+            
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
