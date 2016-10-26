@@ -81,12 +81,11 @@
                         <h4>{{ supEvenement.title }}</h4>
                         <p>{{ supEvenement.paragraph|raw }}</p>
                         <br>
-                        <a href="{{ path('supevenements_edit', { 'id': supEvenement.id }) }}">Modifier</a>
+                        <a href="{{ path('supevenements_edit', { 'id': supEvenement.id }) }}" class="lienRouge">Modifier</a>
                     </div>
                 </div>
             </div>
         {% endfor %}
-
 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="thumbnail" id="thumbnail-membre">
@@ -96,13 +95,13 @@
                     <span class="bold">Nom</span><br>
                     {{ form_errors(new_form.title) }}
                     {{ form_widget(new_form.title) }}
-                    <br>
+                    <br><br>
                     <span class="bold">Description</span><br>
                     {{ form_errors(new_form.paragraph) }}
                     {{ form_widget(new_form.paragraph) }}
                     <br><br>
                     <span class="bold">Photos</span><br>
-
+                    <br><br>
                     <div class="col-xs-4">
                     {{ form_errors(new_form.image) }}
                     {{ form_widget(new_form.image) }}
@@ -205,6 +204,6 @@
             </div>
         </div>
     </div>
-    <a href="{{ path('evsup_index') }}">Retour à la page précédente</a>
+    <a href="{{ path('evsup_index') }}" class="lienRouge">Retour à la page précédente</a>
 
 {% endblock %}

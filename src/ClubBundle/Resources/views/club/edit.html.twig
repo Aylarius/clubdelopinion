@@ -141,125 +141,102 @@
             </div>
         </div>
         <br>
-        <input type="submit" value="Edit" />
+        <input type="submit" value="Modifier" />
+        <br><br>
+        {{ form_errors(edit_form.video ) }}
+        {{ form_widget(edit_form.video, { label: false }) }}
+        <br><br>
     </div>
-    <ul>
-        <li>
-            <a href="{{ path('club_index') }}">Back to the list</a>
-        </li>
-    </ul>
 
 <!-- *********************************************** -->
-
-    <video autoplay loop poster="img/background.jpg" width="100%" height="auto" class="hidden-xs">
-        <source src="{{ vich_uploader_asset(club, 'video', 'ClubBundle\\Entity\\Club') }}" />
-    </video>
-    <img height="" src="{{ vich_uploader_asset(club, 'video', 'ClubBundle\\Entity\\Club') }}"/>
-    <span class="bold">Vidéo</span>
-    {{ form_errors(edit_form.video ) }}
-    {{ form_widget(edit_form.video ) }}
-    <input type="submit" value="Edit" />
 
     <div class="container-fluid">
         <div class="row blockGray" id="blockhp"><!--******************* 1er bloc ***************-->
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <img src="{{ vich_uploader_asset(club, 'image', 'ClubBundle\\Entity\\Club') }}" alt="logo" width="100%"/>
+                <img src="{{ vich_uploader_asset(club, 'image', 'ClubBundle\\Entity\\Club') }}" width="100%"/>
                 {{ form_errors(edit_form.image ) }}
-                {{ form_widget(edit_form.image ) }}
+                {{ form_widget(edit_form.image, { label: false } ) }}
+                <br>
             </div>
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
                 <h2>{{ club.blocktitle1 }}</h2>
-
                 <span class="bold">Titre du bloc</span>
                 {{ form_errors(edit_form.blocktitle1 ) }}
                 {{ form_widget(edit_form.blocktitle1 ) }}
-
-                <input type="submit" value="Edit" />
-
+                <input type="submit" value="Modifier" />
+                <br><br>
                 <p> {{ club.blockparagraph1|raw }}</p>
-
+                <br>
                 <span class="bold">Paragraphe</span>
                 {{ form_errors(edit_form.blockparagraph1) }}
                 {{ form_widget(edit_form.blockparagraph1) }}
-
-                <input type="submit" value="Edit" />
-
-
+                <input type="submit" value="Modifier" />
             </div>
         </div>
         <div class="row"><!--**************** 2ème bloc *****************-->
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
                 <h2> {{ club.blocktitle2 }} </h2>
-
                 <span class="bold">Titre du bloc</span>
                 {{ form_errors(edit_form.blocktitle2) }}
                 {{ form_widget(edit_form.blocktitle2) }}
-
-                <input type="submit" value="Edit" />
-
+                <input type="submit" value="Modifier" />
+                <br><br>
                 <p>{{ club.blockparagraph2|raw }}</p>
-
+                <br>
                 <span class="bold">Paragraphe</span>
                 {{ form_errors(edit_form.blockparagraph2) }}
                 {{ form_widget(edit_form.blockparagraph2) }}
-
-                <input type="submit" value="Edit" />
-
+                <input type="submit" value="Modifier" />
             </div>
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <img src="{{ vich_uploader_asset(club, 'image2', 'ClubBundle\\Entity\\Club') }}" alt="logo" width="100%"/>
+                <img src="{{ vich_uploader_asset(club, 'image2', 'ClubBundle\\Entity\\Club') }}" width="100%"/>
                 {{ form_errors(edit_form.image2 ) }}
-                {{ form_widget(edit_form.image2 ) }}
+                {{ form_widget(edit_form.image2, { label: false } ) }}
+                <br>
             </div>
         </div>
         <div class="row blockGray"><!--************* 3ème bloc ***************-->
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <img src="{{ vich_uploader_asset(club, 'image3', 'ClubBundle\\Entity\\Club') }}" alt="logo" width="100%"/>
+                <img src="{{ vich_uploader_asset(club, 'image3', 'ClubBundle\\Entity\\Club') }}" width="100%"/>
                 {{ form_errors(edit_form.image3 ) }}
-                {{ form_widget(edit_form.image3 ) }}
+                {{ form_widget(edit_form.image3, { label: false } ) }}
+                <br>
             </div>
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
                 <h2>{{ club.blocktitle3 }}</h2 >
-
                 <span class="bold">Titre du bloc</span>
                 {{ form_errors(edit_form.blocktitle3) }}
                 {{ form_widget(edit_form.blocktitle3) }}
-
-                <input type="submit" value="Edit" />
-
+                <input type="submit" value="Modifier" />
+                <br><br>
                 <p>{{ club.blockparagraph3|raw }}</p>
-
+                <br>
                 <span class="bold">Paragraphe</span>
                 {{ form_errors(edit_form.blockparagraph3) }}
                 {{ form_widget(edit_form.blockparagraph3) }}
-
-                <input type="submit" value="Edit" />
-
+                <input type="submit" value="Modifier" />
             </div>
         </div>
         <div class="row"><!--************* 4ème bloc ***************-->
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
                 <h2>{{ club.blocktitle4 }}</h2 >
-
                 <span class="bold">Titre du bloc</span>
                 {{ form_errors(edit_form.blocktitle4) }}
                 {{ form_widget(edit_form.blocktitle4) }}
-
-                <input type="submit" value="Edit" />
-
+                <input type="submit" value="Modifier" />
+                <br><br>
                 <p>{{ club.blockparagraph4|raw }}</p>
-
+                <br>
                 <span class="bold">Paragraphe</span>
                 {{ form_errors(edit_form.blockparagraph4) }}
                 {{ form_widget(edit_form.blockparagraph4) }}
-
-                <input type="submit" value="Edit" />
-
+                <input type="submit" value="Modifier" />
             </div>
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <img src="{{ vich_uploader_asset(club, 'image4', 'ClubBundle\\Entity\\Club') }}" alt="logo" width="100%"/>
+                <img src="{{ vich_uploader_asset(club, 'image4', 'ClubBundle\\Entity\\Club') }}" width="100%"/>
                 {{ form_errors(edit_form.image4 ) }}
-                {{ form_widget(edit_form.image4 ) }}
+                {{ form_widget(edit_form.image4, { label: false } ) }}
+                <br>
             </div>
         </div>
     </div>
