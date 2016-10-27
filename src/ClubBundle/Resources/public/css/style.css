@@ -270,9 +270,7 @@ textarea {
 /********************* EVENEMENT **********************/
 
 .contrainte {
-  height: 300px;
-  overflow: auto;
-  padding-right: 10px;
+  height: 180px;
 }
 
 /********************* DINERS **********************/

@@ -11,10 +11,12 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="thumbnail" id="thumbnail-membre">
                         <div class="caption">
-                            <img src="{{ vich_uploader_asset(araEvenement, 'image4', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" width="100%">
+                            <img src="{{ vich_uploader_asset(araEvenement, 'image4', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" width="100%" height="154px">
                             <br><br>
                             <h4>{{ araEvenement.title }}</h4>
-                            <p>{{ araEvenement.paragraph|raw }}</p>
+                            <div class="contrainte">
+                                <p>{{ araEvenement.paragraph|raw[:200] ~ '...' }}</p>
+                            </div>
                             <br>
                             <a id="btn-photo" data-toggle="modal" data-target="{{ '#' ~ araEvenement.id }}"><p>Plus d'infos<span class="glyphicon glyphicon-share-alt"></span></p></a>
 
