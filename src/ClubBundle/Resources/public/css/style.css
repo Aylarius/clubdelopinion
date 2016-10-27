@@ -267,6 +267,14 @@ textarea {
   }
 }
 
+/********************* EVENEMENT **********************/
+
+.contrainte {
+  height: 300px;
+  overflow: auto;
+  padding-right: 10px;
+}
+
 /********************* DINERS **********************/
 
 .thumbnail a>img, .thumbnail>img {
@@ -377,7 +385,11 @@ footer span {
 }
 
 .modal span {
-	color: black;
+	color: white;
+}
+
+.modal .close span {
+    color: black;
 }
 
 @media (max-width: 550px){
