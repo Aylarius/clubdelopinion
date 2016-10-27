@@ -11,10 +11,289 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="thumbnail" id="thumbnail-membre">
                         <div class="caption">
+                            <img src="{{ vich_uploader_asset(araEvenement, 'image4', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" width="100%" height="154px">
+                            <br><br>
                             <h4>{{ araEvenement.title }}</h4>
-                            <p>{{ araEvenement.paragraph|raw }}</p>
+                            <div class="contrainte">
+                                <p>{{ araEvenement.paragraph|raw[:200] ~ '...' }}</p>
+                            </div>
                             <br>
-                            <a id="btn-photo" href="{{ path('araevenements_show', { 'id': araEvenement.id }) }}"><p>Plus d'infos<span class="glyphicon glyphicon-share-alt"></span></p></a>
+                            <a id="btn-photo" data-toggle="modal" data-target="{{ '#' ~ araEvenement.id }}"><p>Plus d'infos<span class="glyphicon glyphicon-share-alt"></span></p></a>
+
+                            <div class="modal fade" id="{{ araEvenement.id }}" tabindex="-1" role="dialog" aria-labelledby="evenementmodal">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+                                            <h4 class="modal-title">{{ araEvenement.title }}</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>{{ araEvenement.paragraph|raw }}</p>
+                                            <div id="{{ 'carousel-evenement' ~ araEvenement.id }}" class="carousel slide center-block" data-ride="carousel">
+                                                <!-- Carousel Indicators -->
+                                                <ol class="carousel-indicators">
+                                                    {% if araEvenement.iname %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="0" class="active"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname2 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="1"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname3 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="2"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname4 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="3"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname5 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="4"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname6 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="5"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname7 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="6"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname8 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="7"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname9 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="8"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname10 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="9"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname11 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="10"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname12 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="11"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname13 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="12"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname14 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="13"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname15 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="14"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname16 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="15"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname17 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="16"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname18 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="17"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname19 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="18"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname20 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="19"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname21 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="20"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname22 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="21"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname23 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="22"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname24 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="23"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname25 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="24"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname26 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="25"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname27 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="26"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname28 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="27"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname29 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="28"></li>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname30 %}
+                                                        <li data-target="{{ '#carousel-evenement' ~ araEvenement.id }}" data-slide-to="29"></li>
+                                                    {% else %}{% endif %}
+                                                </ol>
+                                                <!-- Carousel Wrapper -->
+                                                <div class="carousel-inner" role="listbox">
+                                                    {% if araEvenement.iname %}
+                                                        <div class="item active">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname2 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image2', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname3 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image3', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname4 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image4', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname5 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image5', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname6 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image6', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname7 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image7', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname8 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image8', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname9 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image9', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname10 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image10', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname11 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image11', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname12 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image12', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname13 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image13', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname14 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image14', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname15 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image15', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname16 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image16', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname17 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image17', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname18 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image18', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname19 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image19', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname20 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image20', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname21 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image21', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname22 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image22', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname23 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image23', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname24 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image24', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname25 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image25', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname26 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image26', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname27 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image27', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname28 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image28', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname29 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image29', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                    {% if araEvenement.iname30 %}
+                                                        <div class="item">
+                                                            <img src="{{ vich_uploader_asset(araEvenement, 'image30', 'ClubBundle\\Entity\\AraEvenements') }}" alt="" class="img-responsive center-block">
+                                                        </div>
+                                                    {% else %}{% endif %}
+                                                </div>
+
+                                                <!-- Carousel Controls -->
+                                                <a class="left carousel-control" href="{{ '#carousel-evenement' ~ araEvenement.id }}" role="button" data-slide="prev">
+                                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                                    <span class="sr-only">Précédent</span>
+                                                </a>
+                                                <a class="right carousel-control" href="{{ '#carousel-evenement' ~ araEvenement.id }}" role="button" data-slide="next">
+                                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                                    <span class="sr-only">Suivant</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div><!-- /.modal -->
+
+
+
                         </div>
                     </div>
                 </div>
