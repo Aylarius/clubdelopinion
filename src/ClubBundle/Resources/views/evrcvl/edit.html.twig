@@ -80,7 +80,7 @@
                     <div class="caption">
                         {% if evenement.iname4 %}
                         <div class="image" style="background-image: url({{ vich_uploader_asset(evenement, 'image4', 'ClubBundle\\Entity\\Evenements') }})"></div>
-                        {% elseif %}{% endif %}
+                        {% else %}{% endif %}
                         <br><br>
                         <h4>{{ evenement.title }}</h4>
                         <div class="contrainte">
