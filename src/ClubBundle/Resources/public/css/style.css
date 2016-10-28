@@ -33,7 +33,7 @@ main {
 	padding-right: 20px !important;
 	padding-top: 20px !important;
   	background-color: white;
-    min-height: 400px;
+    min-height: 60vh;
 }
 
 @media (max-width: 768px){
@@ -271,6 +271,11 @@ textarea {
 
 .contrainte {
   height: 180px;
+}
+
+.contrainte-membre {
+  height: 100px;
+  overflow: auto;
 }
 
 /********************* DINERS **********************/

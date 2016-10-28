@@ -29,7 +29,7 @@ class EvRcvlController extends Controller
         $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
         $EvEm = $this->getDoctrine()->getManager();
         $evenements = $EvEm->getRepository('ClubBundle:Evenements')->findAll();
-
+        
         return $this->render('ClubBundle:evrcvl:index.html.twig', array(
             'evRcvls' => $evRcvls,
             'clubs' => $clubs,

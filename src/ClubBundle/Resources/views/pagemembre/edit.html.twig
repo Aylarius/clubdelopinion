@@ -79,11 +79,12 @@
                         {% if membre.iname %}
                             <div class="image" style="background-image: url({{ vich_uploader_asset(membre, 'image', 'ClubBundle\\Entity\\Membres') }})"></div>
                         {% else %}
-                            Pas d'image chargée !
                         {% endif %}
                         <div class="caption">
                             <h4>{{ membre.name }}</h4>
-                            <p>{{ membre.description }}</p>
+                            <div class="contrainte-membre">
+                                <p>{{ membre.description }}</p>
+                            </div>
                             <br>
                             <a href="{{ path('membres_edit', { 'id': membre.id }) }}" class="lienRouge">Modifier</a>
                         </div>
@@ -96,7 +97,6 @@
                 <div class="thumbnail" id="thumbnail-membre">
                     <div class="caption">
                         {{ form_start(newForm) }}
-                            <span class="bold">Image</span><br>
                             <div class="row">
                                 <div class="col-xs-12">
                                     {{ form_errors(newForm.image) }}
@@ -118,7 +118,7 @@
                 </div>
             </div>
         </div>
-    <a href="{{ path('pagemembre_index') }}" class="lienRouge">Retour à la page précédente</a>
+    <a href="{{ path('pagemembre_index') }}" class="lienRouge">Retour à la page visiteur</a>
 
 
 

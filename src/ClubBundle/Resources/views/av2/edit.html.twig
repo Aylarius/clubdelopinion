@@ -81,7 +81,7 @@
                     <input type="submit" value="Modifier" />
                 </div>
                 <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                    <img src="{{ vich_uploader_asset(av2, 'image', 'ClubBundle\\Entity\\av2') }}" alt="{{ av2.titleAv2 }}" class="center-block" width="100%"/>
+                    <img src="{{ vich_uploader_asset(av2, 'image', 'ClubBundle\\Entity\\av2') }}" class="center-block" width="100%"/>
                     {{ form_errors(edit_form.image) }}
                     {{ form_widget(edit_form.image, { label: false }) }}
                     <br><br>
