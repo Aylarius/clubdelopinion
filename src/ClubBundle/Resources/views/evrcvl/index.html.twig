@@ -6,7 +6,7 @@
     {% for evRcvl in evRcvls %}
         <h1>{{ evRcvl.title }}</h1><br>
         <div class="row center-block row-diners">
-            {% for evenement in evenements %}
+            {% for evenement in evenements|reverse %}
 
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="thumbnail" id="thumbnail-membre">
