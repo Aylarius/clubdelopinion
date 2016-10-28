@@ -12,7 +12,7 @@
     <!-- *********************************************** -->
     {% for club in clubs %}
 
-    <video autoplay loop poster="img/background.jpg" width="100%" height="auto" class="hidden-xs">
+    <video autoplay loop poster="{{ asset('bundles/club/img/poster.png') }}" width="100%" height="auto" class="hidden-xs">
         <source src="{{ vich_uploader_asset(club, 'video', 'ClubBundle\\Entity\\Club') }}" />
     </video>
     <div class="container-fluid">
@@ -52,7 +52,7 @@
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
                 <h2>{{ club.blocktitle3 }}</h2 >
                 <p>{{ club.blockparagraph3|raw }}</p>
-                <br><br><a href="ara.index">Découvrir notre Club Auvergne-Rhône-Alpes</a>
+                <br><br><a href="{{ path('ara_index') }}">Découvrir notre Club Auvergne-Rhône-Alpes</a>
             </div>
         </div>
         {% if club.blocktitle4 %}
@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-xxs-12 col-xs-6 homepageBlock2">
                     <img src="{{ vich_uploader_asset(club, 'image4', 'ClubBundle\\Entity\\Club') }}" alt="" width="100%"/>
-                    {#<br><br><a href=".index">Découvrir notre nouveau Club</a>#}
+                    <br><br><a href="{{ path('club_sup_index') }}">Découvrir notre nouveau Club</a>
                 </div>
             </div>
         {% else %}
