@@ -78,8 +78,14 @@
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="thumbnail">
                     <div class="caption">
+                        {% if supEvenement.iname4 %}
+                        <div class="image" style="background-image: url({{ vich_uploader_asset(supEvenement, 'image4', 'ClubBundle\\Entity\\SupEvenements') }})"></div>
+                        {% else %}{% endif %}
+                        <br><br>
                         <h4>{{ supEvenement.title }}</h4>
-                        <p>{{ supEvenement.paragraph|raw }}</p>
+                        <div class="contrainte">
+                            <p>{{ supEvenement.paragraph|truncate(200, true, '...') }}</p>
+                        </div>
                         <br>
                         <a href="{{ path('supevenements_edit', { 'id': supEvenement.id }) }}" class="lienRouge">Modifier</a>
                     </div>
@@ -204,6 +210,6 @@
             </div>
         </div>
     </div>
-    <a href="{{ path('evsup_index') }}" class="lienRouge">Retour à la page précédente</a>
+    <a href="{{ path('evsup_index') }}" class="lienRouge">Retour à la page visiteur</a>
 
 {% endblock %}
