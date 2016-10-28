@@ -78,8 +78,14 @@
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="thumbnail">
                     <div class="caption">
+                        {% if evenement.iname4 %}
+                        <div class="image" style="background-image: url({{ vich_uploader_asset(evenement, 'image4', 'ClubBundle\\Entity\\Evenements') }})"></div>
+                        {% elseif %}{% endif %}
+                        <br><br>
                         <h4>{{ evenement.title }}</h4>
-                        <p>{{ evenement.paragraph|raw }}</p>
+                        <div class="contrainte">
+                            <p>{{ evenement.paragraph|truncate(200, true, '...') }}</p>
+                        </div>
                         <br>
                         <a href="{{ path('evenements_edit', { 'id': evenement.id }) }}" class="lienRouge">Modifier</a>
                     </div>
@@ -205,6 +211,6 @@
             </div>
         </div>
     </div>
-    <a href="{{ path('evrcvl_index') }}" class="lienRouge">Retour à la page précédente</a>
+    <a href="{{ path('evrcvl_index') }}" class="lienRouge">Retour à la page visiteur</a>
 
 {% endblock %}
