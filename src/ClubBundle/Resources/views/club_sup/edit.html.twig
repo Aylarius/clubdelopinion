@@ -74,14 +74,14 @@
     <div class="container-fluid">
         <div class="row blockGray homepageBlock"><!--******************* 1er bloc ***************-->
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <img src="{{ vich_uploader_asset(club_sup, 'image', 'ClubBundle\\Entity\\club_sup') }}" alt="{{ club_sup.title }}" class="center-block" width="100%"/>
+                <img src="{{ vich_uploader_asset(club_sup, 'image', 'ClubBundle\\Entity\\club_sup') }}" class="center-block" width="100%"/>
                 {{ form_errors(edit_form.image) }}
                 {{ form_widget(edit_form.image, {label: false} ) }}
                 <br><br>
             </div>
 
             <div class="col-xxs-12 col-xs-6 homepageBlock2">
-                <h2>{{ club_sup.soustitre }}</h2>
+                <h2>{{ club_sup.soutitre }}</h2>
                 <span class="bold">Sous-titre</span>
                 {{ form_errors(edit_form.soutitre) }}
                 {{ form_widget(edit_form.soutitre) }}
