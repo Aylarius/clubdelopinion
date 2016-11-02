@@ -35,30 +35,6 @@ class av1Controller extends Controller
     }
 
     /**
-     * Creates a new av1 entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-        $av1 = new av1();
-        $form = $this->createForm('ClubBundle\Form\av1Type', $av1);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($av1);
-            $em->flush();
-
-            return $this->redirectToRoute('av1_show', array('id' => $av1->getId()));
-        }
-
-        return $this->render('ClubBundle:av1:new.html.twig', array(
-            'av1' => $av1,
-            'form' => $form->createView(),
-        ));
-    }
-
-    /**
      * Finds and displays a av1 entity.
      *
      */

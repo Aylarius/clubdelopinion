@@ -32,34 +32,6 @@ class AraController extends Controller
         ));
     }
 
-    /**
-     * Creates a new Ara entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-        $ara = new Ara();
-        $form = $this->createForm('ClubBundle\Form\AraType', $ara);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($ara);
-            $em->flush();
-
-            return $this->redirectToRoute('ara_show', array('id' => $ara->getId()));
-        }
-
-        return $this->render('ClubBundle:ara:new.html.twig', array(
-            'ara' => $ara,
-            'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a Ara entity.
-     *
-     */
 
 
     /**

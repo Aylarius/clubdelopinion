@@ -83,46 +83,6 @@ class EvSupController extends Controller
             'new_form' => $newForm->createView(),
         ));
     }
-    
-    /**
-     * Creates a new evSup entity.
-     *
-     
-    public function newAction(Request $request)
-    {
-        $evSup = new Evsup();
-        $form = $this->createForm('ClubBundle\Form\EvSupType', $evSup);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($evSup);
-            $em->flush($evSup);
-
-            return $this->redirectToRoute('evsup_show', array('id' => $evSup->getId()));
-        }
-
-        return $this->render('ClubBundle:evsup:new.html.twig', array(
-            'evSup' => $evSup,
-            'form' => $form->createView(),
-        ));
-    }*/
-
-    /**
-     * Finds and displays a evSup entity.
-     *
-     
-    public function showAction(EvSup $evSup)
-    {
-        $deleteForm = $this->createDeleteForm($evSup);
-
-        return $this->render('ClubBundle:evsup:show.html.twig', array(
-            'evSup' => $evSup,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }*/
-
-    
 
     /**
      * Deletes a evSup entity.

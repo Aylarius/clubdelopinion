@@ -93,30 +93,6 @@ class AraEvenementsController extends Controller
     }*/
 
     /**
-     * Creates a new araEvenement entity.
-     *
-
-    public function newAction(Request $request)
-    {
-    $araEvenement = new Araevenement();
-    $form = $this->createForm('ClubBundle\Form\AraEvenementsType', $araEvenement);
-    $form->handleRequest($request);
-
-    if ($form->isSubmitted() && $form->isValid()) {
-    $em = $this->getDoctrine()->getManager();
-    $em->persist($araEvenement);
-    $em->flush($araEvenement);
-
-    return $this->redirectToRoute('araevenements_show', array('id' => $araEvenement->getId()));
-    }
-
-    return $this->render('ClubBundle:araevenements:new.html.twig', array(
-    'araEvenement' => $araEvenement,
-    'form' => $form->createView(),
-    ));
-    }*/
-
-    /**
      * Finds and displays a araEvenement entity.
      *
      */
