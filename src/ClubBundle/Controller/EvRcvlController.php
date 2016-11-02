@@ -80,10 +80,7 @@ class EvRcvlController extends Controller
             'new_form' => $newForm->createView(),
         ));
     }
-
-
-
-
+    
     /**
      * Creates a new evRcvl entity.
      *
@@ -105,20 +102,6 @@ class EvRcvlController extends Controller
     return $this->render('ClubBundle:EvRcvl:new.html.twig', array(
     'evRcvl' => $evRcvl,
     'form' => $form->createView(),
-    ));
-    }*/
-
-    /**
-     * Finds and displays a evRcvl entity.
-     *
-
-    public function showAction(EvRcvl $evRcvl)
-    {
-    $deleteForm = $this->createDeleteForm($evRcvl);
-
-    return $this->render('ClubBundle:EvRcvl:show.html.twig', array(
-    'evRcvl' => $evRcvl,
-    'delete_form' => $deleteForm->createView(),
     ));
     }*/
 

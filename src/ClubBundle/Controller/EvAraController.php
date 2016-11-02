@@ -142,18 +142,4 @@ class EvAraController extends Controller
     'form' => $form->createView(),
     ));
     }*/
-
-    /**
-     * Finds and displays a evAra entity.
-     *
-
-    public function showAction(EvAra $evAra)
-    {
-    $deleteForm = $this->createDeleteForm($evAra);
-
-    return $this->render('ClubBundle:evara:show.html.twig', array(
-    'evAra' => $evAra,
-    'delete_form' => $deleteForm->createView(),
-    ));
-    } */
 }

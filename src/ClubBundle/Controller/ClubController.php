@@ -54,20 +54,6 @@ class ClubController extends Controller
     }
 
     /**
-     * Finds and displays a Club entity.
-     *
-     */
-    public function showAction(Club $club)
-    {
-        $deleteForm = $this->createDeleteForm($club);
-
-        return $this->render('ClubBundle:club:show.html.twig', array(
-            'club' => $club,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
      * Displays a form to edit an existing Club entity.
      *
      */
