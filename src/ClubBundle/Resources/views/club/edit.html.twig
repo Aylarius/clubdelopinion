@@ -239,11 +239,15 @@
     </div>
         <!-- *********************************************** -->
             <br><br>
+        {% if club_sups is not empty and evSups is not empty and av3s is not empty %}
+        {% else %}
         <h2>création pages supplémentaires</h2>
         <div class="container-fluid">
             <div class="row ">
+            {% endif %}
                 <!-- *****************   CLUB SUP ******************* -->
-                {% if club_sup.id is empty %}
+                {% if club_sups is not empty %}
+                {% else %}
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="thumbnail" id="thumbnail-membre">
                             <div class="caption">
@@ -273,11 +277,9 @@
                             </div>
                         </div>
                     </div>
-
-                {% else %}
                 {% endif %}
                 <!-- *****************   EV SUP ******************* -->
-                {% if evSup.id is not empty %}
+                {% if evSups is not empty %}
                 {% else %}
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="thumbnail" id="thumbnail-membre">
@@ -295,7 +297,7 @@
                 </div>
                 {% endif %}
                 <!-- *****************   AV3 ******************* -->
-                {% if av3.id is not empty %}
+                {% if av3s is not empty %}
                 {% else %}
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="thumbnail" id="thumbnail-membre">
