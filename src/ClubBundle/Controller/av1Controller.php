@@ -62,15 +62,7 @@ class av1Controller extends Controller
      * Finds and displays a av1 entity.
      *
      */
-    public function showAction(av1 $av1)
-    {
-        $deleteForm = $this->createDeleteForm($av1);
 
-        return $this->render('ClubBundle:av1:show.html.twig', array(
-            'av1' => $av1,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing av1 entity.

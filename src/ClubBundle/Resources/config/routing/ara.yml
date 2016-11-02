@@ -3,11 +3,6 @@ ara_index:
     defaults: { _controller: "ClubBundle:Ara:index" }
     methods:  GET
 
-ara_show:
-    path:     /{id}/show
-    defaults: { _controller: "ClubBundle:Ara:show" }
-    methods:  GET
-
 ara_new:
     path:     /new
     defaults: { _controller: "ClubBundle:Ara:new" }

@@ -120,19 +120,6 @@ class AraEvenementsController extends Controller
      * Finds and displays a araEvenement entity.
      *
      */
-    
-    public function showAction(AraEvenements $araEvenement)
-    {
-        $deleteForm = $this->createDeleteForm($araEvenement);
-        $clubEm = $this->getDoctrine()->getManager();
-        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
-        
-    return $this->render('ClubBundle:araevenements:show.html.twig', array(
-        'araEvenement' => $araEvenement,
-        'clubs' => $clubs,
-        'delete_form' => $deleteForm->createView(),
-    ));
-        
-    }
+
 
 }

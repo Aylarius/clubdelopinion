@@ -3,11 +3,6 @@ av1_index:
     defaults: { _controller: "ClubBundle:av1:index" }
     methods:  GET
 
-av1_show:
-    path:     /{id}/show
-    defaults: { _controller: "ClubBundle:av1:show" }
-    methods:  GET
-
 av1_new:
     path:     /new
     defaults: { _controller: "ClubBundle:av1:new" }

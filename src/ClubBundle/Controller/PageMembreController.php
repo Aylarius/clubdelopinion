@@ -198,17 +198,5 @@ class PageMembreController extends Controller
             ;
     }*/
 
-    /**
-     * Finds and displays a PageMembre entity.
-     *
 
-    public function showAction(PageMembre $pageMembre)
-    {
-    $deleteForm = $this->createDeleteForm($pageMembre);
-
-    return $this->render('ClubBundle:PageMembre:show.html.twig', array(
-    'pageMembre' => $pageMembre,
-    'delete_form' => $deleteForm->createView(),
-    ));
-    }*/
 }

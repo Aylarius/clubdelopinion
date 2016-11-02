@@ -60,15 +60,7 @@ class AraController extends Controller
      * Finds and displays a Ara entity.
      *
      */
-    public function showAction(Ara $ara)
-    {
-        $deleteForm = $this->createDeleteForm($ara);
 
-        return $this->render('ClubBundle:ara:show.html.twig', array(
-            'ara' => $ara,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing Ara entity.
