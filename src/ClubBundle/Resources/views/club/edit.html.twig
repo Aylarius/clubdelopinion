@@ -59,11 +59,6 @@
             <!-- ********************Fin Navbar************** -->
         {% endblock %}
 
-
-
-
-
-
 {% block main %}
 <main class="container-fluid" id="container-club">
     <div class="row">
@@ -143,6 +138,7 @@
         <br>
         <input type="submit" value="Modifier" />
         <br><br>
+        <h2>édition page d'accueil</h2>
         {{ form_errors(edit_form.video ) }}
         {{ form_widget(edit_form.video, { label: false }) }}
         <br><br>
@@ -239,7 +235,96 @@
                 <br>
             </div>
         </div>
-    </div>
     {{ form_end(edit_form) }}
+    </div>
+        <!-- *********************************************** -->
+            <br><br>
+        <h2>création pages supplémentaires</h2>
+        <div class="container-fluid">
+            <div class="row ">
+                <!-- *****************   CLUB SUP ******************* -->
+                {% if club_sup.id %}
+                {% else %}
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="thumbnail" id="thumbnail-membre">
+                            <div class="caption">
+                                <h3>Page Club Supplémentaire</h3>
+                                {{ form_start(newForm) }}
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        {{ form_errors(newForm.image) }}
+                                        {{ form_widget(newForm.image) }}
+                                    </div>
+                                </div>
+                                <br>
+                                <span class="bold">Titre</span><br>
+                                {{ form_errors(newForm.title) }}
+                                {{ form_widget(newForm.title) }}
+                                <br>
+                                 <span class="bold">Sous-titre</span><br>
+                                {{ form_errors(newForm.soutitre) }}
+                                {{ form_widget(newForm.soutitre) }}
+                                <br>
+                                <span class="bold">Paragraphe</span><br>
+                                {{ form_errors(newForm.paragraph) }}
+                                {{ form_widget(newForm.paragraph) }}
+                                <br><br>
+                                <input type="submit" value="Créer" />
+                                {{ form_end(newForm) }}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                <!-- *****************   EV SUP ******************* -->
+                {% if evSup.id %}
+                {% else %}
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="thumbnail" id="thumbnail-membre">
+                        <div class="caption">
+                            <h3>Page évènement supplémentaire</h3>
+                            {{ form_start(newForm3) }}
+                            <span class="bold">Titre</span><br>
+                            {{ form_errors(newForm3.title) }}
+                            {{ form_widget(newForm3.title) }}
+                            <br><br>
+                            <input type="submit" value="Créer" />
+                            {{ form_end(newForm3) }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                <!-- *****************   AV3 ******************* -->
+                {% if av3.id %}
+                {% else %}
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="thumbnail" id="thumbnail-membre">
+                        <div class="caption">
+                            <h3>Page Avantage Supplémentaire</h3>
+                            {{ form_start(newForm2) }}
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    {{ form_errors(newForm2.image) }}
+                                    {{ form_widget(newForm2.image) }}
+                                </div>
+                            </div>
+                            <br>
+                            <span class="bold">Titre</span><br>
+                            {{ form_errors(newForm2.titleAv3) }}
+                            {{ form_widget(newForm2.titleAv3) }}
+                            <br>
+                            <span class="bold">Paragraphe</span><br>
+                            {{ form_errors(newForm2.paragraphAv3) }}
+                            {{ form_widget(newForm2.paragraphAv3) }}
+                            <br><br>
+                            <input type="submit" value="Créer" />
+                            {{ form_end(newForm2) }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+
 
 {% endblock %}
