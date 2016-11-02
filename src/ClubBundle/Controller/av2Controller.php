@@ -58,15 +58,7 @@ class av2Controller extends Controller
      * Finds and displays a av2 entity.
      *
      */
-    public function showAction(av2 $av2)
-    {
-        $deleteForm = $this->createDeleteForm($av2);
 
-        return $this->render('ClubBundle:av2:show.html.twig', array(
-            'av2' => $av2,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing av2 entity.
