@@ -243,8 +243,7 @@
         <div class="container-fluid">
             <div class="row ">
                 <!-- *****************   CLUB SUP ******************* -->
-                {% if club_sup.id %}
-                {% else %}
+                {% if club_sup.id is empty %}
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="thumbnail" id="thumbnail-membre">
                             <div class="caption">
@@ -274,9 +273,11 @@
                             </div>
                         </div>
                     </div>
+
+                {% else %}
                 {% endif %}
                 <!-- *****************   EV SUP ******************* -->
-                {% if evSup.id %}
+                {% if evSup.id is not empty %}
                 {% else %}
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="thumbnail" id="thumbnail-membre">
@@ -294,7 +295,7 @@
                 </div>
                 {% endif %}
                 <!-- *****************   AV3 ******************* -->
-                {% if av3.id %}
+                {% if av3.id is not empty %}
                 {% else %}
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="thumbnail" id="thumbnail-membre">
