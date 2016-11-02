@@ -3,11 +3,6 @@ contact_index:
     defaults: { _controller: "ClubBundle:contact:index" }
     methods:  GET
 
-contact_new:
-    path:     /new
-    defaults: { _controller: "ClubBundle:contact:new" }
-    methods:  [GET, POST]
-
 contact_edit:
     path:     /{id}/edit
     defaults: { _controller: "ClubBundle:contact:edit" }

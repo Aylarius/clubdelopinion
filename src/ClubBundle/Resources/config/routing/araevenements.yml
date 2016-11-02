@@ -3,11 +3,6 @@ araevenements_index:
     defaults: { _controller: "ClubBundle:AraEvenements:index" }
     methods:  GET
 
-araevenements_new:
-    path:     /new
-    defaults: { _controller: "ClubBundle:AraEvenements:new" }
-    methods:  [GET, POST]
-
 araevenements_edit:
     path:     /{id}/edit
     defaults: { _controller: "ClubBundle:AraEvenements:edit" }

@@ -30,29 +30,6 @@ class av2Controller extends Controller
         ));
     }
 
-    /**
-     * Creates a new av2 entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-        $av2 = new av2();
-        $form = $this->createForm('ClubBundle\Form\av2Type', $av2);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($av2);
-            $em->flush();
-
-            return $this->redirectToRoute('av2_show', array('id' => $av2->getId()));
-        }
-
-        return $this->render('ClubBundle:av2:new.html.twig', array(
-            'av2' => $av2,
-            'form' => $form->createView(),
-        ));
-    }
 
     /**
      * Finds and displays a av2 entity.

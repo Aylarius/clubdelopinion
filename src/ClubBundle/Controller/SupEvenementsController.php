@@ -33,47 +33,6 @@ class SupEvenementsController extends Controller
     }
 
     /**
-     * Creates a new supEvenement entity.
-     *
-     
-    public function newAction(Request $request)
-    {
-        $supEvenement = new Supevenement();
-        $form = $this->createForm('ClubBundle\Form\SupEvenementsType', $supEvenement);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($supEvenement);
-            $em->flush($supEvenement);
-
-            return $this->redirectToRoute('supevenements_show', array('id' => $supEvenement->getId()));
-        }
-
-        return $this->render('ClubBundle:supevenements/new.html.twig', array(
-            'supEvenement' => $supEvenement,
-            'form' => $form->createView(),
-        ));
-    } */
-
-    /**
-     * Finds and displays a supEvenement entity.
-     *
-     */
-    public function showAction(SupEvenements $supEvenement)
-    {
-        $deleteForm = $this->createDeleteForm($supEvenement);
-        $clubEm = $this->getDoctrine()->getManager();
-        $clubs = $clubEm->getRepository('ClubBundle:Club')->findAll();
-
-        return $this->render('ClubBundle:supevenements:show.html.twig', array(
-            'supEvenement' => $supEvenement,
-            'delete_form' => $deleteForm->createView(),
-            'clubs' => $clubs,
-        ));
-    }
-
-    /**
      * Displays a form to edit an existing supEvenement entity.
      *
      */

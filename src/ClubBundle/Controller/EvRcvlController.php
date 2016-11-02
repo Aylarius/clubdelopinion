@@ -82,30 +82,7 @@ class EvRcvlController extends Controller
     }
     
     /**
-     * Creates a new evRcvl entity.
-     *
 
-    public function newAction(Request $request)
-    {
-    $evRcvl = new Evrcvl();
-    $form = $this->createForm('ClubBundle\Form\EvRcvlType', $evRcvl);
-    $form->handleRequest($request);
-
-    if ($form->isSubmitted() && $form->isValid()) {
-    $em = $this->getDoctrine()->getManager();
-    $em->persist($evRcvl);
-    $em->flush($evRcvl);
-
-    return $this->redirectToRoute('evrcvl_show', array('id' => $evRcvl->getId()));
-    }
-
-    return $this->render('ClubBundle:EvRcvl:new.html.twig', array(
-    'evRcvl' => $evRcvl,
-    'form' => $form->createView(),
-    ));
-    }*/
-
-    /**
      * Displays a form to edit an existing evRcvl entity.
      *
      */

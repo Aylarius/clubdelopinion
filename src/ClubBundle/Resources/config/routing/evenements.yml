@@ -3,11 +3,6 @@ evenements_index:
     defaults: { _controller: "ClubBundle:Evenements:index" }
     methods:  GET
 
-evenements_new:
-    path:     /new
-    defaults: { _controller: "ClubBundle:Evenements:new" }
-    methods:  [GET, POST]
-
 evenements_edit:
     path:     /{id}/edit
     defaults: { _controller: "ClubBundle:Evenements:edit" }

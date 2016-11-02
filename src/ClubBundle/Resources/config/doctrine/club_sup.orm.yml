@@ -18,4 +18,6 @@ ClubBundle\Entity\club_sup:
         paragraph:
             type: string
             length: 255
+        iname:
+            type: string
     lifecycleCallbacks: {  }

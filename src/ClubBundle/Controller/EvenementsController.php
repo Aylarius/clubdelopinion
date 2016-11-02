@@ -78,36 +78,6 @@ class EvenementsController extends Controller
 
 
     /**
-     * Finds and displays a evenement entity.
-     *
-     */
-
-
-    /**
-     * Creates a new evenement entity.
-     *
-
-    public function newAction(Request $request)
-    {
-    $evenement = new Evenement();
-    $form = $this->createForm('ClubBundle\Form\EvenementsType', $evenement);
-    $form->handleRequest($request);
-
-    if ($form->isSubmitted() && $form->isValid()) {
-    $em = $this->getDoctrine()->getManager();
-    $em->persist($evenement);
-    $em->flush($evenement);
-
-    return $this->redirectToRoute('evenements_show', array('id' => $evenement->getId()));
-    }
-
-    return $this->render('ClubBundle:Evenements:new.html.twig', array(
-    'evenement' => $evenement,
-    'form' => $form->createView(),
-    ));
-    }*/
-
-    /**
      * Lists all evenement entities.
      *
 

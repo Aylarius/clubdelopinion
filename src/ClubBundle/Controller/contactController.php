@@ -32,32 +32,7 @@ class contactController extends Controller
     }
 
     /**
-     * Creates a new contact entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-        $contact = new contact();
-        $form = $this->createForm('ClubBundle\Form\contactType', $contact);
-        $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($contact);
-            $em->flush();
-
-            return $this->redirectToRoute('contact_show', array('id' => $contact->getId()));
-        }
-
-        return $this->render('ClubBundle:contact:new.html.twig', array(
-            'contact' => $contact,
-            'form' => $form->createView(),
-        ));
-    }
-
-    
-
-    /**
      * Displays a form to edit an existing contact entity.
      *
      */
