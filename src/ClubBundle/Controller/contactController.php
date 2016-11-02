@@ -55,19 +55,7 @@ class contactController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a contact entity.
-     *
-     */
-    public function showAction(contact $contact)
-    {
-        $deleteForm = $this->createDeleteForm($contact);
-
-        return $this->render('ClubBundle:contact:show.html.twig', array(
-            'contact' => $contact,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
+    
 
     /**
      * Displays a form to edit an existing contact entity.
