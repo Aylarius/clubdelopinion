@@ -57,6 +57,7 @@ main {
 		width: 1200px;
 	}
 }
+
 input[type=file]{
   width:100% !important;
 }
@@ -71,13 +72,16 @@ input[type=file]{
 #container-club {
   padding: 0px !important;
 }
+
 #blockhp {
   margin-top: -6px;
 }
+
 textarea {
   width:100%;
   height: 120px;
 }
+
 /**************************************************/
 /********************  HEADER  ********************/
 /**************************************************/
@@ -156,6 +160,7 @@ textarea {
 }
 
 /********************* NAV DROPDOWN **********************/
+
 .dropdown-menu {
   background-color: #0C1319;
 }
@@ -185,12 +190,9 @@ textarea {
   .nav>li>a {
     padding: 10px;
   }
-
 }
 
 @media (max-width: 1060px) {
-
-
   .navbar-default .navbar-nav > li > a {
     font-size: 1em;
   }
@@ -202,7 +204,7 @@ textarea {
     position: inherit;
   }
   
-  #logo{
+  #logo {
     width: 100px;
     margin-top: 0px;
   }
@@ -225,10 +227,12 @@ textarea {
   .navbar-default .navbar-nav > li > a {
     padding-bottom: 10px;
   }
+
   .navbar-default .navbar-nav .open .dropdown-menu>li>a {
     color: white;
     text-align: right;
   }
+
   .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
     color: #E0071E;
   }
@@ -267,7 +271,7 @@ textarea {
   }
 }
 
-/********************* EVENEMENT **********************/
+/********************* EVENEMENTS **********************/
 
 .contrainte {
   height: 180px;
@@ -287,10 +291,6 @@ textarea {
 .thumbnail {
   background-color: #F3F3F3;
   border-radius: inherit;
-}
-
-.thumbnail:hover {
-  box-shadow: 0px 0px 5px 2px #cfcfcf;
 }
 
 .thumbnail:hover {
@@ -398,5 +398,5 @@ footer span {
 @media (max-width: 550px){
   footer li {
     padding: 5px;
-}
+  }
 }

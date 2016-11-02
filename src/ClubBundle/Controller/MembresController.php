@@ -111,15 +111,5 @@ class MembresController extends Controller
     'form' => $form->createView(),
     ));
     }
-
-
-    public function showAction(Membres $membre)
-    {
-    $deleteForm = $this->createDeleteForm($membre);
-
-    return $this->render('ClubBundle:membres:show.html.twig', array(
-    'membre' => $membre,
-    'delete_form' => $deleteForm->createView(),
-    ));
-    }       */
+     */
 }

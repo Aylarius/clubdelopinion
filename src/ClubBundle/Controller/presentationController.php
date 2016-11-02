@@ -54,21 +54,7 @@ class presentationController extends Controller
             'form' => $form->createView(),
         ));
     }
-
-    /**
-     * Finds and displays a presentation entity.
-     *
-     */
-    public function showAction(presentation $presentation)
-    {
-        $deleteForm = $this->createDeleteForm($presentation);
-
-        return $this->render('ClubBundle:presentation:show.html.twig', array(
-            'presentation' => $presentation,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
+    
     /**
      * Displays a form to edit an existing presentation entity.
      *

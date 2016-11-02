@@ -56,20 +56,6 @@ class RcvlController extends Controller
     }
 
     /**
-     * Finds and displays a Rcvl entity.
-     *
-     */
-    public function showAction(Rcvl $rcvl)
-    {
-        $deleteForm = $this->createDeleteForm($rcvl);
-
-        return $this->render('ClubBundle:rcvl:show.html.twig', array(
-            'rcvl' => $rcvl,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
      * Displays a form to edit an existing Rcvl entity.
      *
      */

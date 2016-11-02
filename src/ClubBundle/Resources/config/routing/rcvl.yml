@@ -3,11 +3,6 @@ rcvl_index:
     defaults: { _controller: "ClubBundle:Rcvl:index" }
     methods:  GET
 
-rcvl_show:
-    path:     /{id}/show
-    defaults: { _controller: "ClubBundle:Rcvl:show" }
-    methods:  GET
-
 rcvl_new:
     path:     /new
     defaults: { _controller: "ClubBundle:Rcvl:new" }
