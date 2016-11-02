@@ -3,11 +3,6 @@ pagemembre_index:
     defaults: { _controller: "ClubBundle:PageMembre:index" }
     methods:  GET
 
-pagemembre_new:
-    path:     /new
-    defaults: { _controller: "ClubBundle:PageMembre:new" }
-    methods:  [GET, POST]
-
 pagemembre_edit:
     path:     /{id}/edit
     defaults: { _controller: "ClubBundle:PageMembre:edit" }

@@ -3,16 +3,6 @@ club_index:
     defaults: { _controller: "ClubBundle:Club:index" }
     methods:  GET
 
-club_show:
-    path:     /{id}/show
-    defaults: { _controller: "ClubBundle:Club:show" }
-    methods:  GET
-
-club_new:
-    path:     /new
-    defaults: { _controller: "ClubBundle:Club:new" }
-    methods:  [GET, POST]
-
 club_edit:
     path:     /{id}/edit
     defaults: { _controller: "ClubBundle:Club:edit" }

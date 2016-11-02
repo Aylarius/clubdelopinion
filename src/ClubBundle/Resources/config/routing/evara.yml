@@ -3,16 +3,6 @@ evara_index:
     defaults: { _controller: "ClubBundle:EvAra:index" }
     methods:  GET
 
-evara_show:
-    path:     /{id}/show
-    defaults: { _controller: "ClubBundle:EvAra:show" }
-    methods:  GET
-
-evara_new:
-    path:     /new
-    defaults: { _controller: "ClubBundle:EvAra:new" }
-    methods:  [GET, POST]
-
 evara_edit:
     path:     /{id}/edit
     defaults: { _controller: "ClubBundle:EvAra:edit" }

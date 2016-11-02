@@ -106,30 +106,6 @@ class PageMembreController extends Controller
         ));
 
     }
-    /**
-     * Creates a new Membres entity.
-     *
-
-    public function newAction(Request $request, PageMembre $pageMembre)
-    {
-    $membre = new Membres();
-    $newForm = $this->createForm('ClubBundle\Form\MembresType', $membre);
-    $newForm->handleRequest($request);
-
-    if ($newForm->isSubmitted() && $newForm->isValid()) {
-    $em = $this->getDoctrine()->getManager();
-    $em->persist($membre);
-    $em->flush();
-
-    return $this->redirectToRoute('pagemembre_edit', array('id' => $pageMembre->getId()));
-    }
-
-    return $this->render('ClubBundle:PageMembre:edit.html.twig', array(
-    'membre' => $membre,
-    'pageMembre' => $pageMembre,
-    'newForm' => $newForm->createView(),
-    ));
-    } */
 
     /**
      * Deletes a PageMembre entity.

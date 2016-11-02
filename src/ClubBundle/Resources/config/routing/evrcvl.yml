@@ -3,16 +3,6 @@ evrcvl_index:
     defaults: { _controller: "ClubBundle:EvRcvl:index" }
     methods:  GET
 
-evrcvl_show:
-    path:     /{id}/show
-    defaults: { _controller: "ClubBundle:EvRcvl:show" }
-    methods:  GET
-
-evrcvl_new:
-    path:     /new
-    defaults: { _controller: "ClubBundle:EvRcvl:new" }
-    methods:  [GET, POST]
-
 evrcvl_edit:
     path:     /{id}/edit
     defaults: { _controller: "ClubBundle:EvRcvl:edit" }

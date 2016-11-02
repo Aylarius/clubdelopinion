@@ -32,44 +32,6 @@ class RcvlController extends Controller
     }
 
     /**
-     * Creates a new Rcvl entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-        $rcvl = new Rcvl();
-        $form = $this->createForm('ClubBundle\Form\RcvlType', $rcvl);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($rcvl);
-            $em->flush();
-
-            return $this->redirectToRoute('rcvl_show', array('id' => $rcvl->getId()));
-        }
-
-        return $this->render('ClubBundle:rcvl:new.html.twig', array(
-            'rcvl' => $rcvl,
-            'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a Rcvl entity.
-     *
-     */
-    public function showAction(Rcvl $rcvl)
-    {
-        $deleteForm = $this->createDeleteForm($rcvl);
-
-        return $this->render('ClubBundle:rcvl:show.html.twig', array(
-            'rcvl' => $rcvl,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
      * Displays a form to edit an existing Rcvl entity.
      *
      */

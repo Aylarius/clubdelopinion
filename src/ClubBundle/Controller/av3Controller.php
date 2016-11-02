@@ -32,44 +32,6 @@ class av3Controller extends Controller
     }
 
     /**
-     * Creates a new av3 entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-        $av3 = new av3();
-        $form = $this->createForm('ClubBundle\Form\av3Type', $av3);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($av3);
-            $em->flush();
-
-            return $this->redirectToRoute('av3_show', array('id' => $av3->getId()));
-        }
-
-        return $this->render('ClubBundle:av3:new.html.twig', array(
-            'av3' => $av3,
-            'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a av3 entity.
-     *
-     */
-    public function showAction(av3 $av3)
-    {
-        $deleteForm = $this->createDeleteForm($av3);
-
-        return $this->render('ClubBundle:av3:show.html.twig', array(
-            'av3' => $av3,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
      * Displays a form to edit an existing av3 entity.
      *
      */

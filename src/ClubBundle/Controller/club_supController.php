@@ -31,43 +31,6 @@ class club_supController extends Controller
         ));
     }
 
-    /**
-     * Creates a new club_sup entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-        $club_sup = new club_sup();
-        $form = $this->createForm('ClubBundle\Form\club_supType', $club_sup);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($club_sup);
-            $em->flush();
-
-            return $this->redirectToRoute('club_sup_show', array('id' => $club_sup->getId()));
-        }
-
-        return $this->render('ClubBundle:club_sup:new.html.twig', array(
-            'club_sup' => $club_sup,
-            'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a club_sup entity.
-     *
-     */
-    public function showAction(club_sup $club_sup)
-    {
-        $deleteForm = $this->createDeleteForm($club_sup);
-
-        return $this->render('ClubBundle:club_sup:show.html.twig', array(
-            'club_sup' => $club_sup,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing club_sup entity.

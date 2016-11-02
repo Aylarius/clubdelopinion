@@ -32,44 +32,6 @@ class presentationController extends Controller
     }
 
     /**
-     * Creates a new presentation entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-        $presentation = new presentation();
-        $form = $this->createForm('ClubBundle\Form\presentationType', $presentation);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($presentation);
-            $em->flush();
-
-            return $this->redirectToRoute('presentation_show', array('id' => $presentation->getId()));
-        }
-
-        return $this->render('ClubBundle:presentation:new.html.twig', array(
-            'presentation' => $presentation,
-            'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a presentation entity.
-     *
-     */
-    public function showAction(presentation $presentation)
-    {
-        $deleteForm = $this->createDeleteForm($presentation);
-
-        return $this->render('ClubBundle:presentation:show.html.twig', array(
-            'presentation' => $presentation,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
      * Displays a form to edit an existing presentation entity.
      *
      */

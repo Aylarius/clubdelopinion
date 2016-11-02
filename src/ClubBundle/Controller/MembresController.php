@@ -92,34 +92,5 @@ class MembresController extends Controller
     ));
     }
 
-    public function newAction(Request $request, PageMembre $pageMembre)
-    {
-    $membre = new Membres();
-    $form = $this->createForm('ClubBundle\Form\MembresType', $membre);
-    $form->handleRequest($request);
-
-    if ($form->isSubmitted() && $form->isValid()) {
-    $em = $this->getDoctrine()->getManager();
-    $em->persist($membre);
-    $em->flush();
-
-    return $this->redirectToRoute('pagemembre_edit', array('id' => $pageMembre->getId()));
-    }
-
-    return $this->render('ClubBundle:membres:new.html.twig', array(
-    'membre' => $membre,
-    'form' => $form->createView(),
-    ));
-    }
-
-
-    public function showAction(Membres $membre)
-    {
-    $deleteForm = $this->createDeleteForm($membre);
-
-    return $this->render('ClubBundle:membres:show.html.twig', array(
-    'membre' => $membre,
-    'delete_form' => $deleteForm->createView(),
-    ));
-    }       */
+     */
 }

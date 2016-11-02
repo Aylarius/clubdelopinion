@@ -119,41 +119,4 @@ class EvAraController extends Controller
         ;
     }*/
 
-    /**
-     * Creates a new evAra entity.
-     *
-
-    public function newAction(Request $request)
-    {
-    $evAra = new Evara();
-    $form = $this->createForm('ClubBundle\Form\EvAraType', $evAra);
-    $form->handleRequest($request);
-
-    if ($form->isSubmitted() && $form->isValid()) {
-    $em = $this->getDoctrine()->getManager();
-    $em->persist($evAra);
-    $em->flush($evAra);
-
-    return $this->redirectToRoute('evara_show', array('id' => $evAra->getId()));
-    }
-
-    return $this->render('ClubBundle:evara:new.html.twig', array(
-    'evAra' => $evAra,
-    'form' => $form->createView(),
-    ));
-    }*/
-
-    /**
-     * Finds and displays a evAra entity.
-     *
-
-    public function showAction(EvAra $evAra)
-    {
-    $deleteForm = $this->createDeleteForm($evAra);
-
-    return $this->render('ClubBundle:evara:show.html.twig', array(
-    'evAra' => $evAra,
-    'delete_form' => $deleteForm->createView(),
-    ));
-    } */
 }

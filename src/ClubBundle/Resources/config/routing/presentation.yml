@@ -3,16 +3,6 @@ presentation_index:
     defaults: { _controller: "ClubBundle:presentation:index" }
     methods:  GET
 
-presentation_show:
-    path:     /{id}/show
-    defaults: { _controller: "ClubBundle:presentation:show" }
-    methods:  GET
-
-presentation_new:
-    path:     /new
-    defaults: { _controller: "ClubBundle:presentation:new" }
-    methods:  [GET, POST]
-
 presentation_edit:
     path:     /{id}/edit
     defaults: { _controller: "ClubBundle:presentation:edit" }
