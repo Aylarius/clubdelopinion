@@ -40,7 +40,7 @@ ClubBundle
 `sudo chmod -R 777 web/images/ app/cache/ app/logs/`  
 
 8. Vous pouvez désormais afficher le site via votre localhost de cette façon :  
-`localhost/clubdelopinion/web/`  
+`localhost/clubdelopinion/web/` 
 
 9. Si les images ne s'affichent pas, il est nécessaire de modifier les liens dans le fichier config.yml (app/config/) :  
 <pre>vich_uploader:
@@ -67,8 +67,17 @@ ClubBundle
 </pre>
 Pour cela, modifier les champs **uri_prefix** pour correspondre au chemin d'accès du dossier *clubdelopinion* depuis votre localhost. Ainsi si votre localhost est :
 `localhost/~nomutilisateur/projets/clubdelopinion/web/`  
-Il vous suffit de modifier les uri_prefix en ajoutant `/projets`, de cette façon :  
+Il vous suffit de modifier les **uri_prefix** en ajoutant `/projets`, de cette façon :  
 `/projets/clubdelopinion/web/images/membres`  
+
+**Attention :**  
+Parfois sur Mac OS X, les images ne s'affichent pas en localhost, il est alors nécessaire de saisir dans le terminal :  
+`php app/console server:run`  
+
+Le terminal affichera alors un message de type :  
+`[OK] Server running on http://127.0.0.1:8000`  
+
+Vous pourrez donc accéder au site en utilisant l'URL indiqué et il faudra changer les **uri_prefix** en ne gardant que les dossiers après `web`, de cette façon : `/images/membres`.  
 
 ## Création d'un super administrateur  
 
