@@ -67,7 +67,7 @@ ClubBundle
 </pre>
 Pour cela, modifier les champs **uri_prefix** pour correspondre au chemin d'accès du dossier *clubdelopinion* depuis votre localhost. Ainsi si votre localhost est :
 `localhost/~nomutilisateur/projets/clubdelopinion/web/`  
-Il vous suffit de modifier les uri_prefix en ajoutant /projets, de cette façon :  
+Il vous suffit de modifier les uri_prefix en ajoutant `/projets`, de cette façon :  
 `/projets/clubdelopinion/web/images/membres`  
 
 ## Création d'un super administrateur  
@@ -77,5 +77,9 @@ Il vous suffit de modifier les uri_prefix en ajoutant /projets, de cette façon 
   
 2. Il vous est ensuite demandé d'indiquer un email et un mot de passe pour votre super administrateur  
   
-3. Pour accéder à la partie administrable du site, ajouter /login à l'URL, exemple :
+3. Pour accéder à la partie administrable du site, ajouter `/login` à l'URL, exemple :
 `localhost/clubdelopinion/web/login`
+
+## Spécificités du VichUploaderBundle 
+
+Pour modifier ou supprimer des images/vidéos du site, il est toujours nécessaire de modifier un autre champs du formulaire de modification.
