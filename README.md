@@ -19,20 +19,56 @@ ClubBundle
 1. Pour cloner le projet, saisir dans le terminal :  
 `git clone https://github.com/Maxime-Coustes/clubdelopinion.git`  
   
-2. Installer composer en saisissant dans le terminal :  
+2. Entrer dans le dossier :  
+`cd clubdelopinion` 
+
+3. Installer composer en saisissant dans le terminal :  
 `composer install`  
   
-3. A la fin du composer install, configurer la base de donnée et le serveur mail 
+4. A la fin du composer install, configurer la base de donnée  
+`database_name (symfony):`  
+`database_user (root):`   
+`database_password (null):`
   
-4. Créer votre base de données via le terminal :  
+5. Créer votre base de données via le terminal :  
 `php app/console doctrine:database:create`  
   
-5. Mettre à jour votre base de données via le terminal :  
+6. Mettre à jour votre base de données via le terminal :  
 `php app/console doctrine:schema:update --force`  
   
-6. Enfin mettre les droits sur le projet en saisissant dans le terminal :  
-`chmod -R 777 web/images/ app/cache/ app/logs/`  
-  
+7. Enfin mettre les droits sur le projet en saisissant dans le terminal :  
+`sudo chmod -R 777 web/images/ app/cache/ app/logs/`  
+
+8. Afficher le site via votre localhost, exemple :  
+`localhost/clubdelopinion/web/`  
+
+9. Si les images ne s'affichent pas, il est nécessaire de modifier les liens dans le fichier config.yml (app/config/) :  
+<pre>vich_uploader:
+    db_driver: orm
+    mappings:
+        membres_image:
+            uri_prefix:         /clubdelopinion/web/images/membres
+            upload_destination: '%kernel.root_dir%/../web/images/membres'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        folder_images:
+            uri_prefix:         /clubdelopinion/web/images
+            upload_destination: '%kernel.root_dir%/../web/images'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        evenements_image:
+            uri_prefix:         /clubdelopinion/web/images/evenements
+            upload_destination: '%kernel.root_dir%/../web/images/evenements'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+</pre>
+Pour cela, modifier les champs **uri_prefix** pour correspondre au chemin d'accès du dossier *clubdelopinion* depuis votre localhost. Ainsi si votre localhost est :
+`localhost/~nomutilisateur/projets/clubdelopinion/web/`  
+Il vous suffit de modifier les uri_prefix en ajoutant /projets, de cette façon :  
+`/projets/clubdelopinion/web/images/membres`  
 
 ## Création d'un super administrateur  
 
@@ -41,4 +77,5 @@ ClubBundle
   
 2. Il vous est ensuite demandé d'indiquer un email et un mot de passe pour votre super administrateur  
   
-3. Pour accéder à la partie administrable du site, ajouter /login à l'URL  
+3. Pour accéder à la partie administrable du site, ajouter /login à l'URL, exemple :
+`localhost/clubdelopinion/web/login`
