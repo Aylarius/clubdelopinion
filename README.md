@@ -82,4 +82,4 @@ Il vous suffit de modifier les uri_prefix en ajoutant `/projets`, de cette faço
 
 ## Spécificités du VichUploaderBundle 
 
-Pour modifier ou supprimer des images/vidéos du site, il est toujours nécessaire de modifier un autre champs du formulaire de modification.
+Pour modifier ou supprimer des images/vidéos du site, il est toujours nécessaire de modifier un autre champ du formulaire de modification.
