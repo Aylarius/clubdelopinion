@@ -31,7 +31,7 @@ ClubBundle
 `php app/console doctrine:schema:update --force`  
   
 6. Enfin mettre les droits sur le projet en saisissant dans le terminal :  
-`chmod -R 777 web/uploads/ web/images/ app/cache/ app/logs/`  
+`chmod -R 777 web/images/ app/cache/ app/logs/`  
   
 
 ## Création d'un super administrateur  
