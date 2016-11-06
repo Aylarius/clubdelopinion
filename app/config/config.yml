@@ -71,19 +71,19 @@ vich_uploader:
     db_driver: orm
     mappings:
         membres_image:
-            uri_prefix:         /projets/clubdelopinion/web/images/membres
+            uri_prefix:         /images/membres
             upload_destination: '%kernel.root_dir%/../web/images/membres'
             inject_on_load:     false
             delete_on_update:   true
             delete_on_remove:   true
         folder_images:
-            uri_prefix:         /projets/clubdelopinion/web/images
+            uri_prefix:         /images
             upload_destination: '%kernel.root_dir%/../web/images'
             inject_on_load:     false
             delete_on_update:   true
             delete_on_remove:   true
         evenements_image:
-            uri_prefix:         /projets/clubdelopinion/web/images/evenements
+            uri_prefix:         /images/evenements
             upload_destination: '%kernel.root_dir%/../web/images/evenements'
             inject_on_load:     false
             delete_on_update:   true
