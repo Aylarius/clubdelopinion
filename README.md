@@ -1,6 +1,6 @@
 clubdelopinion
 ==============
-Application Symfony2 (version 2.8) créée pour la mise en place du site internet du Club de L'Opinion.
+Application Symfony2 (version 2.8) créée pour la mise en place du site internet du Club de L'Opinion.   
 Lien ==> https://clubopinion.wildcodeschool.fr/  
 
 ## Pré-requis
