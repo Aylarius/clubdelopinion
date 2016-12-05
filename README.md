@@ -40,10 +40,13 @@ ClubBundle
 7. Enfin mettre les droits sur le projet en saisissant dans le terminal :  
 `sudo chmod -R 777 web/images/ app/cache/ app/logs/`  
 
-8. Vous pouvez désormais afficher le site via votre localhost de cette façon :  
+8. Ajouter et lier les assets (le dossier Resources/public)    
+`php app/console assets:install --symlink`  
+
+9. Vous pouvez désormais afficher le site via votre localhost de cette façon :  
 `localhost/clubdelopinion/web/` 
 
-9. Si les images ne s'affichent pas, il est nécessaire de modifier les liens dans le fichier config.yml (app/config/) :  
+10. Si les images ne s'affichent pas, il est nécessaire de modifier les liens dans le fichier config.yml (app/config/) :  
 <pre>vich_uploader:
     db_driver: orm
     mappings:
