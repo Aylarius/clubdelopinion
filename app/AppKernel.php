@@ -18,7 +18,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new ClubBundle\ClubBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
-            new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+            new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle(),
 
             //new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new FOS\UserBundle\FOSUserBundle(),
